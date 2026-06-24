@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mein Konto — Mit Menschen reden</title>
+  <meta name="description" content="Mitgliederbereich von Mit Menschen reden — Vorschau, wie der Bereich für Premium-Mitglieder aussieht.">
+  <meta name="robots" content="noindex,follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/mmr-demo/css/main.css">
+  <style>
+    .konto-banner { background: #f4f0e3; border-bottom: 1px solid #d8cdac; padding: 0.75rem var(--space-m); text-align: center; font-size: 0.9rem; }
+    .konto-banner strong { color: #6b6240; }
+    .konto-hero { padding: var(--space-l) 0; border-bottom: 1px solid var(--color-rule); }
+    .konto-grid { display: grid; grid-template-columns: 1fr 320px; gap: var(--space-l); }
+    @media (max-width: 800px) { .konto-grid { grid-template-columns: 1fr; } }
+    .konto-sidebar { background: var(--color-bg-alt); padding: var(--space-m); position: sticky; top: 80px; align-self: start; }
+    .progress-bar { height: 4px; background: var(--color-rule); margin: 0.5rem 0 1rem; position: relative; }
+    .progress-bar::after { content: ""; position: absolute; left: 0; top: 0; height: 100%; background: var(--color-accent); width: var(--progress, 50%); }
+    .audio-item { display: grid; grid-template-columns: 40px 1fr auto; gap: var(--space-s); align-items: center; padding: var(--space-s) 0; border-bottom: 1px solid var(--color-rule); }
+    .audio-item:last-child { border-bottom: none; }
+    .audio-icon { width: 40px; height: 40px; background: var(--color-text); color: var(--color-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+    .badge { display: inline-block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; background: var(--color-success); color: var(--color-bg); padding: 0.2rem 0.5rem; font-weight: 700; }
+    .badge--foerder { background: var(--color-pate); color: var(--color-text); }
+  </style>
+</head>
+<body>
+
+<div class="konto-banner">
+  <strong>📋 Demo-Ansicht</strong> — So sieht der Mitgliederbereich für Premium-Mitglieder aus. Wird mit Stripe/Digistore-Anbindung nach Übergabe aktiviert. <a href="/mmr-demo/so-funktioniert.html">Was ist das?</a>
+</div>
+
+<header class="site-header"><div class="container site-header__inner"><a class="site-logo" href="/mmr-demo/">mit<b>menschen</b>reden<small>das magazin für den perspektivenwechsel</small></a><button class="nav-toggle" aria-label="Menü">☰</button><nav class="site-nav"><a href="/mmr-demo/archiv.html">Interviews</a><a href="/mmr-demo/themen/">Themen</a><a href="/mmr-demo/kolumnen/">Kolumnen</a><a href="/mmr-demo/live.html">Live</a><a href="/mmr-demo/mein-konto.html" class="cta">Mein Konto</a></nav></div></header>
+
+<main>
+
+  <section class="konto-hero">
+    <div class="container">
+      <div class="hero__eyebrow">Mein Konto</div>
+      <h1 style="font-family:var(--font-serif);font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:var(--space-s)">Willkommen zurück, Andrea.</h1>
+      <p class="muted" style="margin:0">Mitglied seit März 2026 · Premium Jährlich · <span class="badge">aktiv</span></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="konto-grid">
+
+        <!-- Hauptbereich -->
+        <div>
+
+          <!-- Aktuell -->
+          <div style="margin-bottom:var(--space-xl)">
+            <h2 class="section__title" style="margin-bottom:var(--space-s)">Neu für Sie</h2>
+            <p class="muted small">Premium-Mitglieder sehen neue Interviews 48 Stunden vor allen anderen.</p>
+
+            <div class="card-grid" style="margin-top:var(--space-m)">
+              <a href="/mmr-demo/interviews/2026-02-bagus.html" class="card card--with-image">
+                <img class="card__image" src="/mmr-demo/assets/images/interviews/2026-02-bagus.jpg" alt="">
+                <div class="card__eyebrow" style="color:var(--color-success)">✓ Voller Zugang freigeschaltet</div>
+                <h3 class="card__title">Weniger Staat, mehr Zukunft</h3>
+                <div class="card__person">Prof. Dr. Philipp Bagus</div>
+                <p class="card__lead">Vollständig — alle 11 Fragen lesbar.</p>
+              </a>
+              <a href="/mmr-demo/interviews/2026-02-birg.html" class="card card--with-image">
+                <img class="card__image" src="/mmr-demo/assets/images/interviews/2026-02-birg.jpg" alt="">
+                <div class="card__eyebrow">Demografie</div>
+                <h3 class="card__title">Die demografische Krise als Mutter aller Krisen</h3>
+                <div class="card__person">Prof. Dr. Herwig Birg</div>
+                <p class="card__lead">Audio-Version verfügbar · 47 Min.</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- Weiterlesen -->
+          <div style="margin-bottom:var(--space-xl)">
+            <h2 class="section__title">Weiterlesen</h2>
+            <p class="muted small">Sie waren zuletzt mitten im Lesen.</p>
+
+            <div style="background:var(--color-bg);border:1px solid var(--color-rule);padding:var(--space-m);margin-top:var(--space-m);display:grid;grid-template-columns:80px 1fr auto;gap:var(--space-m);align-items:center">
+              <img src="/mmr-demo/assets/images/interviews/2026-02-mewes.jpg" alt="" style="width:80px;height:80px;object-fit:cover;border-radius:50%">
+              <div>
+                <p class="muted small" style="margin:0">Klima · Clara Mewes</p>
+                <p style="font-family:var(--font-serif);font-size:1.15rem;line-height:1.3;margin:0.2rem 0">Klimaneutralität im Realitätstest</p>
+                <div class="progress-bar" style="--progress: 65%"></div>
+                <p class="small muted" style="margin:0">65 % gelesen · Frage 8 von 11</p>
+              </div>
+              <a href="/mmr-demo/interviews/2026-02-mewes.html" class="btn" style="padding:0.5rem 1rem;font-size:0.85rem">Weiter</a>
+            </div>
+          </div>
+
+          <!-- Audio-Bibliothek -->
+          <div style="margin-bottom:var(--space-xl)">
+            <h2 class="section__title">Audio-Bibliothek</h2>
+            <p class="muted small">Alle Interviews als eingelesene Audio-Versionen — exklusiv für Premium-Mitglieder.</p>
+
+            <div style="margin-top:var(--space-m);background:var(--color-bg);border:1px solid var(--color-rule);padding:0 var(--space-m)">
+              <div class="audio-item">
+                <div class="audio-icon">▶</div>
+                <div>
+                  <p style="margin:0;font-weight:600">Die demografische Krise — Herwig Birg</p>
+                  <p class="small muted" style="margin:0">47 Min · 1. März 2026 · Eingelesen von Susanne Hartmann</p>
+                </div>
+                <a href="#" class="small">Anhören →</a>
+              </div>
+              <div class="audio-item">
+                <div class="audio-icon">▶</div>
+                <div>
+                  <p style="margin:0;font-weight:600">Klimaneutralität im Realitätstest — Clara Mewes</p>
+                  <p class="small muted" style="margin:0">42 Min · 1. März 2026 · Eingelesen von Susanne Hartmann</p>
+                </div>
+                <a href="#" class="small">Anhören →</a>
+              </div>
+              <div class="audio-item">
+                <div class="audio-icon">▶</div>
+                <div>
+                  <p style="margin:0;font-weight:600">Weniger Staat — Philipp Bagus</p>
+                  <p class="small muted" style="margin:0">38 Min · 1. März 2026 · Original-Mitschnitt</p>
+                </div>
+                <a href="#" class="small">Anhören →</a>
+              </div>
+              <div class="audio-item">
+                <div class="audio-icon">▶</div>
+                <div>
+                  <p style="margin:0;font-weight:600">Kirche als Hilfe — Landesbischof Gohl</p>
+                  <p class="small muted" style="margin:0">39 Min · 11. März 2025 · Eingelesen von Susanne Hartmann</p>
+                </div>
+                <a href="#" class="small">Anhören →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live-Aufzeichnungen -->
+          <div style="margin-bottom:var(--space-xl)">
+            <h2 class="section__title">Live-Aufzeichnungen</h2>
+            <p class="muted small">Alle Live-Interviews dauerhaft im Premium-Archiv.</p>
+
+            <div class="card-grid" style="margin-top:var(--space-m)">
+              <div class="event-card">
+                <div class="event-card__date">14.<br>Mai</div>
+                <div class="event-card__status event-card__status--past">Aufzeichnung verfügbar</div>
+                <h4 style="margin-top:var(--space-s)">Klimaneutralität live — Clara Mewes mit Q&amp;A</h4>
+                <p class="small muted">78 Min · 14.05.2025</p>
+                <a href="#" class="small">Aufzeichnung ansehen →</a>
+              </div>
+              <div class="event-card">
+                <div class="event-card__date">24.<br>Sep</div>
+                <div class="event-card__status">Ihr Ticket vorgemerkt</div>
+                <h4 style="margin-top:var(--space-s)">Herwig Birg live — was kommt nach dem Zenit?</h4>
+                <p class="small muted">19:00 Uhr · 24.09.2026</p>
+                <a href="#" class="small">Ticket einlösen →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="konto-sidebar">
+          <div class="card__eyebrow">Ihre Mitgliedschaft</div>
+          <h3 style="font-family:var(--font-serif);font-size:1.5rem;margin:0.3rem 0 var(--space-s)">Jährlich</h3>
+          <p class="small muted" style="margin:0 0 var(--space-s)">49 €/Jahr · läuft bis 28.02.2027</p>
+          <p class="small" style="margin:0 0 var(--space-m)"><span class="badge">automatisch</span> Verlängerung</p>
+
+          <hr style="border:none;border-top:1px solid var(--color-rule);margin:var(--space-m) 0">
+
+          <p style="margin:0 0 var(--space-s);font-weight:600">Ihr Zugang umfasst:</p>
+          <ul style="font-size:0.85rem;line-height:1.6;padding-left:1.2rem;margin:0 0 var(--space-m)">
+            <li>Alle Interviews ungekürzt</li>
+            <li>Audio-Bibliothek</li>
+            <li>Live-Aufzeichnungen</li>
+            <li>48 Std. Frühzugang</li>
+            <li>Premium-Newsletter</li>
+            <li>Print-Sonderausgabe 1×/Jahr</li>
+            <li>Vorrang bei Live-Tickets</li>
+          </ul>
+
+          <a class="btn btn--ghost" href="#" style="width:100%;text-align:center;font-size:0.85rem;padding:0.6rem;display:block;box-sizing:border-box">Auf Förder upgraden</a>
+          <p class="small muted" style="margin:var(--space-s) 0 0;text-align:center"><a href="#">Mitgliedschaft verwalten</a> · <a href="#">Abmelden</a></p>
+
+          <hr style="border:none;border-top:1px solid var(--color-rule);margin:var(--space-m) 0">
+
+          <p style="margin:0;font-size:0.8rem;color:var(--color-text-muted)">Premium-Newsletter zuletzt: <strong>03.05.2026</strong><br>Print-Sonderausgabe 2026 versendet: <strong>02.2026</strong></p>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div><div class="site-footer__brand">mit<b style="font-weight:700">menschen</b>reden</div></div>
+    <div><h4>Magazin</h4><ul><li><a href="/mmr-demo/archiv.html">Interview-Archiv</a></li><li><a href="/mmr-demo/themen/">Themen-Cluster</a></li><li><a href="/mmr-demo/kolumnen/">Kolumnen</a></li><li><a href="/mmr-demo/live.html">Live-Interviews</a></li></ul></div>
+    <div><h4>Mitmachen</h4><ul><li><a href="/mmr-demo/portraits.html">Bewerbung Portrait</a></li><li><a href="/mmr-demo/sponsoren.html">Patenschaft werden</a></li><li><a href="/mmr-demo/premium.html">Premium-Mitglied</a></li><li><a href="/mmr-demo/newsletter.html">Newsletter</a></li></ul></div>
+    <div><h4>Verlag</h4><ul><li><a href="/mmr-demo/ueber.html">Über uns</a></li><li><a href="/mmr-demo/impressum.html">Impressum</a></li><li><a href="/mmr-demo/datenschutz.html">Datenschutz</a></li></ul></div>
+  </div>
+  <div class="container site-footer__bottom"><span>© Mit Menschen reden · Edition PJB · Ralf M. Ruthardt</span><span>ISSN 2944-0408 (Online)</span></div>
+</footer>
+<script>document.querySelector('.nav-toggle')?.addEventListener('click', () => { document.querySelector('.site-nav')?.classList.toggle('mobile-open'); });</script>
+</body>
+</html>
