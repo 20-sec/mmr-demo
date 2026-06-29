@@ -4,219 +4,241 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mit Menschen reden — Magazin für den Perspektivenwechsel</title>
-  <meta name="description" content="Hochwertige Interviews mit Menschen, die etwas zu sagen haben. Wissenschaft, Wirtschaft, Kirche, Gesellschaft. Herausgegeben von Ralf M. Ruthardt.">
+  <meta name="description" content="Lange, ehrliche Gespräche mit Menschen, die etwas zu sagen haben. Wissenschaft, Wirtschaft, Kirche, Gesellschaft. Alle Gespräche frei lesbar.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/mmr-demo/css/main.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Mit Menschen reden",
-    "url": "https://mitmenschenreden.de/",
-    "description": "Magazin für den Perspektivenwechsel — hochwertige Interviews mit Menschen, die etwas zu sagen haben.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Mit Menschen reden",
-      "founder": {
-        "@type": "Person",
-        "name": "Ralf M. Ruthardt"
-      }
-    }
-  }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/mmr.css">
 </head>
 <body>
 
 <header class="site-header">
-  <div class="container site-header__inner">
-    <a class="site-logo" href="/mmr-demo/">mit<b>menschen</b>reden<small>das magazin für den perspektivenwechsel</small></a>
-    <button class="nav-toggle" aria-label="Menü">☰</button>
-    <nav class="site-nav">
-      <a href="/mmr-demo/archiv.html">Interviews</a>
-      <a href="/mmr-demo/themen/">Themen</a>
-      <a href="/mmr-demo/kolumnen/">Kolumnen</a>
-      <a href="/mmr-demo/live.html">Live</a>
-      <a href="/mmr-demo/portraits.html">Portraits</a>
-      <a href="/mmr-demo/premium.html" class="cta">Premium</a>
+  <div class="wrap site-header__inner">
+    <a class="logo" href="index.html">mit<b>menschen</b>reden<small>das magazin für den perspektivenwechsel</small></a>
+    <button class="nav-toggle" aria-label="Menü" aria-expanded="false">☰</button>
+    <nav class="nav">
+      <a href="archiv.html">Interviews</a>
+      <a href="#">Themen</a>
+      <a href="#">Kolumnen</a>
+      <a href="#">Live</a>
+      <a href="#" class="cta">Newsletter</a>
     </nav>
   </div>
 </header>
 
 <main>
 
-  <!-- Hero: aktuelles Interview -->
-  <section class="hero hero--with-image" style="--hero-bg: url('/mmr-demo/assets/images/interviews/2026-02-birg.jpg')">
-    <div class="content">
-      <div class="hero__eyebrow">Neu im Magazin · Demografie</div>
-      <h1 class="hero__title"><a href="/mmr-demo/interviews/2026-02-birg.html" style="color:inherit;border:none">Warum die demografische Krise härter trifft, als wir denken — Herwig Birg im Interview</a></h1>
-      <p class="hero__lead">Der renommierte Demograf Prof. Dr. Herwig Birg über Geburtenraten, politische Verdrängung und die Frage, was eine Gesellschaft trägt, wenn die Pyramide kippt.</p>
-      <div class="themen-pills">
-        <a href="/mmr-demo/themen/demografie.html" class="themen-pill">Demografie</a>
-        <a href="/mmr-demo/themen/gesellschaft.html" class="themen-pill">Gesellschaft</a>
-        <a href="/mmr-demo/themen/zukunft.html" class="themen-pill">Zukunft</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stream: letzte Interviews -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section__title">Aktuelle Interviews</h2>
-      <div class="card-grid">
-
-        <a href="/mmr-demo/interviews/2026-02-mewes.html" class="card card--with-image">
-          <img class="card__image" src="/mmr-demo/assets/images/interviews/2026-02-mewes.jpg" alt="Clara Mewes">
-          <div class="card__eyebrow">Wissenschaft</div>
-          <h3 class="card__title">Klimaneutralität im Realitätstest</h3>
-          <div class="card__person">Clara Mewes · Klimaforscherin, IKND</div>
-          <p class="card__lead">Deutschland hat seit 1990 49 % seiner Emissionen eingespart — über die Lücke zwischen Klimazielen und der Realität.</p>
-        </a>
-
-        <a href="/mmr-demo/interviews/2026-02-bagus.html" class="card card--with-image">
-          <img class="card__image" src="/mmr-demo/assets/images/interviews/2026-02-bagus.jpg" alt="Philipp Bagus">
-          <div class="lock-badge">Premium ab Anriss</div>
-          <div class="card__eyebrow">Ökonomie</div>
-          <h3 class="card__title">Weniger Staat, mehr Zukunft</h3>
-          <div class="card__person">Prof. Dr. Philipp Bagus · Ökonom</div>
-          <p class="card__lead">Über das Javier Milei Institut, Infantilisierung durch den paternalistischen Staat und konkrete Deregulierungs-Prioritäten.</p>
-        </a>
-
-        <a href="/mmr-demo/interviews/2025-02-gohl.html" class="card card--with-image">
-          <img class="card__image" src="/mmr-demo/assets/images/interviews/2025-02-gohl.jpg" alt="Landesbischof Gohl">
-          <div class="card__eyebrow">Kirche</div>
-          <h3 class="card__title">Kirche als Hilfe gegen die Illusion der Machbarkeit</h3>
-          <div class="card__person">Landesbischof Ernst-Wilhelm Gohl</div>
-          <p class="card__lead">Über die Versuchung, Verantwortung und Kontrolle zu verwechseln — und die Rolle der Kirche dazwischen.</p>
-        </a>
-
-      </div>
-
-      <p style="margin-top:var(--space-l)"><a href="/mmr-demo/archiv.html">Alle Interviews im Archiv →</a></p>
-    </div>
-  </section>
-
-  <!-- Themen-Cluster als Einladung in die Tiefe -->
-  <section class="section" style="border-top:1px solid var(--color-rule)">
-    <div class="container">
-      <h2 class="section__title">In der Tiefe weiterlesen</h2>
-      <p class="muted" style="max-width:680px;margin-bottom:var(--space-l)">Wir sammeln Gespräche zu zusammenhängenden Themen — so entstehen über die Zeit Bibliotheken, in denen Sie sich tiefer einlesen können.</p>
-      <div class="card-grid">
-
-        <a href="/mmr-demo/themen/energiewende.html" class="card">
-          <div class="card__eyebrow">Themen-Cluster</div>
-          <h3 class="card__title">Energiewende &amp; Transformation</h3>
-          <p class="card__lead">Klimaneutralität, erneuerbare Energien, Stromnetz — Wissenschaft und Realität zusammen gedacht. Mit Mewes-Interview und Energie-Kolumnen.</p>
-        </a>
-
-        <a href="/mmr-demo/themen/verantwortung.html" class="card">
-          <div class="card__eyebrow">Themen-Cluster</div>
-          <h3 class="card__title">Verantwortung, Staat &amp; Gesellschaft</h3>
-          <p class="card__lead">Bürokratie, Deregulierung, Werte, Reformen. Mit Bagus-Interview und Baustelle-Deutschland-Kolumnen.</p>
-        </a>
-
-        <a href="/mmr-demo/themen/" class="card">
-          <div class="card__eyebrow">Übersicht</div>
-          <h3 class="card__title">Alle Themen-Cluster</h3>
-          <p class="card__lead">Demografie · Migration · Klima · Kirche · Bildung · Innovation · Sinn — wachsen mit jedem neuen Interview.</p>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Markus' Rubriken (kompakt) + Patenschaft-Slot Demo -->
-  <section class="section" style="background:var(--color-bg-alt)">
-    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-l)">
+  <section class="hero">
+    <div class="wrap" style="display:grid;grid-template-columns:1.4fr 1fr;gap:var(--s-l);align-items:center">
       <div>
-        <div class="rubrik-block">
-          <div class="rubrik-block__label">Kolumnen · Markus Coenen</div>
-          <div class="rubrik-block__item"><a href="/mmr-demo/kolumnen/hashtag/">#HASHTAG — Kurze Reflexionen zur Zeit</a></div>
-          <div class="rubrik-block__item"><a href="/mmr-demo/kolumnen/im-rueckspiegel-energiewende/">Im Rückspiegel: Energiewende</a></div>
+        <span class="hero__tick"></span>
+        <div class="eyebrow">Neu im Magazin · Demografie</div>
+        <h1 class="hero__title"><a href="interviews/birg.html" style="color:inherit;border:none">Die demografische Krise als Mutter aller Krisen</a></h1>
+        <p class="hero__person">Prof. Dr. Herwig Birg · Demograf, em. Direktor IBS Uni Bielefeld</p>
+        <p class="hero__lead">Was trägt eine Gesellschaft, wenn die Pyramide kippt?</p>
+        <p style="margin-top:var(--s-m)"><a href="interviews/birg.html" class="btn">Das ganze Interview lesen</a></p>
+      </div>
+      <div class="duo" style="aspect-ratio:4/5">
+        <img src="assets/portraits/birg.jpg" alt="Prof. Dr. Herwig Birg">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2 class="section__title">Empfohlen</h2>
+      <div class="grid grid--two">
+
+        <a class="card card--featured" href="interviews/birg.html">
+          <div class="feat-img duo"><img src="assets/portraits/mewes.jpg" alt="Clara Mewes"></div>
+          <div class="feat-body">
+            <div class="feat-topic">Wissenschaft</div>
+            <blockquote class="feat-quote">„Wenn wir nur über den Untergang reden, sind wir wie Rehe im Lichtkegel."</blockquote>
+            <div class="feat-name">Clara Mewes</div>
+            <div class="feat-role">Klimaforscherin, IKND</div>
+            <span class="feat-read">Das ganze Interview lesen →</span>
+          </div>
+        </a>
+
+        <a class="card card--featured" href="interviews/birg.html">
+          <div class="feat-img duo"><img src="assets/portraits/gohl.jpg" alt="Landesbischof Gohl"></div>
+          <div class="feat-body">
+            <div class="feat-topic">Kirche</div>
+            <blockquote class="feat-quote">„Früher war ein Dachziegel ein Gottesurteil. Heute ist er ein Versicherungsfall."</blockquote>
+            <div class="feat-name">Landesbischof Ernst-Wilhelm Gohl</div>
+            <div class="feat-role">Evangelische Landeskirche Württemberg</div>
+            <span class="feat-read">Das ganze Interview lesen →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="cols-main">
+
+        <div>
+          <h2 class="section__title">Aktuelle Gespräche</h2>
+          <div class="cols-cards">
+
+            <a class="card" href="interviews/birg.html">
+              <div class="card__media duo"><img src="assets/portraits/bagus.jpg" alt="Philipp Bagus"></div>
+              <div class="card__eyebrow">Ökonomie</div>
+              <h3 class="card__title">Weniger Staat, mehr Zukunft</h3>
+              <div class="card__person">Prof. Dr. Philipp Bagus · Ökonom</div>
+              <p class="card__lead">Über die Infantilisierung durch den paternalistischen Staat, das Javier-Milei-Institut und konkrete Deregulierungs-Prioritäten für Deutschland.</p>
+            </a>
+
+            <a class="card" href="#">
+              <div class="card__media ph"><span>EN</span></div>
+              <div class="card__eyebrow">Friedenspolitik</div>
+              <h3 class="card__title">Versöhnung ist eine Entscheidung, kein Gefühl</h3>
+              <div class="card__person">Esther N. · Friedensforscherin</div>
+              <p class="card__lead">Was Ruanda dreißig Jahre nach dem Völkermord über Schuld, Vergebung und das mühsame Zusammenleben danach zu sagen hat.</p>
+            </a>
+
+            <a class="card" href="#">
+              <div class="card__media ph"><span>TR</span></div>
+              <div class="card__eyebrow">Medien</div>
+              <h3 class="card__title">Wenn die Aufregung zum Geschäftsmodell wird</h3>
+              <div class="card__person">Tobias R. · Medienforscher</div>
+              <p class="card__lead">Über Empörungsspiralen, die Aufmerksamkeitsökonomie und die Frage, was Journalismus jenseits der täglichen Aufregung noch zusammenhält.</p>
+            </a>
+
+            <a class="card" href="#">
+              <div class="card__media ph"><span>CV</span></div>
+              <div class="card__eyebrow">Bildung</div>
+              <h3 class="card__title">Was PISA misst, und was eigentlich zählt</h3>
+              <div class="card__person">Dr. Carla V. · Bildungsforscherin</div>
+              <p class="card__lead">Warum Bildungsdebatten an Testergebnissen hängen bleiben und welche Fähigkeiten in keiner PISA-Statistik je auftauchen.</p>
+            </a>
+
+          </div>
+          <p style="margin-top:var(--s-l)"><a href="archiv.html">Alle Gespräche im Archiv →</a></p>
+        </div>
+
+        <aside>
+          <h2 class="section__title">Kolumnen</h2>
+          <div class="kol-aside">
+            <div class="kol">
+
+              <a class="kol__item" href="#">
+                <div class="kol__rubrik">#HASHTAG</div>
+                <div class="kol__title">Baustelle Deutschland: Helm auf oder runter?</div>
+                <div class="kol__by">Markus Coenen</div>
+              </a>
+
+              <a class="kol__item" href="#">
+                <div class="kol__rubrik">Kolumne</div>
+                <div class="kol__title">Titel folgt</div>
+                <div class="kol__by">Veronika Wetzel</div>
+              </a>
+
+              <a class="kol__item" href="#">
+                <div class="kol__rubrik">Im Rückspiegel</div>
+                <div class="kol__title">Warum Deutschland eine Dauerbaustelle bleibt</div>
+                <div class="kol__by">Markus Coenen</div>
+              </a>
+
+            </div>
+            <p style="margin:var(--s-m) 0 0"><a href="#">Alle Kolumnen →</a></p>
+          </div>
+
+          <h2 class="section__title" style="margin-top:var(--s-l)">Rubriken</h2>
+          <div class="kol-aside">
+            <a class="rub__item" href="#">Wer liest denn LYRIK</a>
+            <a class="rub__item" href="#">FiftyFifty</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2 class="section__title">In der Tiefe weiterlesen</h2>
+      <p class="muted" style="max-width:60ch;margin-bottom:var(--s-l)">Wir sammeln Gespräche zu zusammenhängenden Themen. So entstehen über die Zeit Bibliotheken, in denen man sich tiefer einlesen kann.</p>
+      <div class="grid">
+        <div class="typo" style="aspect-ratio:16/9">
+          <div class="typo__thema">Themen-Cluster</div>
+          <p class="typo__quote">Energiewende &amp; Transformation</p>
+          <div class="typo__attr">Mewes-Interview und Energie-Kolumnen</div>
+        </div>
+        <div class="typo" style="aspect-ratio:16/9">
+          <div class="typo__thema">Themen-Cluster</div>
+          <p class="typo__quote">Verantwortung, Staat &amp; Gesellschaft</p>
+          <div class="typo__attr">Birg, Bagus und Baustelle-Deutschland</div>
+        </div>
+        <div class="typo" style="aspect-ratio:16/9">
+          <div class="typo__thema">Übersicht</div>
+          <p class="typo__quote">Alle Themen</p>
+          <div class="typo__attr">Demografie · Migration · Klima · Kirche</div>
         </div>
       </div>
-      <div>
-        <h3 style="margin-bottom:var(--space-s)">Was MMR ist</h3>
-        <p class="muted">Ein Raum für versachlichten Austausch. Lange Gespräche mit Menschen, die etwas zu sagen haben — Wissenschaftler, Theologen, Praktiker, Querdenker im besten Sinne. Keine Hektik, keine Beliebigkeit, kein Polit-Theater.</p>
-        <p><a href="/mmr-demo/ueber.html">Mehr über das Magazin →</a></p>
-      </div>
     </div>
   </section>
 
-  <!-- Premium-Hinweis -->
-  <section class="section">
-    <div class="content text-center">
-      <div class="card__eyebrow">Premium</div>
-      <h2>Vollzugang zu allen Interviews — werbefrei, ungekürzt, mit Audio.</h2>
-      <p class="muted" style="max-width:560px;margin:var(--space-s) auto var(--space-m)">Premium-Mitglieder lesen alle Interviews ungekürzt, hören die Audio-Versionen und bekommen frühen Zugang zu neuen Gesprächen. Mit jeder Mitgliedschaft tragen Sie das Magazin.</p>
-      <p style="display:flex;gap:var(--space-s);justify-content:center;flex-wrap:wrap">
-        <a class="btn" href="/mmr-demo/premium.html">Premium ab 5,90 €/Monat</a>
-        <a class="btn btn--ghost" href="/mmr-demo/so-funktioniert.html">Wie funktioniert das?</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- Newsletter -->
-  <section class="section" style="background:var(--color-bg-alt)">
-    <div class="content">
-      <div class="newsletter" style="margin:0;border:none;background:transparent;padding:0">
-        <h3>Der MMR-Newsletter</h3>
-        <p>Einmal alle zwei Wochen: das jüngste Interview, kurz eingeordnet, mit Empfehlung aus dem Archiv. Kein Spam, kein Marketing-Geblubber.</p>
-        <form action="#" method="post" onsubmit="event.preventDefault(); alert('Demo: Newsletter-Anmeldung wird nach Ralfs Zusage live gestellt.');">
-          <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required aria-label="E-Mail-Adresse">
-          <button type="submit" class="btn">Anmelden</button>
-        </form>
-        <p class="small muted" style="margin-top:var(--space-s)">Double-Opt-in. Jederzeit abbestellbar. Datenschutz nach DSGVO.</p>
-      </div>
+  <section class="section section--alt">
+    <div class="read" style="text-align:center">
+      <span class="marker">Newsletter</span>
+      <h2>Alle zwei Wochen: das jüngste Gespräch, kurz eingeordnet.</h2>
+      <p class="muted" style="max-width:56ch;margin:var(--s-s) auto var(--s-m)">Wer diese Woche bei „Mit Menschen reden" spricht, in einer kurzen Mail. Kein Spam, kein Marketing-Geblubber. Alle Gespräche bleiben frei lesbar.</p>
+      <form onsubmit="event.preventDefault(); alert('Demo: Die Newsletter-Anmeldung kommt mit dem echten Build.');" style="display:flex;gap:var(--s-s);justify-content:center;flex-wrap:wrap;max-width:520px;margin:0 auto">
+        <input type="email" required placeholder="Ihre E-Mail-Adresse" aria-label="E-Mail-Adresse" style="flex:1 1 240px;padding:.85rem 1rem;border:1px solid var(--rule);background:var(--bg);font-family:var(--font-sans);font-size:1rem;border-radius:3px">
+        <button class="btn" type="submit">Anmelden</button>
+      </form>
     </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="container site-footer__inner">
+  <div class="wrap site-footer__inner">
     <div>
-      <div class="site-footer__brand">mit<b style="font-weight:700">menschen</b>reden</div>
-      <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;max-width:340px">Magazin für den Perspektivenwechsel. Hochwertige Interviews mit Menschen, die etwas zu sagen haben.</p>
+      <div class="site-footer__brand">mit<b>menschen</b>reden</div>
+      <p style="color:rgba(255,255,255,.6);font-size:.9rem;max-width:38ch">Magazin für den Perspektivenwechsel. Lange, ehrliche Gespräche mit Menschen, die etwas zu sagen haben. Alle Gespräche frei lesbar.</p>
     </div>
     <div>
       <h4>Magazin</h4>
       <ul>
-        <li><a href="/mmr-demo/archiv.html">Interview-Archiv</a></li>
-        <li><a href="/mmr-demo/themen/">Themen-Cluster</a></li>
-        <li><a href="/mmr-demo/kolumnen/">Kolumnen</a></li>
-        <li><a href="/mmr-demo/live.html">Live-Interviews</a></li>
+        <li><a href="archiv.html">Archiv</a></li>
+        <li><a href="#">Themen</a></li>
+        <li><a href="#">Kolumnen</a></li>
+        <li><a href="#">Live</a></li>
       </ul>
     </div>
     <div>
       <h4>Mitmachen</h4>
       <ul>
-        <li><a href="/mmr-demo/portraits.html">Bewerbung Portrait</a></li>
-        <li><a href="/mmr-demo/sponsoren.html">Patenschaft werden</a></li>
-        <li><a href="/mmr-demo/premium.html">Premium-Mitglied</a></li>
-        <li><a href="/mmr-demo/newsletter.html">Newsletter</a></li>
+        <li><a href="#">Portrait</a></li>
+        <li><a href="#">Patenschaft</a></li>
+        <li><a href="#">Newsletter</a></li>
       </ul>
     </div>
     <div>
       <h4>Verlag</h4>
       <ul>
-        <li><a href="/mmr-demo/ueber.html">Über uns</a></li>
-        <li><a href="/mmr-demo/impressum.html">Impressum</a></li>
-        <li><a href="/mmr-demo/datenschutz.html">Datenschutz</a></li>
+        <li><a href="#">Über uns</a></li>
+        <li><a href="#">Impressum</a></li>
+        <li><a href="#">Datenschutz</a></li>
       </ul>
     </div>
   </div>
-  <div class="container site-footer__bottom">
+  <div class="wrap site-footer__bottom">
     <span>© Mit Menschen reden · Edition PJB · Ralf M. Ruthardt</span>
-    <span>ISSN 2944-0408 (Online)</span>
+    <span>Prototyp Neubau · CI-Grün #CAD909</span>
   </div>
 </footer>
 
 <script>
-document.querySelector('.nav-toggle')?.addEventListener('click', () => {
-  document.querySelector('.site-nav')?.classList.toggle('mobile-open');
-});
+  var t = document.querySelector('.nav-toggle'), n = document.querySelector('.nav');
+  t && t.addEventListener('click', function () {
+    var open = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
 </script>
 </body>
 </html>

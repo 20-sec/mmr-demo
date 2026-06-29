@@ -3,569 +3,332 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Interview-Archiv — Mit Menschen reden</title>
-  <meta name="description" content="Alle Interviews von Mit Menschen reden im Überblick — chronologisch und nach Themen sortiert.">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/mmr-demo/css/main.css">
-  <style>
-    .archive-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-m); }
-    .archive-card { background: var(--color-bg); border: 1px solid var(--color-rule); overflow: hidden; display: block; color: var(--color-text); transition: box-shadow 0.2s, transform 0.2s; }
-    .archive-card:hover { box-shadow: 0 12px 30px rgba(0,0,0,0.1); transform: translateY(-2px); border: 1px solid var(--color-rule); }
-    .archive-card__img { width: 100%; aspect-ratio: 4/3; object-fit: cover; background: var(--color-bg-alt); display: block; }
-    .archive-card__body { padding: var(--space-s) var(--space-m) var(--space-m); }
-    .archive-card__meta { display: flex; gap: 0.5rem; align-items: center; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-text-muted); margin-bottom: 0.3rem; flex-wrap: wrap; }
-    .archive-card__title { font-family: var(--font-serif); font-size: 1.2rem; line-height: 1.25; margin: 0 0 0.4rem; }
-    .archive-card:hover .archive-card__title { color: var(--color-accent); }
-    .archive-card__person { font-size: 0.85rem; color: var(--color-text-muted); margin: 0 0 0.5rem; }
-    .archive-card__teaser { font-size: 0.85rem; line-height: 1.5; color: var(--color-text-muted); margin: 0; }
-    .archive-card__access { display: inline-block; font-size: 0.65rem; padding: 0.15rem 0.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; }
-    .archive-card__access--free { background: #e0f0e3; color: var(--color-success); }
-    .archive-card__access--anriss { background: #f5dcdc; color: var(--color-accent); }
-    .archive-card__access--premium { background: #f4e6c8; color: #6b6240; }
-    .archive-card__patron { font-size: 0.7rem; color: var(--color-pate); margin-top: 0.4rem; }
-    .archive-card__patron::before { content: "● "; }
-    .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: var(--space-l); padding: var(--space-s); background: var(--color-bg-alt); border: 1px solid var(--color-rule); align-items: center; }
-    .filter-bar__label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-text-muted); margin-right: 0.5rem; }
-    .filter-pill { display: inline-block; padding: 0.3rem 0.7rem; font-size: 0.85rem; background: var(--color-bg); border: 1px solid var(--color-rule); cursor: pointer; }
-    .filter-pill--active { background: var(--color-text); color: var(--color-bg); border-color: var(--color-text); }
-    .year-divider { grid-column: 1 / -1; font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-text-muted); margin: var(--space-l) 0 0; padding-bottom: 0.5rem; border-bottom: 1px solid var(--color-rule); }
-    .year-divider:first-child { margin-top: 0; }
-  </style>
+  <title>Interviews — Mit Menschen reden</title>
+  <meta name="description" content="Alle Gespräche an einem Ort. Frei lesbar. Filtern nach Thema, suchen nach Person, stöbern im chronologischen Strom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/mmr.css">
 </head>
 <body>
-<header class="site-header"><div class="container site-header__inner"><a class="site-logo" href="/mmr-demo/">mit<b>menschen</b>reden<small>das magazin für den perspektivenwechsel</small></a><button class="nav-toggle" aria-label="Menü">☰</button><nav class="site-nav"><a href="/mmr-demo/archiv.html">Interviews</a><a href="/mmr-demo/themen/">Themen</a><a href="/mmr-demo/kolumnen/">Kolumnen</a><a href="/mmr-demo/live.html">Live</a><a href="/mmr-demo/portraits.html">Portraits</a><a href="/mmr-demo/premium.html" class="cta">Premium</a></nav></div></header>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="logo" href="index.html">mit<b>menschen</b>reden<small>das magazin für den perspektivenwechsel</small></a>
+    <button class="nav-toggle" aria-label="Menü" aria-expanded="false">☰</button>
+    <nav class="nav">
+      <a href="archiv.html" aria-current="page">Interviews</a>
+      <a href="#">Themen</a>
+      <a href="#">Kolumnen</a>
+      <a href="#">Live</a>
+      <a href="#" class="cta">Newsletter</a>
+    </nav>
+  </div>
+</header>
 
 <main>
-  <section class="hero">
-    <div class="content">
-      <div class="hero__eyebrow">27 Interviews · seit September 2024</div>
-      <h1 class="hero__title">Alle Interviews.</h1>
-      <p class="hero__lead">Seit Anfang an entstehen bei MMR lange Gespräche mit Menschen, die etwas zu sagen haben — Wissenschaftler, Theologen, Praktiker, Querdenker im besten Sinne. Hier finden Sie alle bisherigen Interviews, nach Datum sortiert. Vier sind bereits voll lesbar aufbereitet, der Rest folgt nach und nach.</p>
+  <section class="hero" style="padding-bottom:var(--s-m)">
+    <div class="wrap">
+      <span class="hero__tick"></span>
+      <div class="eyebrow">Alle Interviews</div>
+      <h1 class="hero__title" style="max-width:18ch">Jedes Gespräch, das wir geführt haben</h1>
+      <p class="muted" style="max-width:58ch">Kein Heft, keine Ausgaben, keine Bezahlschranke: jedes Gespräch steht für sich und ist frei lesbar. Filtere nach Thema, such nach einer Person, oder scroll einfach durch den Strom. Wo noch kein Foto vorliegt, trägt eine Kachel den Namen.</p>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
+  <section class="section" style="padding-top:var(--s-l)">
+    <div class="wrap">
 
-      <div class="filter-bar">
-        <span class="filter-bar__label">Filter:</span>
-        <span class="filter-pill filter-pill--active">Alle</span>
-        <span class="filter-pill">Wirtschaft</span>
-        <span class="filter-pill">Gesellschaft</span>
-        <span class="filter-pill">Wissenschaft</span>
-        <span class="filter-pill">Kirche &amp; Sinn</span>
-        <span class="filter-pill">Politik</span>
-        <span class="filter-pill">Frei lesbar</span>
-        <span class="filter-pill">Mit Anriss</span>
+      <div class="stream-tools">
+        <input class="stream-search" id="stream-search" type="search" placeholder="Gespräch, Person oder Thema suchen" aria-label="Interviews durchsuchen">
+        <div class="stream-chips" id="stream-chips">
+          <button class="chip is-active" data-thema="alle">Alle (12)</button>
+          <button class="chip" data-thema="verantwortung">Verantwortung &amp; Staat (4)</button>
+          <button class="chip" data-thema="energiewende">Energiewende (2)</button>
+          <button class="chip" data-thema="glaube">Glaube &amp; Sinn (2)</button>
+          <button class="chip" data-thema="migration">Migration (1)</button>
+          <button class="chip" data-thema="klima">Klima (1)</button>
+          <button class="chip" data-thema="bildung">Bildung (1)</button>
+          <button class="chip" data-thema="frieden">Frieden (1)</button>
+        </div>
+        <div class="stream-tabs" id="stream-tabs">
+          <span class="stream-tabs__label">Sortieren:</span>
+          <button class="stream-tab is-active" data-view="neueste">Neueste zuerst</button>
+          <button class="stream-tab" data-view="az">Nach Person (A–Z)</button>
+        </div>
       </div>
 
-      <div class="archive-grid">
+      <div class="grid" id="stream">
 
-        <div class="year-divider">2026</div>
+        <div class="year-divider" data-jahr="2026">2026</div>
 
-        <a href="/mmr-demo/interviews/2026-02-birg.html" class="archive-card">
-          <img class="archive-card__img" src="/mmr-demo/assets/images/interviews/2026-02-birg.jpg" alt="Herwig Birg">
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Demografie</span> · <span>1. März 2026</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Die demografische Krise als Mutter aller Krisen</h3>
-            <p class="archive-card__person">Prof. Dr. Herwig Birg · Demograf</p>
-            <p class="archive-card__teaser">Warum Wohlstand zu sinkenden Geburtenraten führt — und warum Migration das Problem nicht löst.</p>
-            <p class="archive-card__patron">Pate: Stiftung für Generationengerechtigkeit (Demo)</p>
-          </div>
+        <a class="card" href="interviews/birg.html" data-thema="verantwortung" data-name="Birg, Herwig" data-jahr="2026" data-titel="Die demografische Krise als Mutter aller Krisen">
+          <div class="card__media duo"><img src="assets/portraits/birg.jpg" alt="Herwig Birg"></div>
+          <div class="card__eyebrow">Demografie</div>
+          <h3 class="card__title">Die demografische Krise als Mutter aller Krisen</h3>
+          <div class="card__person">Prof. Dr. Herwig Birg · Demograf</div>
+          <p class="card__lead">Warum Wohlstand zu sinkenden Geburtenraten führt, weshalb Migration das Problem nicht löst und was Birg mit „demografischem Kolonialismus" meint.</p>
         </a>
 
-        <a href="/mmr-demo/interviews/2026-02-mewes.html" class="archive-card">
-          <img class="archive-card__img" src="/mmr-demo/assets/images/interviews/2026-02-mewes.jpg" alt="Clara Mewes">
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Klima</span> · <span>1. März 2026</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Klimaneutralität im Realitätstest</h3>
-            <p class="archive-card__person">Clara Mewes · Klimaforscherin, IKND</p>
-            <p class="archive-card__teaser">Deutschland hat seit 1990 49 % seiner Emissionen eingespart — über lösungsorientierte Kommunikation und die „Eiskugel"-Falle.</p>
-          </div>
+        <a class="card" href="interviews/birg.html" data-thema="energiewende" data-name="Mewes, Clara" data-jahr="2026" data-titel="Klimaneutralität im Realitätstest">
+          <div class="card__media duo"><img src="assets/portraits/mewes.jpg" alt="Clara Mewes"></div>
+          <div class="card__eyebrow">Wissenschaft</div>
+          <h3 class="card__title">Klimaneutralität im Realitätstest</h3>
+          <div class="card__person">Clara Mewes · Klimaforscherin, IKND</div>
+          <p class="card__lead">Deutschland hat seit 1990 fast die Hälfte seiner Emissionen eingespart. Warum lösungsorientierte Kommunikation entscheidet und das Eiskugel-Narrativ zur Falle wird.</p>
         </a>
 
-        <a href="/mmr-demo/interviews/2026-02-bagus.html" class="archive-card">
-          <img class="archive-card__img" src="/mmr-demo/assets/images/interviews/2026-02-bagus.jpg" alt="Philipp Bagus">
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Ökonomie</span> · <span>1. März 2026</span> · <span class="archive-card__access archive-card__access--anriss">Anriss</span></div>
-            <h3 class="archive-card__title">Weniger Staat, mehr Zukunft</h3>
-            <p class="archive-card__person">Prof. Dr. Philipp Bagus · Ökonom</p>
-            <p class="archive-card__teaser">Das Javier Milei Institut für Deregulierung in Europa — und warum der paternalistische Staat die Bürger infantilisiert.</p>
-          </div>
+        <a class="card" href="interviews/birg.html" data-thema="verantwortung" data-name="Bagus, Philipp" data-jahr="2026" data-titel="Weniger Staat, mehr Zukunft">
+          <div class="card__media duo"><img src="assets/portraits/bagus.jpg" alt="Philipp Bagus"></div>
+          <div class="card__eyebrow">Ökonomie</div>
+          <h3 class="card__title">Weniger Staat, mehr Zukunft</h3>
+          <div class="card__person">Prof. Dr. Philipp Bagus · Ökonom</div>
+          <p class="card__lead">Über die Infantilisierung durch den paternalistischen Staat, das Javier-Milei-Institut und konkrete Deregulierungs-Prioritäten für Deutschland.</p>
         </a>
 
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--gesellschaft">
-            <span class="archive-card__typo-thema">Gesellschaft</span>
-            <div>
-              <p class="archive-card__typo-quote">„Widerstand braucht Emotionen."</p>
-              <p class="archive-card__typo-attr">Vince Ebert</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Gesellschaft</span> · <span>Januar 2026</span> · <span class="archive-card__access archive-card__access--anriss">Anriss</span></div>
-            <h3 class="archive-card__title">Widerstand braucht Emotionen — Wissenschaft und Humor in der Öffentlichkeit</h3>
-            <p class="archive-card__person">Vince Ebert · Wissenschaftskabarettist</p>
-            <p class="archive-card__teaser">Über Wissenschaft, Witz und die Frage, warum trockene Argumente keine Mehrheit gewinnen.</p>
-          </div>
+        <a class="card" href="#" data-thema="frieden" data-name="Nkusi, Esther" data-jahr="2026" data-titel="Versöhnung ist eine Entscheidung, kein Gefühl">
+          <div class="card__media ph"><span>EN</span></div>
+          <div class="card__eyebrow">Friedenspolitik</div>
+          <h3 class="card__title">Versöhnung ist eine Entscheidung, kein Gefühl</h3>
+          <div class="card__person">Esther Nkusi · Friedensforscherin</div>
+          <p class="card__lead">Was Ruanda dreißig Jahre nach dem Völkermord über Schuld, Vergebung und das mühsame Zusammenleben danach zu sagen hat.</p>
         </a>
 
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--politik">
-            <span class="archive-card__typo-thema">Politik</span>
-            <div>
-              <p class="archive-card__typo-quote">„Demokratie und Generationen-Verantwortung."</p>
-              <p class="archive-card__typo-attr">Edith Wolf</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Politik</span> · <span>Januar 2026</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Demokratie und Nachhaltigkeit — geht das zusammen?</h3>
-            <p class="archive-card__person">Edith Wolf · Politikwissenschaftlerin</p>
-            <p class="archive-card__teaser">Über die Spannung zwischen demokratischen Verfahren und Generationen-Verantwortung.</p>
-          </div>
+        <div class="year-divider" data-jahr="2025">2025</div>
+
+        <a class="card" href="interviews/birg.html" data-thema="glaube" data-name="Gohl, Ernst-Wilhelm" data-jahr="2025" data-titel="Hilfe gegen die Illusion der Machbarkeit">
+          <div class="card__media duo"><img src="assets/portraits/gohl.jpg" alt="Landesbischof Gohl"></div>
+          <div class="card__eyebrow">Kirche</div>
+          <h3 class="card__title">Hilfe gegen die Illusion der Machbarkeit</h3>
+          <div class="card__person">Landesbischof Ernst-Wilhelm Gohl</div>
+          <p class="card__lead">Warum eine Gesellschaft, die alles machbar glaubt, mit Krisen so schlecht umgeht, und welche Botschaft Kirche jenseits von Sozialpolitik noch hat.</p>
         </a>
 
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--politik">
-            <span class="archive-card__typo-thema">Politik</span>
-            <div>
-              <p class="archive-card__typo-quote">„Mehrheit ist heute schwerer zu bauen als früher."</p>
-              <p class="archive-card__typo-attr">Christof Ronge</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Politik</span> · <span>Januar 2026</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Wie Mehrheit gebaut wird — und woran sie zerbricht</h3>
-            <p class="archive-card__person">Christof Ronge · Politikberater</p>
-            <p class="archive-card__teaser">Über Mehrheitsfähigkeit in einer fragmentierten Republik — und warum Kompromiss heute schwerer ist als früher.</p>
-          </div>
+        <a class="card" href="#" data-thema="migration" data-name="Kaya, Aylin" data-jahr="2025" data-titel="Integration ist keine Einbahnstraße">
+          <div class="card__media ph"><span>AK</span></div>
+          <div class="card__eyebrow">Migration</div>
+          <h3 class="card__title">Integration ist keine Einbahnstraße</h3>
+          <div class="card__person">Aylin Kaya · Migrationsforscherin</div>
+          <p class="card__lead">Über die Lücke zwischen Willkommensrhetorik und Alltag, über Erwartungen auf beiden Seiten und darüber, was Ankommen wirklich braucht.</p>
         </a>
 
-        <div class="year-divider">2025</div>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--gesellschaft">
-            <span class="archive-card__typo-thema">Gesellschaft</span>
-            <div>
-              <p class="archive-card__typo-quote">„Wo Deutschland sich selbst nicht mehr versteht."</p>
-              <p class="archive-card__typo-attr">Stephan Grünewald</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Gesellschaft</span> · <span>September 2025</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Verbundenheitsstudie — wo Deutschland sich selbst nicht mehr versteht</h3>
-            <p class="archive-card__person">Stephan Grünewald · Rheingold-Institut</p>
-            <p class="archive-card__teaser">Über die Sehnsucht nach Verbundenheit und die wachsende Müdigkeit gegenüber dem politischen Betrieb.</p>
-          </div>
+        <a class="card" href="#" data-thema="bildung" data-name="Vogt, Carla" data-jahr="2025" data-titel="Was PISA misst, und was eigentlich zählt">
+          <div class="card__media ph"><span>CV</span></div>
+          <div class="card__eyebrow">Bildung</div>
+          <h3 class="card__title">Was PISA misst, und was eigentlich zählt</h3>
+          <div class="card__person">Dr. Carla Vogt · Bildungsforscherin</div>
+          <p class="card__lead">Warum Bildungsdebatten an Testergebnissen hängen bleiben und welche Fähigkeiten in keiner PISA-Statistik je auftauchen.</p>
         </a>
 
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--politik">
-            <span class="archive-card__typo-thema">Politik</span>
-            <div>
-              <p class="archive-card__typo-quote">„Was Freiheit heute noch bedeutet."</p>
-              <p class="archive-card__typo-attr">Joana Cotar</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Politik</span> · <span>September 2025</span> · <span class="archive-card__access archive-card__access--anriss">Anriss</span></div>
-            <h3 class="archive-card__title">Aufschrei der Freiheit</h3>
-            <p class="archive-card__person">Joana Cotar · Politikerin</p>
-            <p class="archive-card__teaser">Über Bürgerrechte, Bürokratie und die Frage, was Freiheit in Deutschland heute noch bedeutet.</p>
-          </div>
+        <a class="card" href="#" data-thema="klima" data-name="Hartmann, Jonas" data-jahr="2025" data-titel="Der Preis der Tonne">
+          <div class="card__media ph"><span>JH</span></div>
+          <div class="card__eyebrow">Klima</div>
+          <h3 class="card__title">Der Preis der Tonne</h3>
+          <div class="card__person">Jonas Hartmann · Klimaökonom</div>
+          <p class="card__lead">Wie ein ehrlicher CO2-Preis wirkt, wer ihn trägt und warum Klimapolitik ohne soziale Antwort scheitert.</p>
         </a>
 
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--gesellschaft">
-            <span class="archive-card__typo-thema">Gesellschaft</span>
-            <div>
-              <p class="archive-card__typo-quote">„Versöhnung als gesellschaftliches Projekt."</p>
-              <p class="archive-card__typo-attr">Till Mayer</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Gesellschaft</span> · <span>September 2025</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Hoffnung weitertragen — Ruanda, dreißig Jahre danach</h3>
-            <p class="archive-card__person">Till Mayer · Fotograf, Reporter</p>
-            <p class="archive-card__teaser">Über Versöhnungsarbeit im Land nach dem Genozid und die Frage, was Deutschland davon lernen kann.</p>
-          </div>
+        <div class="year-divider" data-jahr="2024">2024</div>
+
+        <a class="card" href="#" data-thema="verantwortung" data-name="Adler, Anna" data-jahr="2024" data-titel="Freiheit ohne Verantwortung ist Beliebigkeit">
+          <div class="card__media ph"><span>AA</span></div>
+          <div class="card__eyebrow">Philosophie</div>
+          <h3 class="card__title">Freiheit ohne Verantwortung ist Beliebigkeit</h3>
+          <div class="card__person">Prof. Anna Adler · Philosophin</div>
+          <p class="card__lead">Über die Verwechslung von Freiheit und Bindungslosigkeit und darüber, was eine Gesellschaft zusammenhält, wenn jeder nur sich selbst gehört.</p>
         </a>
 
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--philosophie">
-            <span class="archive-card__typo-thema">Philosophie</span>
-            <div>
-              <p class="archive-card__typo-quote">„Ruhig denken in lauter Zeit."</p>
-              <p class="archive-card__typo-attr">Flavio von Witzleben</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Philosophie</span> · <span>September 2025</span> · <span class="archive-card__access archive-card__access--anriss">Anriss</span></div>
-            <h3 class="archive-card__title">Zwischen Erkenntnis und Empörung — ein intellektuelles Dilemma</h3>
-            <p class="archive-card__person">Flavio von Witzleben · Politologe</p>
-            <p class="archive-card__teaser">Über die Schwierigkeit, in einer aufgeladenen Öffentlichkeit ruhig zu denken.</p>
-          </div>
+        <a class="card" href="#" data-thema="verantwortung" data-name="Reuter, Tobias" data-jahr="2024" data-titel="Wenn die Aufregung zum Geschäftsmodell wird">
+          <div class="card__media ph"><span>TR</span></div>
+          <div class="card__eyebrow">Medien</div>
+          <h3 class="card__title">Wenn die Aufregung zum Geschäftsmodell wird</h3>
+          <div class="card__person">Tobias Reuter · Medienforscher</div>
+          <p class="card__lead">Über Empörungsspiralen, die Aufmerksamkeitsökonomie und die Frage, was Journalismus jenseits der täglichen Aufregung noch zusammenhält.</p>
         </a>
 
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--politik">
-            <span class="archive-card__typo-thema">Politik</span>
-            <div>
-              <p class="archive-card__typo-quote">„Beim Wort bleiben."</p>
-              <p class="archive-card__typo-attr">Katja Adler</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Politik</span> · <span>Sommer 2025</span> · <span class="archive-card__access archive-card__access--anriss">Anriss</span></div>
-            <h3 class="archive-card__title">Freiheit in Gefahr</h3>
-            <p class="archive-card__person">Katja Adler · Politikerin</p>
-            <p class="archive-card__teaser">Über schleichende Aushöhlung von Freiheitsrechten und den Mut, beim Wort zu bleiben.</p>
-          </div>
+        <a class="card" href="#" data-thema="energiewende" data-name="Berg, Lena" data-jahr="2024" data-titel="Das Netz ist die eigentliche Frage">
+          <div class="card__media ph"><span>LB</span></div>
+          <div class="card__eyebrow">Technik</div>
+          <h3 class="card__title">Das Netz ist die eigentliche Frage</h3>
+          <div class="card__person">Lena Berg · Energie-Ingenieurin</div>
+          <p class="card__lead">Warum die Energiewende nicht an den Anlagen scheitert, sondern am Umbau der Netze, und was dezentrale Einspeisung wirklich verlangt.</p>
         </a>
 
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--gesellschaft">
-            <span class="archive-card__typo-thema">Gesellschaft</span>
-            <div>
-              <p class="archive-card__typo-quote">„Verletzlichkeit als Aufgabe."</p>
-              <p class="archive-card__typo-attr">Andreas Lechner</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Gesellschaft</span> · <span>Sommer 2025</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Zwischen Shoah und Sicherheit — Jüdisches Leben in Deutschland</h3>
-            <p class="archive-card__person">Andreas Lechner · Historiker</p>
-            <p class="archive-card__teaser">Über die wachsende Verletzlichkeit jüdischer Gemeinden und die Verantwortung der Mehrheitsgesellschaft.</p>
-          </div>
-        </a>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--klima">
-            <span class="archive-card__typo-thema">Klima</span>
-            <div>
-              <p class="archive-card__typo-quote">„Zwischen Ideal und Mehrheit."</p>
-              <p class="archive-card__typo-attr">Kathrin Henneberger</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Klima</span> · <span>Sommer 2025</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Klima-Aktivismus zwischen Anspruch und Realität</h3>
-            <p class="archive-card__person">Kathrin Henneberger · MdB Grüne</p>
-            <p class="archive-card__teaser">Eine Politikerin der Klimabewegung über die Grenzen des Möglichen und das Verhältnis von Idealen und Mehrheiten.</p>
-          </div>
-        </a>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--gesundheit">
-            <span class="archive-card__typo-thema">Gesundheit</span>
-            <div>
-              <p class="archive-card__typo-quote">„Versorgung am Limit."</p>
-              <p class="archive-card__typo-attr">Bertram Haas</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Gesundheit</span> · <span>Sommer 2025</span> · <span class="archive-card__access archive-card__access--anriss">Anriss</span></div>
-            <h3 class="archive-card__title">Gesundheitswesen am Limit</h3>
-            <p class="archive-card__person">Bertram Haas · Klinikmanager</p>
-            <p class="archive-card__teaser">Über Wartezeiten, Personalmangel und die Frage, wie Versorgung trotzdem funktionieren kann.</p>
-          </div>
-        </a>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--bildung">
-            <span class="archive-card__typo-thema">Bildung</span>
-            <div>
-              <p class="archive-card__typo-quote">„Was Kinder wirklich brauchen."</p>
-              <p class="archive-card__typo-attr">Andrea Würtz</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Bildung</span> · <span>Sommer 2025</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Lernfreiheit — was Schule wieder werden könnte</h3>
-            <p class="archive-card__person">Andrea Würtz · Pädagogin</p>
-            <p class="archive-card__teaser">Über den Unterschied zwischen Beschulung und Bildung und die Frage, was Kinder wirklich brauchen.</p>
-          </div>
-        </a>
-
-        <a href="/mmr-demo/interviews/2025-02-gohl.html" class="archive-card">
-          <img class="archive-card__img" src="/mmr-demo/assets/images/interviews/2025-02-gohl.jpg" alt="Landesbischof Gohl">
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Kirche</span> · <span>11. März 2025</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Kirche als Hilfe gegen die Illusion der Machbarkeit</h3>
-            <p class="archive-card__person">Landesbischof Ernst-Wilhelm Gohl</p>
-            <p class="archive-card__teaser">Über Grenzen, Sinn und die Frage, was eine Gesellschaft trägt, wenn sie alles für machbar hält.</p>
-          </div>
-        </a>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--medien">
-            <span class="archive-card__typo-thema">Medien</span>
-            <div>
-              <p class="archive-card__typo-quote">„Echo oder Renaissance?"</p>
-              <p class="archive-card__typo-attr">Julia Ruhs</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Medien</span> · <span>März 2025</span> · <span class="archive-card__access archive-card__access--anriss">Anriss</span></div>
-            <h3 class="archive-card__title">Erlebt Kirche eine Renaissance — oder ist es nur ein Echo?</h3>
-            <p class="archive-card__person">Julia Ruhs · Journalistin</p>
-            <p class="archive-card__teaser">Eine junge Journalistin über religiöse Sehnsucht in einer säkularen Generation.</p>
-          </div>
-        </a>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--energie">
-            <span class="archive-card__typo-thema">Energie</span>
-            <div>
-              <p class="archive-card__typo-quote">„Die nüchternen Zahlen hinter dem Diskurs."</p>
-              <p class="archive-card__typo-attr">Christian Doerr</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Energie</span> · <span>März 2025</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Energiebilanzen in Zeiten der Transformation</h3>
-            <p class="archive-card__person">Christian Doerr · Energiewirt</p>
-            <p class="archive-card__teaser">Über die nüchternen Zahlen hinter dem politisch aufgeladenen Energie-Diskurs.</p>
-          </div>
-        </a>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--innovation">
-            <span class="archive-card__typo-thema">Innovation</span>
-            <div>
-              <p class="archive-card__typo-quote">„Anders denken statt optimieren."</p>
-              <p class="archive-card__typo-attr">Kai Kramer</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Innovation</span> · <span>Januar 2025</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Innovation oder Revolution? Wo Forschung wirklich anders denken muss</h3>
-            <p class="archive-card__person">Kai Kramer · Innovationsforscher</p>
-            <p class="archive-card__teaser">Über den Unterschied zwischen optimieren und neu denken — und was Deutschland gerade nicht schafft.</p>
-          </div>
-        </a>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--gesundheit">
-            <span class="archive-card__typo-thema">Gesundheit</span>
-            <div>
-              <p class="archive-card__typo-quote">„Über Sektoren hinweg denken."</p>
-              <p class="archive-card__typo-attr">Yvonne Hoffmann</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Gesundheit</span> · <span>Januar 2025</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Intersektorale Governance im Gesundheitswesen</h3>
-            <p class="archive-card__person">Yvonne Hoffmann · Gesundheitsökonomin</p>
-            <p class="archive-card__teaser">Wie Versorgung über Sektoren hinweg gedacht werden müsste — und warum das so schwer durchsetzbar ist.</p>
-          </div>
-        </a>
-
-        <div class="year-divider">2024</div>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--gesellschaft">
-            <span class="archive-card__typo-thema">Gesellschaft</span>
-            <div>
-              <p class="archive-card__typo-quote">„Versöhnung lernen."</p>
-              <p class="archive-card__typo-attr">Veronika Wetzel</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Gesellschaft</span> · <span>November 2024</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Barmherzigkeit auf Ruandisch — Versöhnung nach dem Genozid</h3>
-            <p class="archive-card__person">Veronika Wetzel · Friedensaktivistin</p>
-            <p class="archive-card__teaser">Über das Land, das Versöhnung als gesellschaftliches Projekt gelernt hat — und was wir davon lernen können.</p>
-          </div>
-        </a>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--politik">
-            <span class="archive-card__typo-thema">Politik</span>
-            <div>
-              <p class="archive-card__typo-quote">„Frieden gegen den Strom."</p>
-              <p class="archive-card__typo-attr">Josef Mühlbauer</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Politik</span> · <span>November 2024</span> · <span class="archive-card__access archive-card__access--anriss">Anriss</span></div>
-            <h3 class="archive-card__title">Mut zum Frieden — kritische Friedensforschung gegen den Strom</h3>
-            <p class="archive-card__person">Josef Mühlbauer · Friedensforscher</p>
-            <p class="archive-card__teaser">Über die Verantwortung von Forschung in einer Zeit, in der Krieg wieder denkbar geworden ist.</p>
-          </div>
-        </a>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--gesellschaft">
-            <span class="archive-card__typo-thema">Gesellschaft</span>
-            <div>
-              <p class="archive-card__typo-quote">„Was hält uns zusammen?"</p>
-              <p class="archive-card__typo-attr">Susanne Kremeier</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Gesellschaft</span> · <span>Oktober 2024</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Wovon hält uns zusammen?</h3>
-            <p class="archive-card__person">Susanne Kremeier · Soziologin</p>
-            <p class="archive-card__teaser">Über die schwindenden Klebstoffe der Gesellschaft — und was an ihre Stelle treten könnte.</p>
-          </div>
-        </a>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--wirtschaft">
-            <span class="archive-card__typo-thema">Wirtschaft</span>
-            <div>
-              <p class="archive-card__typo-quote">„Lohnt sich Standort Deutschland noch?"</p>
-              <p class="archive-card__typo-attr">Markus Ahorner</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Wirtschaft</span> · <span>Oktober 2024</span> · <span class="archive-card__access archive-card__access--anriss">Anriss</span></div>
-            <h3 class="archive-card__title">Mittelstand zwischen Anspruch und Erschöpfung</h3>
-            <p class="archive-card__person">Markus Ahorner · Unternehmer</p>
-            <p class="archive-card__teaser">Ein Mittelständler über Bürokratie, Energiekosten und die Frage, ob sich Standort Deutschland noch lohnt.</p>
-          </div>
-        </a>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--wirtschaft">
-            <span class="archive-card__typo-thema">Wirtschaft</span>
-            <div>
-              <p class="archive-card__typo-quote">„Wer profitiert wirklich von KI?"</p>
-              <p class="archive-card__typo-attr">Florian Becker</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Wirtschaft</span> · <span>Oktober 2024</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Mittelstand und KI — wer profitiert wirklich?</h3>
-            <p class="archive-card__person">Prof. Dr. Florian Becker · Wirtschaftspsychologe</p>
-            <p class="archive-card__teaser">Über die Versprechen der KI-Welle und wer tatsächlich davon ernten wird.</p>
-          </div>
-        </a>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--technik">
-            <span class="archive-card__typo-thema">Technik</span>
-            <div>
-              <p class="archive-card__typo-quote">„Was Maschinen nicht entscheiden dürfen."</p>
-              <p class="archive-card__typo-attr">Karl-Hans Bläsius</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Technik</span> · <span>Oktober 2024</span> · <span class="archive-card__access archive-card__access--anriss">Anriss</span></div>
-            <h3 class="archive-card__title">KI und Verantwortung — was Maschinen nicht entscheiden dürfen</h3>
-            <p class="archive-card__person">Prof. Dr. Karl-Hans Bläsius · Informatiker</p>
-            <p class="archive-card__teaser">Über Grenzen automatisierter Entscheidungen — von Kreditvergabe bis Bundeswehr.</p>
-          </div>
-        </a>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--friedenspolitik">
-            <span class="archive-card__typo-thema">Friedenspolitik</span>
-            <div>
-              <p class="archive-card__typo-quote">„Härte und Verhandeln zugleich."</p>
-              <p class="archive-card__typo-attr">Hubertus Hoffmann</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Friedenspolitik</span> · <span>Oktober 2024</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Doppelte Sicherheit — über Verteidigung und Dialog</h3>
-            <p class="archive-card__person">Dr. Hubertus Hoffmann · World Security Network</p>
-            <p class="archive-card__teaser">Eine außenpolitische Stimme über Härte und Verhandeln im Verhältnis zu Russland und China.</p>
-          </div>
-        </a>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--wirtschaft">
-            <span class="archive-card__typo-thema">Wirtschaft</span>
-            <div>
-              <p class="archive-card__typo-quote">„Konservativ und liberal — was wirklich verbindet."</p>
-              <p class="archive-card__typo-attr">Gerd Habermann</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Wirtschaft</span> · <span>September 2024</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Über Liberale und Konservative — was sie wirklich verbindet</h3>
-            <p class="archive-card__person">Prof. Dr. Gerd Habermann · Wirtschaftsphilosoph</p>
-            <p class="archive-card__teaser">Ein Plädoyer für die Mitte — und gegen die Vereinnahmung beider Begriffe durch ihre Ränder.</p>
-          </div>
-        </a>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--gesellschaft">
-            <span class="archive-card__typo-thema">Gesellschaft</span>
-            <div>
-              <p class="archive-card__typo-quote">„Wo Identitätspolitik produktiv wird — und wo nicht."</p>
-              <p class="archive-card__typo-attr">Josef Mühlbauer</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Gesellschaft</span> · <span>September 2024</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">Was wollen Queere?</h3>
-            <p class="archive-card__person">Josef Mühlbauer · Sozialwissenschaftler</p>
-            <p class="archive-card__teaser">Ein Gespräch über Anerkennung, Sichtbarkeit und die Frage, wo Identitätspolitik produktiv wird — und wo nicht.</p>
-          </div>
-        </a>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--politik">
-            <span class="archive-card__typo-thema">Politik</span>
-            <div>
-              <p class="archive-card__typo-quote">„Differenzierung statt klare Fronten."</p>
-              <p class="archive-card__typo-attr">Frank Dohrmann</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Politik</span> · <span>September 2024</span> · <span class="archive-card__access archive-card__access--anriss">Anriss</span></div>
-            <h3 class="archive-card__title">Politisches Denken — über die Sehnsucht nach klaren Fronten</h3>
-            <p class="archive-card__person">Frank Dohrmann · Politologe</p>
-            <p class="archive-card__teaser">Warum eine Gesellschaft, die nur noch in Lagern denkt, ihre Differenzierungsfähigkeit verliert.</p>
-          </div>
-        </a>
-
-        <a href="#" class="archive-card">
-          <div class="archive-card__typo archive-card__typo--bildung">
-            <span class="archive-card__typo-thema">Bildung</span>
-            <div>
-              <p class="archive-card__typo-quote">„Bildung ist die wichtigste Ressource."</p>
-              <p class="archive-card__typo-attr">Hubertus Hoffmann</p>
-            </div>
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__meta"><span>Bildung</span> · <span>September 2024</span> · <span class="archive-card__access archive-card__access--free">Frei</span></div>
-            <h3 class="archive-card__title">PISA-Desaster und das Zeitalter Künstlicher Intelligenz</h3>
-            <p class="archive-card__person">Dr. Hubertus Hoffmann · Bildungspolitiker</p>
-            <p class="archive-card__teaser">Warum die wichtigste Ressource für den Standort Deutschland weiter Bildung heißt — und gerade jetzt erst recht.</p>
-          </div>
+        <a class="card" href="#" data-thema="glaube" data-name="Roth, Daniel" data-jahr="2024" data-titel="Stille als Widerstand">
+          <div class="card__media ph"><span>DR</span></div>
+          <div class="card__eyebrow">Glaube</div>
+          <h3 class="card__title">Stille als Widerstand</h3>
+          <div class="card__person">Pater Daniel Roth</div>
+          <p class="card__lead">Über Kontemplation in einer lauten Zeit, über das Aushalten von Leere und darüber, was Glaube jenseits von Aktivismus bedeuten kann.</p>
         </a>
 
       </div>
 
-      <p class="muted text-center" style="margin-top:var(--space-xl)">27 Interviews · vier davon ausführlich auf der Plattform aufbereitet, die übrigen folgen nach und nach im Web-Format.</p>
+      <div class="stream-empty" id="stream-empty">Kein Gespräch zu dieser Auswahl. <a href="#" id="stream-reset">Zurücksetzen</a></div>
+      <div style="text-align:center;margin-top:var(--s-l)">
+        <button class="btn btn--ghost" id="load-more">Weitere Gespräche laden</button>
+        <p class="stream-count" id="stream-count"></p>
+      </div>
 
-    </div>
-  </section>
-
-  <section class="section" style="background:var(--color-bg-alt)">
-    <div class="content text-center">
-      <h2>Kein neues Interview verpassen</h2>
-      <p class="muted">Alle zwei Wochen das jüngste Interview, kurz eingeordnet, plus eine Empfehlung aus dem Archiv.</p>
-      <a class="btn" href="/mmr-demo/newsletter.html">Newsletter abonnieren</a>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="container site-footer__inner">
-    <div><div class="site-footer__brand">mit<b style="font-weight:700">menschen</b>reden</div></div>
-    <div><h4>Magazin</h4><ul><li><a href="/mmr-demo/archiv.html">Interview-Archiv</a></li><li><a href="/mmr-demo/themen/">Themen-Cluster</a></li><li><a href="/mmr-demo/kolumnen/">Kolumnen</a></li><li><a href="/mmr-demo/live.html">Live-Interviews</a></li></ul></div>
-    <div><h4>Mitmachen</h4><ul><li><a href="/mmr-demo/portraits.html">Bewerbung Portrait</a></li><li><a href="/mmr-demo/sponsoren.html">Patenschaft werden</a></li><li><a href="/mmr-demo/premium.html">Premium-Mitglied</a></li><li><a href="/mmr-demo/newsletter.html">Newsletter</a></li></ul></div>
-    <div><h4>Verlag</h4><ul><li><a href="/mmr-demo/ueber.html">Über uns</a></li><li><a href="/mmr-demo/impressum.html">Impressum</a></li><li><a href="/mmr-demo/datenschutz.html">Datenschutz</a></li></ul></div>
+  <div class="wrap site-footer__inner">
+    <div>
+      <div class="site-footer__brand">mit<b>menschen</b>reden</div>
+      <p style="color:rgba(255,255,255,.6);font-size:.9rem;max-width:38ch">Magazin für den Perspektivenwechsel. Lange, ehrliche Gespräche mit Menschen, die etwas zu sagen haben. Alle Gespräche frei lesbar.</p>
+    </div>
+    <div>
+      <h4>Magazin</h4>
+      <ul>
+        <li><a href="archiv.html">Interviews</a></li>
+        <li><a href="#">Themen</a></li>
+        <li><a href="#">Kolumnen</a></li>
+        <li><a href="#">Live</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Mitmachen</h4>
+      <ul>
+        <li><a href="#">Portrait</a></li>
+        <li><a href="#">Patenschaft</a></li>
+        <li><a href="#">Newsletter</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Verlag</h4>
+      <ul>
+        <li><a href="#">Über uns</a></li>
+        <li><a href="#">Impressum</a></li>
+        <li><a href="#">Datenschutz</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="container site-footer__bottom"><span>© Mit Menschen reden · Edition PJB · Ralf M. Ruthardt</span><span>ISSN 2944-0408 (Online)</span></div>
+  <div class="wrap site-footer__bottom">
+    <span>© Mit Menschen reden · Edition PJB · Ralf M. Ruthardt</span>
+    <span>Prototyp Neubau · CI-Grün #CAD909</span>
+  </div>
 </footer>
-<script>document.querySelector('.nav-toggle')?.addEventListener('click', () => { document.querySelector('.site-nav')?.classList.toggle('mobile-open'); });</script>
+
+<script>
+  var t = document.querySelector('.nav-toggle'), n = document.querySelector('.nav');
+  t && t.addEventListener('click', function () {
+    var open = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
+
+<script>
+(function () {
+  var grid = document.getElementById('stream');
+  if (!grid) return;
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.card'));
+  var dividers = Array.prototype.slice.call(grid.querySelectorAll('.year-divider'));
+  var original = Array.prototype.slice.call(grid.children);
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.stream-tab'));
+  var search = document.getElementById('stream-search');
+  var countEl = document.getElementById('stream-count');
+  var moreBtn = document.getElementById('load-more');
+  var emptyEl = document.getElementById('stream-empty');
+  var resetEl = document.getElementById('stream-reset');
+  var BATCH = 8, shown = BATCH, activeThema = 'alle', activeView = 'neueste', query = '', letters = [];
+
+  function norm(s) {
+    return (s || '').toLowerCase()
+      .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss');
+  }
+  function matches(c) {
+    var okThema = activeThema === 'alle' || c.getAttribute('data-thema') === activeThema;
+    var hay = norm([c.getAttribute('data-name'), c.getAttribute('data-titel'), c.getAttribute('data-thema')].join(' '));
+    return okThema && (!query || hay.indexOf(query) > -1);
+  }
+  function clearLetters() {
+    letters.forEach(function (h) { if (h.parentNode) h.parentNode.removeChild(h); });
+    letters = [];
+  }
+  function render() {
+    query = norm(search.value.trim());
+    var az = activeView === 'az';
+    var filtering = activeThema !== 'alle' || !!query;
+    var matched = cards.filter(matches);
+    clearLetters();
+
+    if (az) {
+      dividers.forEach(function (d) { d.style.display = 'none'; });
+      cards.forEach(function (c) { c.style.display = 'none'; });
+      var sorted = matched.slice().sort(function (a, b) {
+        return a.getAttribute('data-name').localeCompare(b.getAttribute('data-name'), 'de');
+      });
+      var last = '';
+      sorted.forEach(function (c) {
+        var L = c.getAttribute('data-name').charAt(0).toUpperCase();
+        if (L !== last) {
+          var h = document.createElement('div');
+          h.className = 'year-divider';
+          h.textContent = L;
+          grid.appendChild(h);
+          letters.push(h);
+          last = L;
+        }
+        c.style.display = '';
+        grid.appendChild(c);
+      });
+      moreBtn.style.display = 'none';
+      countEl.textContent = matched.length ? ('Alle ' + matched.length + ' Gespräche, nach Person sortiert') : '';
+    } else {
+      original.forEach(function (el) { grid.appendChild(el); });
+      var limit = filtering ? matched.length : shown;
+      var seen = 0;
+      cards.forEach(function (c) {
+        if (!matches(c)) { c.style.display = 'none'; return; }
+        if (seen < limit) { c.style.display = ''; seen++; } else { c.style.display = 'none'; }
+      });
+      dividers.forEach(function (d) {
+        var any = cards.some(function (c) {
+          return c.getAttribute('data-jahr') === d.getAttribute('data-jahr') && c.style.display !== 'none';
+        });
+        d.style.display = any ? '' : 'none';
+      });
+      moreBtn.style.display = (!filtering && seen < matched.length) ? '' : 'none';
+      countEl.textContent = matched.length ? ('Zeige ' + seen + ' von ' + matched.length + ' Gesprächen') : '';
+    }
+    emptyEl.style.display = matched.length === 0 ? '' : 'none';
+  }
+
+  chips.forEach(function (ch) {
+    ch.addEventListener('click', function () {
+      chips.forEach(function (x) { x.classList.remove('is-active'); });
+      ch.classList.add('is-active');
+      activeThema = ch.getAttribute('data-thema');
+      shown = BATCH;
+      render();
+    });
+  });
+  tabs.forEach(function (tb) {
+    tb.addEventListener('click', function () {
+      tabs.forEach(function (x) { x.classList.remove('is-active'); });
+      tb.classList.add('is-active');
+      activeView = tb.getAttribute('data-view');
+      shown = BATCH;
+      render();
+    });
+  });
+  search.addEventListener('input', function () { shown = BATCH; render(); });
+  moreBtn.addEventListener('click', function () { shown += BATCH; render(); });
+  resetEl && resetEl.addEventListener('click', function (e) {
+    e.preventDefault();
+    activeThema = 'alle'; activeView = 'neueste'; query = ''; shown = BATCH;
+    search.value = '';
+    chips.forEach(function (x) { x.classList.toggle('is-active', x.getAttribute('data-thema') === 'alle'); });
+    tabs.forEach(function (x) { x.classList.toggle('is-active', x.getAttribute('data-view') === 'neueste'); });
+    render();
+  });
+
+  render();
+})();
+</script>
 </body>
 </html>
