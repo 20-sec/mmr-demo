@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kolumnen — Mit Menschen reden</title>
+  <meta name="description" content="Die Rubriken von Markus Coenen und Veronika Wetzel. Frei lesbar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/mmr.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="logo" href="../index.html">mit<b>menschen</b>reden<small>das magazin für den perspektivenwechsel</small></a>
+    <button class="nav-toggle" aria-label="Menü" aria-expanded="false">☰</button>
+    <nav class="nav">
+      <a href="../archiv.html">Interviews</a>
+      <a href="#">Themen</a>
+      <a href="index.html" aria-current="page">Kolumnen</a>
+      <a href="../rubriken.html">Rubriken</a>
+      <a href="#">Live</a>
+      <a href="#" class="cta">Newsletter</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:var(--s-m)">
+    <div class="wrap">
+      <span class="hero__tick"></span>
+      <div class="eyebrow">Kolumnen</div>
+      <h1 class="hero__title" style="max-width:18ch">Stimmen, die wiederkehren</h1>
+      <p class="muted" style="max-width:58ch">Neben den Gesprächen gibt es feste Stimmen mit eigenen Rubriken. Wähle eine Rubrik, dann siehst du alle Beiträge darin. Alle frei lesbar.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:var(--s-l)">
+    <div class="wrap">
+      <div class="author" style="border-top:none">
+        <div class="author__avatar">MC</div>
+        <div>
+          <div class="author__name">Markus Coenen</div>
+          <div class="author__role">Kolumnist · zwei Rubriken</div>
+        </div>
+      </div>
+
+      <div class="grid grid--two" style="margin-top:var(--s-l)">
+        <a class="rubric-card" href="im-rueckspiegel.html">
+          <div class="rubric-card__label">Im Rückspiegel</div>
+          <p class="rubric-card__desc">Persönliche Essays. Ein Blick zurück auf eine Entwicklung, und die Frage, was sie mit uns macht. Ruhig, nachdenklich, mit Haltung.</p>
+          <div class="rubric-card__meta">2 Beiträge · zur Übersicht →</div>
+        </a>
+
+        <a class="rubric-card" href="hashtag.html">
+          <div class="rubric-card__label">#HASHTAG</div>
+          <p class="rubric-card__desc">Ein Thema, drei Hashtags. Eine optimistische, eine fragende und eine kritische Stimme nebeneinander. Schnell, scharf, teilbar.</p>
+          <div class="rubric-card__meta">2 Beiträge · zur Übersicht →</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="author" style="border-top:none">
+        <div class="author__avatar">VW</div>
+        <div>
+          <div class="author__name">Veronika Wetzel</div>
+          <div class="author__role">Kolumnistin · neue Stimme</div>
+        </div>
+      </div>
+      <div class="grid grid--two" style="margin-top:var(--s-l)">
+        <div class="rubric-card">
+          <div class="rubric-card__label">In Vorbereitung</div>
+          <p class="rubric-card__desc">Veronika Wetzel kommt als zweite feste Stimme dazu. Ihre erste Rubrik folgt.</p>
+          <div class="rubric-card__meta">bald</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div>
+      <div class="site-footer__brand">mit<b>menschen</b>reden</div>
+      <p style="color:rgba(255,255,255,.6);font-size:.9rem;max-width:38ch">Magazin für den Perspektivenwechsel. Lange, ehrliche Gespräche mit Menschen, die etwas zu sagen haben. Alle Gespräche frei lesbar.</p>
+    </div>
+    <div>
+      <h4>Magazin</h4>
+      <ul>
+        <li><a href="../archiv.html">Interviews</a></li>
+        <li><a href="#">Themen</a></li>
+        <li><a href="index.html">Kolumnen</a></li>
+        <li><a href="../rubriken.html">Rubriken</a></li>
+        <li><a href="#">Live</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Mitmachen</h4>
+      <ul>
+        <li><a href="#">Portrait</a></li>
+        <li><a href="#">Patenschaft</a></li>
+        <li><a href="#">Newsletter</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Verlag</h4>
+      <ul>
+        <li><a href="#">Über uns</a></li>
+        <li><a href="#">Impressum</a></li>
+        <li><a href="#">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap site-footer__bottom">
+    <span>© Mit Menschen reden · Edition PJB · Ralf M. Ruthardt</span>
+    <span>Prototyp Neubau · CI-Grün #CAD909</span>
+  </div>
+</footer>
+
+<script>
+  var t = document.querySelector('.nav-toggle'), n = document.querySelector('.nav');
+  t && t.addEventListener('click', function () {
+    var open = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
+</body>
+</html>

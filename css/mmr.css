@@ -213,6 +213,40 @@ blockquote { font-family: var(--font-display); font-style: italic; font-size: 1.
 .author__name { font-weight: 600; }
 .author__role { font-size: .85rem; color: var(--muted); }
 
+/* #HASHTAG-Kolumne: ein Block je Hashtag */
+.hblock { border-top: 2px solid var(--gruen-signal); padding-top: var(--s-m); margin: var(--s-l) 0; }
+.hblock__tag { font-family: var(--font-display); color: var(--gruen-tief); font-size: clamp(1.45rem, 3vw, 2rem); line-height: 1.2; margin-bottom: var(--s-m); }
+.htags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: var(--s-m); }
+.htag { font-family: var(--font-sans); font-size: .8rem; font-weight: 500; color: var(--gruen-tief); background: var(--bg-alt); padding: .25rem .7rem; border-radius: 999px; }
+
+/* Kolumne: Sprung-Inhaltsverzeichnis zu den Punkten */
+.toc { background: var(--bg-alt); border-left: 3px solid var(--gruen-signal); padding: var(--s-m); margin: 0 0 var(--s-l); }
+.toc__label { font-family: var(--font-sans); font-size: .72rem; text-transform: uppercase; letter-spacing: .18em; color: var(--gruen-tief); font-weight: 600; margin-bottom: .6rem; }
+.toc ol { margin: 0; padding-left: 1.3rem; }
+.toc li { margin-bottom: .35rem; }
+.toc a { color: var(--text); }
+.toc a:hover { color: var(--gruen-tief); }
+
+/* Kolumnen-Übersicht: Einträge untereinander mit Punkte-Vorschau */
+.kol-entry { border-top: 1px solid var(--rule); padding: var(--s-l) 0; max-width: 760px; }
+.kol-entry:first-of-type { border-top: none; padding-top: var(--s-m); }
+.kol-entry__rubrik { font-size: .72rem; text-transform: uppercase; letter-spacing: .18em; color: var(--gruen-tief); font-weight: 600; margin-bottom: .5rem; }
+.kol-entry__title { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.2; margin-bottom: .5rem; }
+.kol-entry__title a { color: var(--text); border: none; }
+.kol-entry__title a:hover { color: var(--gruen-tief); }
+.kol-entry__lead { color: var(--muted); margin-bottom: var(--s-s); max-width: 64ch; }
+.kol-points { margin: .4rem 0 0; padding-left: 1.4rem; font-size: .95rem; }
+.kol-points li { margin-bottom: .3rem; }
+.kol-points a { color: var(--gruen-tief); }
+
+/* Kolumnen-Landing: Rubrik-Karten */
+.rubric-card { display: block; background: var(--bg-alt); border-radius: 12px; padding: var(--s-m); color: var(--text); border: none; }
+.rubric-card:hover { background: #efeade; border: none; }
+.rubric-card__label { font-family: var(--font-display); font-size: 1.6rem; line-height: 1.2; margin-bottom: .5rem; color: var(--text); transition: color .2s; }
+.rubric-card:hover .rubric-card__label { color: var(--gruen-tief); }
+.rubric-card__desc { color: var(--muted); margin-bottom: var(--s-s); }
+.rubric-card__meta { font-size: .85rem; color: var(--gruen-tief); font-weight: 600; }
+
 /* Patenschaft-Banner */
 .patron { background: var(--bg-alt); border-left: 4px solid var(--pate); padding: var(--s-s) var(--s-m); margin: var(--s-m) 0; font-size: .92rem; }
 .patron__label { text-transform: uppercase; font-size: .68rem; letter-spacing: .18em; color: var(--pate); font-weight: 700; display: block; margin-bottom: .2rem; }
