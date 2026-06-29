@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Interviews — Mit Menschen reden</title>
-  <meta name="description" content="Alle Gespräche an einem Ort. Frei lesbar. Filtern nach Thema, suchen nach Person, stöbern im chronologischen Strom.">
+  <meta name="description" content="Alle Gespräche an einem Ort. Frei lesbar.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -33,144 +33,24 @@
       <span class="hero__tick"></span>
       <div class="eyebrow">Alle Interviews</div>
       <h1 class="hero__title" style="max-width:18ch">Jedes Gespräch, das wir geführt haben</h1>
-      <p class="muted" style="max-width:58ch">Kein Heft, keine Ausgaben, keine Bezahlschranke: jedes Gespräch steht für sich und ist frei lesbar. Filtere nach Thema, such nach einer Person, oder scroll einfach durch den Strom. Wo noch kein Foto vorliegt, trägt eine Kachel den Namen.</p>
+      <p class="muted" style="max-width:58ch">Kein Heft, keine Bezahlschranke: jedes Gespräch steht für sich und ist frei lesbar. Wir lösen das Magazin Ausgabe für Ausgabe auf, die Übersicht wächst mit jedem Gespräch.</p>
     </div>
   </section>
 
   <section class="section" style="padding-top:var(--s-l)">
     <div class="wrap">
+      <div class="grid">
 
-      <div class="stream-tools">
-        <input class="stream-search" id="stream-search" type="search" placeholder="Gespräch, Person oder Thema suchen" aria-label="Interviews durchsuchen">
-        <div class="stream-chips" id="stream-chips">
-          <button class="chip is-active" data-thema="alle">Alle (12)</button>
-          <button class="chip" data-thema="verantwortung">Verantwortung &amp; Staat (4)</button>
-          <button class="chip" data-thema="energiewende">Energiewende (2)</button>
-          <button class="chip" data-thema="glaube">Glaube &amp; Sinn (2)</button>
-          <button class="chip" data-thema="migration">Migration (1)</button>
-          <button class="chip" data-thema="klima">Klima (1)</button>
-          <button class="chip" data-thema="bildung">Bildung (1)</button>
-          <button class="chip" data-thema="frieden">Frieden (1)</button>
-        </div>
-        <div class="stream-tabs" id="stream-tabs">
-          <span class="stream-tabs__label">Sortieren:</span>
-          <button class="stream-tab is-active" data-view="neueste">Neueste zuerst</button>
-          <button class="stream-tab" data-view="az">Nach Person (A–Z)</button>
-        </div>
-      </div>
-
-      <div class="grid" id="stream">
-
-        <div class="year-divider" data-jahr="2026">2026</div>
-
-        <a class="card" href="interviews/birg.html" data-thema="verantwortung" data-name="Birg, Herwig" data-jahr="2026" data-titel="Die demografische Krise als Mutter aller Krisen">
-          <div class="card__media duo"><img src="assets/portraits/birg.jpg" alt="Herwig Birg"></div>
-          <div class="card__eyebrow">Demografie</div>
-          <h3 class="card__title">Die demografische Krise als Mutter aller Krisen</h3>
-          <div class="card__person">Prof. Dr. Herwig Birg · Demograf</div>
-          <p class="card__lead">Warum Wohlstand zu sinkenden Geburtenraten führt, weshalb Migration das Problem nicht löst und was Birg mit „demografischem Kolonialismus" meint.</p>
-        </a>
-
-        <a class="card" href="interviews/birg.html" data-thema="energiewende" data-name="Mewes, Clara" data-jahr="2026" data-titel="Klimaneutralität im Realitätstest">
-          <div class="card__media duo"><img src="assets/portraits/mewes.jpg" alt="Clara Mewes"></div>
-          <div class="card__eyebrow">Wissenschaft</div>
-          <h3 class="card__title">Klimaneutralität im Realitätstest</h3>
-          <div class="card__person">Clara Mewes · Klimaforscherin, IKND</div>
-          <p class="card__lead">Deutschland hat seit 1990 fast die Hälfte seiner Emissionen eingespart. Warum lösungsorientierte Kommunikation entscheidet und das Eiskugel-Narrativ zur Falle wird.</p>
-        </a>
-
-        <a class="card" href="interviews/birg.html" data-thema="verantwortung" data-name="Bagus, Philipp" data-jahr="2026" data-titel="Weniger Staat, mehr Zukunft">
-          <div class="card__media duo"><img src="assets/portraits/bagus.jpg" alt="Philipp Bagus"></div>
-          <div class="card__eyebrow">Ökonomie</div>
-          <h3 class="card__title">Weniger Staat, mehr Zukunft</h3>
-          <div class="card__person">Prof. Dr. Philipp Bagus · Ökonom</div>
-          <p class="card__lead">Über die Infantilisierung durch den paternalistischen Staat, das Javier-Milei-Institut und konkrete Deregulierungs-Prioritäten für Deutschland.</p>
-        </a>
-
-        <a class="card" href="#" data-thema="frieden" data-name="Nkusi, Esther" data-jahr="2026" data-titel="Versöhnung ist eine Entscheidung, kein Gefühl">
-          <div class="card__media ph"><span>EN</span></div>
-          <div class="card__eyebrow">Friedenspolitik</div>
-          <h3 class="card__title">Versöhnung ist eine Entscheidung, kein Gefühl</h3>
-          <div class="card__person">Esther Nkusi · Friedensforscherin</div>
-          <p class="card__lead">Was Ruanda dreißig Jahre nach dem Völkermord über Schuld, Vergebung und das mühsame Zusammenleben danach zu sagen hat.</p>
-        </a>
-
-        <div class="year-divider" data-jahr="2025">2025</div>
-
-        <a class="card" href="interviews/birg.html" data-thema="glaube" data-name="Gohl, Ernst-Wilhelm" data-jahr="2025" data-titel="Hilfe gegen die Illusion der Machbarkeit">
-          <div class="card__media duo"><img src="assets/portraits/gohl.jpg" alt="Landesbischof Gohl"></div>
-          <div class="card__eyebrow">Kirche</div>
-          <h3 class="card__title">Hilfe gegen die Illusion der Machbarkeit</h3>
-          <div class="card__person">Landesbischof Ernst-Wilhelm Gohl</div>
-          <p class="card__lead">Warum eine Gesellschaft, die alles machbar glaubt, mit Krisen so schlecht umgeht, und welche Botschaft Kirche jenseits von Sozialpolitik noch hat.</p>
-        </a>
-
-        <a class="card" href="#" data-thema="migration" data-name="Kaya, Aylin" data-jahr="2025" data-titel="Integration ist keine Einbahnstraße">
-          <div class="card__media ph"><span>AK</span></div>
-          <div class="card__eyebrow">Migration</div>
-          <h3 class="card__title">Integration ist keine Einbahnstraße</h3>
-          <div class="card__person">Aylin Kaya · Migrationsforscherin</div>
-          <p class="card__lead">Über die Lücke zwischen Willkommensrhetorik und Alltag, über Erwartungen auf beiden Seiten und darüber, was Ankommen wirklich braucht.</p>
-        </a>
-
-        <a class="card" href="#" data-thema="bildung" data-name="Vogt, Carla" data-jahr="2025" data-titel="Was PISA misst, und was eigentlich zählt">
-          <div class="card__media ph"><span>CV</span></div>
-          <div class="card__eyebrow">Bildung</div>
-          <h3 class="card__title">Was PISA misst, und was eigentlich zählt</h3>
-          <div class="card__person">Dr. Carla Vogt · Bildungsforscherin</div>
-          <p class="card__lead">Warum Bildungsdebatten an Testergebnissen hängen bleiben und welche Fähigkeiten in keiner PISA-Statistik je auftauchen.</p>
-        </a>
-
-        <a class="card" href="#" data-thema="klima" data-name="Hartmann, Jonas" data-jahr="2025" data-titel="Der Preis der Tonne">
-          <div class="card__media ph"><span>JH</span></div>
-          <div class="card__eyebrow">Klima</div>
-          <h3 class="card__title">Der Preis der Tonne</h3>
-          <div class="card__person">Jonas Hartmann · Klimaökonom</div>
-          <p class="card__lead">Wie ein ehrlicher CO2-Preis wirkt, wer ihn trägt und warum Klimapolitik ohne soziale Antwort scheitert.</p>
-        </a>
-
-        <div class="year-divider" data-jahr="2024">2024</div>
-
-        <a class="card" href="#" data-thema="verantwortung" data-name="Adler, Anna" data-jahr="2024" data-titel="Freiheit ohne Verantwortung ist Beliebigkeit">
-          <div class="card__media ph"><span>AA</span></div>
-          <div class="card__eyebrow">Philosophie</div>
-          <h3 class="card__title">Freiheit ohne Verantwortung ist Beliebigkeit</h3>
-          <div class="card__person">Prof. Anna Adler · Philosophin</div>
-          <p class="card__lead">Über die Verwechslung von Freiheit und Bindungslosigkeit und darüber, was eine Gesellschaft zusammenhält, wenn jeder nur sich selbst gehört.</p>
-        </a>
-
-        <a class="card" href="#" data-thema="verantwortung" data-name="Reuter, Tobias" data-jahr="2024" data-titel="Wenn die Aufregung zum Geschäftsmodell wird">
-          <div class="card__media ph"><span>TR</span></div>
-          <div class="card__eyebrow">Medien</div>
-          <h3 class="card__title">Wenn die Aufregung zum Geschäftsmodell wird</h3>
-          <div class="card__person">Tobias Reuter · Medienforscher</div>
-          <p class="card__lead">Über Empörungsspiralen, die Aufmerksamkeitsökonomie und die Frage, was Journalismus jenseits der täglichen Aufregung noch zusammenhält.</p>
-        </a>
-
-        <a class="card" href="#" data-thema="energiewende" data-name="Berg, Lena" data-jahr="2024" data-titel="Das Netz ist die eigentliche Frage">
-          <div class="card__media ph"><span>LB</span></div>
-          <div class="card__eyebrow">Technik</div>
-          <h3 class="card__title">Das Netz ist die eigentliche Frage</h3>
-          <div class="card__person">Lena Berg · Energie-Ingenieurin</div>
-          <p class="card__lead">Warum die Energiewende nicht an den Anlagen scheitert, sondern am Umbau der Netze, und was dezentrale Einspeisung wirklich verlangt.</p>
-        </a>
-
-        <a class="card" href="#" data-thema="glaube" data-name="Roth, Daniel" data-jahr="2024" data-titel="Stille als Widerstand">
-          <div class="card__media ph"><span>DR</span></div>
-          <div class="card__eyebrow">Glaube</div>
-          <h3 class="card__title">Stille als Widerstand</h3>
-          <div class="card__person">Pater Daniel Roth</div>
-          <p class="card__lead">Über Kontemplation in einer lauten Zeit, über das Aushalten von Leere und darüber, was Glaube jenseits von Aktivismus bedeuten kann.</p>
+        <a class="card" href="interviews/thun.html">
+          <div class="card__media duo"><img src="assets/portraits/thun.jpg" alt="Zeitenwende im Gesundheitswesen"></div>
+          <div class="card__eyebrow">Gesundheit</div>
+          <h3 class="card__title">Zeitenwende im Gesundheitswesen</h3>
+          <div class="card__person">Prof. Dr. Sylvia Thun · Charité Universitätsmedizin Berlin</div>
+          <p class="card__lead">Die elektronische Patientenakte und warum die Digitalisierung des Gesundheitswesens nicht an der Technik scheitert, sondern an fehlender Normierung.</p>
         </a>
 
       </div>
-
-      <div class="stream-empty" id="stream-empty">Kein Gespräch zu dieser Auswahl. <a href="#" id="stream-reset">Zurücksetzen</a></div>
-      <div style="text-align:center;margin-top:var(--s-l)">
-        <button class="btn btn--ghost" id="load-more">Weitere Gespräche laden</button>
-        <p class="stream-count" id="stream-count"></p>
-      </div>
-
+      <p class="muted" style="margin-top:var(--s-l)">Weitere Gespräche aus dem Magazin folgen nach und nach.</p>
     </div>
   </section>
 </main>
@@ -220,117 +100,6 @@
     var open = n.classList.toggle('open');
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
-</script>
-
-<script>
-(function () {
-  var grid = document.getElementById('stream');
-  if (!grid) return;
-  var cards = Array.prototype.slice.call(grid.querySelectorAll('.card'));
-  var dividers = Array.prototype.slice.call(grid.querySelectorAll('.year-divider'));
-  var original = Array.prototype.slice.call(grid.children);
-  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('.stream-tab'));
-  var search = document.getElementById('stream-search');
-  var countEl = document.getElementById('stream-count');
-  var moreBtn = document.getElementById('load-more');
-  var emptyEl = document.getElementById('stream-empty');
-  var resetEl = document.getElementById('stream-reset');
-  var BATCH = 8, shown = BATCH, activeThema = 'alle', activeView = 'neueste', query = '', letters = [];
-
-  function norm(s) {
-    return (s || '').toLowerCase()
-      .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss');
-  }
-  function matches(c) {
-    var okThema = activeThema === 'alle' || c.getAttribute('data-thema') === activeThema;
-    var hay = norm([c.getAttribute('data-name'), c.getAttribute('data-titel'), c.getAttribute('data-thema')].join(' '));
-    return okThema && (!query || hay.indexOf(query) > -1);
-  }
-  function clearLetters() {
-    letters.forEach(function (h) { if (h.parentNode) h.parentNode.removeChild(h); });
-    letters = [];
-  }
-  function render() {
-    query = norm(search.value.trim());
-    var az = activeView === 'az';
-    var filtering = activeThema !== 'alle' || !!query;
-    var matched = cards.filter(matches);
-    clearLetters();
-
-    if (az) {
-      dividers.forEach(function (d) { d.style.display = 'none'; });
-      cards.forEach(function (c) { c.style.display = 'none'; });
-      var sorted = matched.slice().sort(function (a, b) {
-        return a.getAttribute('data-name').localeCompare(b.getAttribute('data-name'), 'de');
-      });
-      var last = '';
-      sorted.forEach(function (c) {
-        var L = c.getAttribute('data-name').charAt(0).toUpperCase();
-        if (L !== last) {
-          var h = document.createElement('div');
-          h.className = 'year-divider';
-          h.textContent = L;
-          grid.appendChild(h);
-          letters.push(h);
-          last = L;
-        }
-        c.style.display = '';
-        grid.appendChild(c);
-      });
-      moreBtn.style.display = 'none';
-      countEl.textContent = matched.length ? ('Alle ' + matched.length + ' Gespräche, nach Person sortiert') : '';
-    } else {
-      original.forEach(function (el) { grid.appendChild(el); });
-      var limit = filtering ? matched.length : shown;
-      var seen = 0;
-      cards.forEach(function (c) {
-        if (!matches(c)) { c.style.display = 'none'; return; }
-        if (seen < limit) { c.style.display = ''; seen++; } else { c.style.display = 'none'; }
-      });
-      dividers.forEach(function (d) {
-        var any = cards.some(function (c) {
-          return c.getAttribute('data-jahr') === d.getAttribute('data-jahr') && c.style.display !== 'none';
-        });
-        d.style.display = any ? '' : 'none';
-      });
-      moreBtn.style.display = (!filtering && seen < matched.length) ? '' : 'none';
-      countEl.textContent = matched.length ? ('Zeige ' + seen + ' von ' + matched.length + ' Gesprächen') : '';
-    }
-    emptyEl.style.display = matched.length === 0 ? '' : 'none';
-  }
-
-  chips.forEach(function (ch) {
-    ch.addEventListener('click', function () {
-      chips.forEach(function (x) { x.classList.remove('is-active'); });
-      ch.classList.add('is-active');
-      activeThema = ch.getAttribute('data-thema');
-      shown = BATCH;
-      render();
-    });
-  });
-  tabs.forEach(function (tb) {
-    tb.addEventListener('click', function () {
-      tabs.forEach(function (x) { x.classList.remove('is-active'); });
-      tb.classList.add('is-active');
-      activeView = tb.getAttribute('data-view');
-      shown = BATCH;
-      render();
-    });
-  });
-  search.addEventListener('input', function () { shown = BATCH; render(); });
-  moreBtn.addEventListener('click', function () { shown += BATCH; render(); });
-  resetEl && resetEl.addEventListener('click', function (e) {
-    e.preventDefault();
-    activeThema = 'alle'; activeView = 'neueste'; query = ''; shown = BATCH;
-    search.value = '';
-    chips.forEach(function (x) { x.classList.toggle('is-active', x.getAttribute('data-thema') === 'alle'); });
-    tabs.forEach(function (x) { x.classList.toggle('is-active', x.getAttribute('data-view') === 'neueste'); });
-    render();
-  });
-
-  render();
-})();
 </script>
 </body>
 </html>
