@@ -308,3 +308,12 @@ blockquote { font-family: var(--font-display); font-style: italic; font-size: 1.
 .beitrag-body { padding-top: var(--s-l); }
 .beitrag-body p { font-size: 1.05rem; line-height: 1.75; margin-bottom: var(--s-m); }
 .beitrag-body h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.4rem, 2.4vw, 1.9rem); line-height: 1.2; margin: var(--s-l) 0 var(--s-s); color: var(--gruen-tief); }
+
+/* #HASHTAG-Kolumne: drei Perspektiven-Karten */
+.hk-card { background: var(--bg-alt); border-radius: 12px; padding: var(--s-l); margin-bottom: var(--s-l); border-left: 4px solid var(--gruen-signal); }
+.hk-card__num { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.35rem, 2.6vw, 1.85rem); line-height: 1.2; margin: 0 0 var(--s-s); }
+.hk-tags { font-weight: 600; font-size: .92rem; color: var(--gruen-tief); margin-bottom: var(--s-m); }
+.hk-quote { font-family: var(--font-display); font-style: italic; font-size: 1.2rem; line-height: 1.45; margin: 0 0 var(--s-m); }
+.hk-card p { margin-bottom: var(--s-m); line-height: 1.7; }
+.hk-cta { border-top: 1px solid var(--rule); padding-top: var(--s-s); font-size: .92rem; color: var(--muted); }
+.hk-cta b { color: var(--gruen-tief); font-weight: 600; }
