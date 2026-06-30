@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Themen — Mit Menschen reden</title>
+  <meta name="description" content="Ein Thema, viele Stimmen. Die wiederkehrenden Themen quer durch Interviews, Blickwinkel und Kolumnen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/mmr.css">
+  <style>
+    .tw-cloud { display: flex; flex-wrap: wrap; gap: .5rem .9rem; align-items: baseline; max-width: 900px; margin-top: var(--s-m); }
+    .tw-tag { font-family: var(--font-display); font-weight: 600; line-height: 1.05; color: var(--gruen-tief); background: none; border: none; cursor: pointer; padding: .15rem .1rem; transition: color .15s; }
+    .tw-tag:hover { color: var(--gruen-signal-text, #1b240e); }
+    .tw-tag .tw-n { font-family: var(--font-sans); font-weight: 500; font-size: .55em; color: var(--muted); vertical-align: super; margin-left: .1em; }
+    .tw-tag.is-active { color: #1a1a1a; text-decoration: underline; text-decoration-color: var(--gruen-signal); text-decoration-thickness: 3px; text-underline-offset: 4px; }
+    .tw-bar { display: flex; align-items: center; gap: var(--s-m); flex-wrap: wrap; margin: var(--s-l) 0 var(--s-m); }
+    .tw-count { font-size: .95rem; color: var(--muted); }
+    .tw-reset { font-size: .9rem; color: var(--gruen-tief); font-weight: 600; cursor: pointer; background: none; border: none; padding: 0; }
+    .tw-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--s-m); }
+    .tw-item { display: block; border: 1px solid var(--rule); border-radius: 10px; padding: var(--s-m); color: var(--text); background: var(--bg); }
+    .tw-item:hover { border-color: var(--gruen-tief); }
+    .tw-item__fmt { font-size: .72rem; text-transform: uppercase; letter-spacing: .14em; color: var(--gruen-tief); font-weight: 600; }
+    .tw-item__title { font-family: var(--font-display); font-size: 1.2rem; line-height: 1.25; margin: .3rem 0 .2rem; }
+    .tw-item__who { font-size: .9rem; color: var(--muted); margin-bottom: .5rem; }
+    .tw-item__tags { font-size: .8rem; color: var(--muted); }
+    .tw-item__tags span { color: var(--gruen-tief); }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="logo" href="index.html">mit<b>menschen</b>reden<small>das magazin für den perspektivenwechsel</small></a>
+    <button class="nav-toggle" aria-label="Menü" aria-expanded="false">☰</button>
+    <nav class="nav">
+      <a href="archiv.html">Interviews</a>
+      <a href="themen.html" aria-current="page">Themen</a>
+      <a href="kolumnen/index.html">Kolumnen</a>
+      <a href="rubriken.html">Rubriken</a>
+      <a href="blickwinkel.html">Blickwinkel</a>
+      <a href="#">Live</a>
+      <a href="#" class="cta">Newsletter</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:var(--s-m)">
+    <div class="wrap">
+      <span class="hero__tick"></span>
+      <div class="eyebrow">Themen</div>
+      <h1 class="hero__title" style="max-width:20ch">Ein Thema, viele Stimmen</h1>
+      <p class="muted" style="max-width:60ch">Die Themen, die immer wiederkehren — quer durch Interviews, Blickwinkel und Kolumnen. Je größer, desto öfter behandelt. Klick ein Thema an, und du siehst alle Stimmen dazu.</p>
+      <div class="tw-cloud" id="cloud"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:var(--s-l)">
+    <div class="wrap">
+      <div class="tw-bar">
+        <span class="tw-count" id="count"></span>
+        <button class="tw-reset" id="reset" hidden>Alle Themen zeigen</button>
+      </div>
+      <div class="tw-list" id="list"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div>
+      <div class="site-footer__brand">mit<b>menschen</b>reden</div>
+      <p style="color:rgba(255,255,255,.6);font-size:.9rem;max-width:38ch">Magazin für den Perspektivenwechsel. Lange, ehrliche Gespräche mit Menschen, die etwas zu sagen haben. Alle Gespräche frei lesbar.</p>
+    </div>
+    <div>
+      <h4>Magazin</h4>
+      <ul>
+        <li><a href="archiv.html">Interviews</a></li>
+        <li><a href="themen.html">Themen</a></li>
+        <li><a href="kolumnen/index.html">Kolumnen</a></li>
+        <li><a href="rubriken.html">Rubriken</a></li>
+        <li><a href="blickwinkel.html">Blickwinkel</a></li>
+        <li><a href="#">Live</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Mitmachen</h4>
+      <ul>
+        <li><a href="#">Portrait</a></li>
+        <li><a href="#">Patenschaft</a></li>
+        <li><a href="#">Newsletter</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Verlag</h4>
+      <ul>
+        <li><a href="#">Über uns</a></li>
+        <li><a href="#">Impressum</a></li>
+        <li><a href="#">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap site-footer__bottom">
+    <span>© Mit Menschen reden · Edition PJB · Ralf M. Ruthardt</span>
+    <span>Prototyp Neubau · CI-Grün #CAD909</span>
+  </div>
+</footer>
+
+<script>
+  var t = document.querySelector('.nav-toggle'), n = document.querySelector('.nav');
+  t && t.addEventListener('click', function () { var o = n.classList.toggle('open'); t.setAttribute('aria-expanded', o ? 'true' : 'false'); });
+
+  // Inhalts-Index der Ausgabe 2025-01 (redaktionelle Themen-Tags je Stück)
+  var PIECES = [
+    {title:"Zeitenwende im Gesundheitswesen", who:"Prof. Dr. Sylvia Thun", href:"interviews/thun.html", fmt:"Interview", tags:["Gesundheit","Digitalisierung"]},
+    {title:"Pflanzenproduktion von morgen", who:"Friedericke & Stephan von Rundstedt", href:"interviews/rundstedt.html", fmt:"Interview", tags:["Innovation","Nachhaltigkeit","Wirtschaft"]},
+    {title:"Konkreter Klimaschutz", who:"Dr. Stefan Ferber", href:"interviews/ferber.html", fmt:"Interview", tags:["Klima","Innovation","Nachhaltigkeit"]},
+    {title:"Armut macht krank. Krankheit macht arm.", who:"Prof. Dr. Gerhard Trabert", href:"interviews/trabert.html", fmt:"Interview", tags:["Gesellschaft","Gesundheit"]},
+    {title:"Relevanz menschlicher Intelligenz", who:"Prof. Dr. Dr. Klaus Kayser", href:"interviews/kayser.html", fmt:"Interview", tags:["KI","Digitalisierung","Wissenschaft"]},
+    {title:"Intersektorale Governance", who:"Prof. Dr. Monika Gonser", href:"interviews/gonser.html", fmt:"Interview", tags:["Gesellschaft","Nachhaltigkeit"]},
+    {title:"Buch. Bücher. Buchmesse.", who:"Ann-Katrin Zellner & Stefan Zeh", href:"interviews/zellner-zeh.html", fmt:"Interview", tags:["Kultur","Innovation"]},
+    {title:"Deindustrialisierung oder nur Panikmache?", who:"Vilson Gegic", href:"interviews/gegic.html", fmt:"Interview", tags:["Wirtschaft","Arbeit"]},
+    {title:"Was ist Konservatismus?", who:"Prof. Dr. Werner J. Patzelt", href:"blickwinkel/konservatismus.html", fmt:"Blickwinkel", tags:["Gesellschaft","Politik"]},
+    {title:"Woran es krankt: Eine Hausärztin gibt Einblicke", who:"Dr. Laura Dalhaus", href:"blickwinkel/hausaerztin.html", fmt:"Blickwinkel", tags:["Gesundheit","Gesellschaft"]},
+    {title:"Datenschutz oder Chaos?", who:"Ralf M. Ruthardt", href:"blickwinkel/datenschutz.html", fmt:"Blickwinkel", tags:["Datenschutz","Digitalisierung","Gesundheit"]},
+    {title:"Digitalisierung: Warum Menschen auf der Strecke bleiben", who:"Christoph Groß", href:"blickwinkel/digitalisierung.html", fmt:"Blickwinkel", tags:["Digitalisierung","Arbeit","Gesellschaft"]},
+    {title:"Innovation: KI-basierte Recherche", who:"Kai Kramer", href:"blickwinkel/steuerrecht.html", fmt:"Blickwinkel", tags:["KI","Digitalisierung","Recht"]},
+    {title:"Im Rückspiegel: Zwischen Glanz und Substanz", who:"Markus Coenen", href:"kolumnen/im-rueckspiegel-innovation.html", fmt:"Kolumne", tags:["Innovation"]},
+    {title:"#HASHTAG: Innovation – was tun?", who:"Markus Coenen", href:"kolumnen/hashtag-innovation.html", fmt:"Kolumne", tags:["Innovation"]}
+  ];
+
+  var counts = {};
+  PIECES.forEach(function (p) { p.tags.forEach(function (g) { counts[g] = (counts[g] || 0) + 1; }); });
+  var themes = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a] || a.localeCompare(b); });
+  var max = Math.max.apply(null, themes.map(function (g) { return counts[g]; }));
+  var min = Math.min.apply(null, themes.map(function (g) { return counts[g]; }));
+
+  var cloud = document.getElementById('cloud'), list = document.getElementById('list'),
+      countEl = document.getElementById('count'), resetEl = document.getElementById('reset');
+  var active = null;
+
+  themes.forEach(function (g) {
+    var b = document.createElement('button');
+    b.className = 'tw-tag'; b.dataset.theme = g;
+    var size = 1 + (max === min ? 0.6 : (counts[g] - min) / (max - min)) * 1.7; // 1.0–2.7rem
+    b.style.fontSize = size.toFixed(2) + 'rem';
+    b.innerHTML = g + '<span class="tw-n">' + counts[g] + '</span>';
+    b.addEventListener('click', function () { select(active === g ? null : g); });
+    cloud.appendChild(b);
+  });
+
+  function render(theme) {
+    var items = theme ? PIECES.filter(function (p) { return p.tags.indexOf(theme) > -1; }) : PIECES;
+    list.innerHTML = items.map(function (p) {
+      return '<a class="tw-item" href="' + p.href + '">' +
+        '<div class="tw-item__fmt">' + p.fmt + '</div>' +
+        '<div class="tw-item__title">' + p.title + '</div>' +
+        '<div class="tw-item__who">' + p.who + '</div>' +
+        '<div class="tw-item__tags">' + p.tags.map(function (g) { return g === theme ? '<span>' + g + '</span>' : g; }).join(' · ') + '</div>' +
+        '</a>';
+    }).join('');
+    countEl.textContent = theme ? items.length + (items.length === 1 ? ' Beitrag' : ' Beiträge') + ' zum Thema „' + theme + '“' : PIECES.length + ' Beiträge insgesamt';
+    resetEl.hidden = !theme;
+  }
+  function select(theme) {
+    active = theme;
+    Array.prototype.forEach.call(cloud.children, function (b) { b.classList.toggle('is-active', b.dataset.theme === theme); });
+    render(theme);
+  }
+  resetEl.addEventListener('click', function () { select(null); });
+  render(null);
+</script>
+</body>
+</html>
