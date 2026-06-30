@@ -307,3 +307,4 @@ blockquote { font-family: var(--font-display); font-style: italic; font-size: 1.
 .beitrag-hero__credit { position: absolute; bottom: var(--s-s); right: var(--s-m); font-size: .72rem; color: rgba(255, 255, 255, .55); letter-spacing: .02em; }
 .beitrag-body { padding-top: var(--s-l); }
 .beitrag-body p { font-size: 1.05rem; line-height: 1.75; margin-bottom: var(--s-m); }
+.beitrag-body h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.4rem, 2.4vw, 1.9rem); line-height: 1.2; margin: var(--s-l) 0 var(--s-s); color: var(--gruen-tief); }
