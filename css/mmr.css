@@ -319,3 +319,10 @@ blockquote { font-family: var(--font-quote); font-style: italic; font-size: 1.45
 .hk-card p { margin-bottom: var(--s-m); line-height: 1.7; }
 .hk-cta { border-top: 1px solid var(--rule); padding-top: var(--s-s); font-size: .92rem; color: var(--muted); }
 .hk-cta b { color: var(--gruen-tief); font-weight: 600; }
+
+/* ---------- Rubrik: Wer liest schon Lyrik (Gedicht) ---------- */
+.poem { font-family: var(--font-quote); font-size: clamp(1.2rem, 2.4vw, 1.4rem); line-height: 1.8; color: var(--text); max-width: 34ch; margin: var(--s-l) 0; }
+.poem__stanza { margin: 0 0 var(--s-m); }
+.poem__stanza:last-child { margin-bottom: 0; }
+.poem-source { font-size: .9rem; color: var(--muted); margin-top: var(--s-l); padding-top: var(--s-m); border-top: 1px solid var(--rule); max-width: 60ch; }
+.poem-source b { color: var(--text); font-weight: 600; }
