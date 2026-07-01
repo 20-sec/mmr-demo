@@ -72,9 +72,9 @@ a:hover { border-bottom-color: var(--gruen-tief); }
   border-bottom: 1px solid var(--rule);
 }
 .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--s-m); padding: var(--s-s) 0; }
-.logo { font-family: var(--font-sans); font-weight: 300; font-size: 1.5rem; letter-spacing: -0.01em; line-height: 1; color: var(--text); border: none; display: inline-block; }
-.logo b { font-weight: 700; color: var(--gruen-tief); }
-.logo small { display: block; font-size: .62rem; letter-spacing: .05em; color: var(--gruen-tief); margin-top: .28rem; font-weight: 400; }
+.logo { display: inline-flex; align-items: center; border: none; line-height: 0; }
+.logo img { height: 46px; width: auto; display: block; }
+.logo:hover { border: none; }
 .nav { display: flex; align-items: center; gap: var(--s-m); font-size: .95rem; }
 .nav a { color: var(--text); border: none; font-weight: 500; }
 .nav a:hover { color: var(--gruen-tief); }
@@ -93,7 +93,7 @@ a:hover { border-bottom-color: var(--gruen-tief); }
 .hero { padding: var(--s-xl) 0 var(--s-l); border-bottom: 1px solid var(--rule); }
 .hero__tick { display: inline-block; width: 34px; height: 10px; background: var(--gruen-signal); margin-bottom: var(--s-s); }
 .hero__title { max-width: 14ch; margin: 0 0 var(--s-m); }
-.hero__lead { font-family: var(--font-display); font-style: italic; font-size: 1.45rem; line-height: 1.5; color: var(--muted); max-width: 40ch; border-left: 2px solid var(--gruen-signal); padding-left: var(--s-s); }
+.hero__lead { font-family: var(--font-sans); font-style: normal; font-weight: 400; font-size: 1.28rem; line-height: 1.58; color: #3b3e34; max-width: 46ch; border-left: 2px solid var(--gruen-signal); padding-left: var(--s-m); }
 .hero__person { font-size: .98rem; color: var(--muted); margin: var(--s-s) 0 var(--s-m); }
 
 /* ---------- Sektionen ---------- */
@@ -200,7 +200,7 @@ a:hover { border-bottom-color: var(--gruen-tief); }
 .article-person { font-family: var(--font-sans); font-size: 1rem; color: var(--muted); margin-bottom: var(--s-m); }
 .article-meta { display: flex; flex-wrap: wrap; gap: var(--s-m); font-size: .85rem; color: var(--muted); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: var(--s-s) 0; margin-bottom: var(--s-l); }
 .article-meta .frei { color: var(--gruen-tief); font-weight: 500; }
-.article-lead { font-family: var(--font-display); font-style: italic; font-size: 1.4rem; line-height: 1.5; margin: 0 0 var(--s-l); }
+.article-lead { font-family: var(--font-sans); font-style: normal; font-weight: 400; font-size: 1.28rem; line-height: 1.62; color: #3b3e34; margin: 0 0 var(--s-l); max-width: 62ch; }
 .article-body { font-size: 1.05rem; line-height: 1.78; }
 .qa { margin-bottom: var(--s-m); }
 .qa__q { font-family: var(--font-display); font-weight: 600; font-size: 1.3rem; line-height: 1.35; margin-bottom: var(--s-xs); }
@@ -273,8 +273,8 @@ blockquote { font-family: var(--font-display); font-style: italic; font-size: 1.
 .site-footer a { color: #cdd6b3; border-bottom-color: rgba(202,217,9,.25); }
 .site-footer a:hover { color: var(--gruen-signal); border-bottom-color: var(--gruen-signal); }
 .site-footer__inner { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--s-l); }
-.site-footer__brand { font-family: var(--font-sans); font-weight: 300; font-size: 1.5rem; margin-bottom: var(--s-s); }
-.site-footer__brand b { font-weight: 700; color: var(--gruen-signal); }
+.site-footer__brand { margin-bottom: var(--s-m); line-height: 0; }
+.site-footer__brand img { height: 42px; width: auto; display: block; }
 .site-footer h4 { font-family: var(--font-sans); font-size: .78rem; text-transform: uppercase; letter-spacing: .18em; color: rgba(255,255,255,.45); margin: 0 0 var(--s-s); font-weight: 600; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; font-size: .95rem; }
 .site-footer li { margin-bottom: .4rem; }
@@ -294,6 +294,7 @@ blockquote { font-family: var(--font-display); font-style: italic; font-size: 1.
   .nav-toggle { display: block; }
   .site-header__inner { position: relative; }
   .site-footer__inner { grid-template-columns: 1fr; }
+  .logo img { height: 38px; }
 }
 
 /* Blickwinkel-Beitrag: themenbezogener Cover-Hero + Prosa */
