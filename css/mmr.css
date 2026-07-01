@@ -254,12 +254,16 @@ blockquote { font-family: var(--font-quote); font-style: italic; font-size: 1.45
 .kol-points a { color: var(--gruen-tief); }
 
 /* Kolumnen-Landing: Rubrik-Karten */
-.rubric-card { display: block; background: var(--bg-alt); border-radius: 12px; padding: var(--s-m); color: var(--text); border: none; }
+.rubric-card { position: relative; display: block; background: var(--bg-alt); border-radius: 12px; padding: var(--s-m); color: var(--text); border: none; }
 .rubric-card:hover { background: #efeade; border: none; }
 .rubric-card__label { font-family: var(--font-display); font-size: 1.6rem; line-height: 1.2; margin-bottom: .5rem; color: var(--text); transition: color .2s; }
 .rubric-card:hover .rubric-card__label { color: var(--gruen-tief); }
 .rubric-card__desc { color: var(--muted); margin-bottom: var(--s-s); }
-.rubric-card__meta { font-size: .85rem; color: var(--gruen-tief); font-weight: 600; }
+.rubric-card__meta { font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); font-weight: 600; margin-bottom: var(--s-s); }
+/* Sichtbarer Button; ganze Karte bleibt klickbar (stretched link) */
+.rubric-card__btn { display: inline-flex; align-items: center; gap: .4rem; font-family: var(--font-sans); font-size: .92rem; font-weight: 600; color: var(--gruen-tief); background: var(--bg); border: 1px solid var(--rule); border-radius: 999px; padding: .5rem 1.15rem; transition: background .15s, border-color .15s, color .15s; }
+.rubric-card__btn::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.rubric-card:hover .rubric-card__btn { background: var(--gruen-signal); border-color: var(--gruen-signal); color: var(--text); }
 
 /* Patenschaft-Banner */
 .patron { background: var(--bg-alt); border-left: 4px solid var(--pate); padding: var(--s-s) var(--s-m); margin: var(--s-m) 0; font-size: .92rem; }
