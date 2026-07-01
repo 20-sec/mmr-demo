@@ -330,13 +330,3 @@ blockquote { font-family: var(--font-quote); font-style: italic; font-size: 1.45
 .poem__stanza:last-child { margin-bottom: 0; }
 .poem-source { font-size: .9rem; color: var(--muted); margin-top: var(--s-l); padding-top: var(--s-m); border-top: 1px solid var(--rule); max-width: 60ch; }
 .poem-source b { color: var(--text); font-weight: 600; }
-
-/* ---------- Rubrik: Lichtemomente (randloses Foto) ---------- */
-.licht-hero { position: relative; background: var(--gruen-schwarz); line-height: 0; }
-.licht-hero img { width: 100%; height: auto; display: block; }
-.licht-hero__scrim { position: absolute; left: 0; right: 0; bottom: 0; top: 45%; background: linear-gradient(to top, rgba(15,20,8,.85), rgba(15,20,8,.2) 65%, transparent); pointer-events: none; }
-.licht-hero__cap { position: absolute; left: 0; right: 0; bottom: 0; padding: var(--s-l) 0; line-height: 1.15; }
-.licht-hero__cap .eyebrow { color: var(--gruen-signal); margin-bottom: .5rem; }
-.licht-hero__title { font-family: var(--font-display); font-weight: 600; color: #fff; font-size: clamp(2.4rem, 6vw, 4.4rem); line-height: 1.05; margin: 0 0 .5rem; }
-.licht-hero__meta { color: rgba(255, 255, 255, .82); font-size: 1rem; margin: 0; }
-.licht-credit { position: absolute; bottom: var(--s-s); right: var(--s-m); color: rgba(255, 255, 255, .7); font-size: .75rem; letter-spacing: .02em; line-height: 1.3; }
