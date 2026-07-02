@@ -357,3 +357,13 @@ blockquote { font-family: var(--font-quote); font-style: italic; font-size: 1.45
 .beitrag-body .eb-list li { font-size: 1.05rem; line-height: 1.7; margin-bottom: var(--s-s); }
 .beitrag-body ol.eb-quellen { font-size: .88rem; color: var(--muted); line-height: 1.55; padding-left: 1.3rem; }
 .beitrag-body ol.eb-quellen li { margin-bottom: var(--s-xs); }
+
+/* ---- Interviews-Galerie: dichtere Spalten (bis ~5), gemischte Reihenfolge ---- */
+.grid--dense { grid-template-columns: repeat(2, 1fr); gap: var(--s-m); }
+@media (min-width: 560px)  { .grid--dense { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 820px)  { .grid--dense { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1100px) { .grid--dense { grid-template-columns: repeat(5, 1fr); } }
+.grid--dense .card__title { font-size: 1.12rem; line-height: 1.22; }
+.grid--dense .card__person { font-size: .84rem; }
+.grid--dense .card__lead { font-size: .87rem; line-height: 1.45; -webkit-line-clamp: 3; }
+#iv-grid { transition: opacity .25s ease; }

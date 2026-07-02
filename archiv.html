@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/mmr.css">
+  <noscript><style>#iv-grid{opacity:1 !important}</style></noscript>
 </head>
 <body>
 
@@ -34,15 +35,13 @@
       <span class="hero__tick"></span>
       <div class="eyebrow">Alle Interviews</div>
       <h1 class="hero__title" style="max-width:18ch">Jedes Gespräch, das wir geführt haben</h1>
-      <p class="muted" style="max-width:58ch">Kein Heft, keine Bezahlschranke: jedes Gespräch steht für sich und ist frei lesbar. Wir lösen das Magazin Ausgabe für Ausgabe auf, die Übersicht wächst mit jedem Gespräch.</p>
+      <p class="muted" style="max-width:58ch">Kein Heft, keine Bezahlschranke: jedes Gespräch steht für sich und ist frei lesbar. Die Reihenfolge mischen wir bei jedem Besuch neu, damit du jedes Mal auf andere Stimmen zuerst triffst.</p>
     </div>
   </section>
 
   <section class="section" style="padding-top:var(--s-l)">
     <div class="wrap">
-      <div class="grid">
-
-        <div class="year-divider">Ausgabe 2025-02</div>
+      <div id="iv-grid" class="grid grid--dense" style="opacity:0">
 
         <a class="card" href="interviews/ruhs.html">
           <div class="card__media duo"><img src="assets/portraits/ruhs.jpg" alt="Julia Ruhs"></div>
@@ -83,8 +82,6 @@
           <div class="card__person">Prof. Dr. Heiko Kleve · WIFU, Universität Witten/Herdecke</div>
           <p class="card__lead">Ein Gespräch über die besondere Dynamik von Unternehmerfamilien: Emotionen, Loyalitäten, Konflikte und die Kunst, Tradition mit Fortschritt zu verbinden.</p>
         </a>
-
-        <div class="year-divider">Ausgabe 2025-01</div>
 
         <a class="card" href="interviews/thun.html">
           <div class="card__media duo"><img src="assets/portraits/thun.jpg" alt="Prof. Dr. Sylvia Thun"></div>
@@ -151,7 +148,20 @@
         </a>
 
       </div>
-      <p class="muted" style="margin-top:var(--s-l)">Ausgabe 2025-02 lösen wir gerade Gespräch für Gespräch auf, die Übersicht wächst laufend. Darunter alle acht Gespräche aus Ausgabe 2025-01.</p>
+      <script>
+        (function () {
+          var g = document.getElementById('iv-grid');
+          if (!g) return;
+          var cards = Array.prototype.slice.call(g.querySelectorAll('.card'));
+          for (var i = cards.length - 1; i > 0; i--) {         // Fisher-Yates
+            var j = Math.floor(Math.random() * (i + 1));
+            var t = cards[i]; cards[i] = cards[j]; cards[j] = t;
+          }
+          cards.forEach(function (c) { g.appendChild(c); });    // in neuer Reihenfolge anhaengen
+          g.style.opacity = '1';
+        })();
+      </script>
+      <p class="muted" style="margin-top:var(--s-l)">Dreizehn Gespräche aus den Ausgaben 2025-01 und 2025-02, bei jedem Aufruf neu gemischt. Die Übersicht wächst mit jedem neuen Gespräch.</p>
     </div>
   </section>
 </main>
