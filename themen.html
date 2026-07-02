@@ -68,7 +68,7 @@
       <span class="hero__tick"></span>
       <div class="eyebrow">Themen</div>
       <h1 class="hero__title" style="max-width:20ch">Ein Thema, viele Stimmen</h1>
-      <p class="muted" style="max-width:60ch">Die Themen, die immer wiederkehren — quer durch Interviews, Blickwinkel und Kolumnen. Je länger der Balken, desto öfter behandelt. Klick ein Thema an, und du siehst alle Stimmen dazu.</p>
+      <p class="muted" style="max-width:60ch">Die Themen, die immer wiederkehren, quer durch Interviews, Blickwinkel und Kolumnen. Je länger der Balken, desto öfter behandelt. Klick ein Thema an, und du siehst alle Stimmen dazu.</p>
       <div class="tw-rank" id="rank"></div>
       <div class="tw-mini" id="mini"></div>
     </div>
@@ -129,7 +129,7 @@
   var t = document.querySelector('.nav-toggle'), n = document.querySelector('.nav');
   t && t.addEventListener('click', function () { var o = n.classList.toggle('open'); t.setAttribute('aria-expanded', o ? 'true' : 'false'); });
 
-  // Inhalts-Index der Ausgabe 2025-01 (redaktionelle Themen-Tags je Stück)
+  // Inhalts-Index der Ausgaben 2025-01 und 2025-02 (redaktionelle Themen-Tags je Stück)
   var PIECES = [
     {title:"Zeitenwende im Gesundheitswesen", who:"Prof. Dr. Sylvia Thun", href:"interviews/thun.html", fmt:"Interview", tags:["Gesundheit","Digitalisierung"]},
     {title:"Pflanzenproduktion von morgen", who:"Friedericke & Stephan von Rundstedt", href:"interviews/rundstedt.html", fmt:"Interview", tags:["Innovation","Nachhaltigkeit","Wirtschaft"]},
@@ -145,7 +145,22 @@
     {title:"Digitalisierung: Warum Menschen auf der Strecke bleiben", who:"Christoph Groß", href:"blickwinkel/digitalisierung.html", fmt:"Blickwinkel", tags:["Digitalisierung","Arbeit","Gesellschaft"]},
     {title:"Innovation: KI-basierte Recherche", who:"Kai Kramer", href:"blickwinkel/steuerrecht.html", fmt:"Blickwinkel", tags:["KI","Digitalisierung","Recht"]},
     {title:"Im Rückspiegel: Zwischen Glanz und Substanz", who:"Markus Coenen", href:"kolumnen/im-rueckspiegel-innovation.html", fmt:"Kolumne", tags:["Innovation"]},
-    {title:"#HASHTAG: Innovation – was tun?", who:"Markus Coenen", href:"kolumnen/hashtag-innovation.html", fmt:"Kolumne", tags:["Innovation"]}
+    {title:"#HASHTAG: Innovation – was tun?", who:"Markus Coenen", href:"kolumnen/hashtag-innovation.html", fmt:"Kolumne", tags:["Innovation"]},
+    // Ausgabe 2025-02 (Schwerpunkt Energie)
+    {title:"Wurde eine Errungenschaft gekapert?", who:"Julia Ruhs", href:"interviews/ruhs.html", fmt:"Interview", tags:["Medien","Gesellschaft"]},
+    {title:"Erlebt Kirche eine Renaissance?", who:"Landesbischof Ernst-Wilhelm Gohl", href:"interviews/gohl.html", fmt:"Interview", tags:["Religion","Gesellschaft"]},
+    {title:"Shalom aleichem", who:"Prof. Dr. Roland Rixecker", href:"interviews/rixecker.html", fmt:"Interview", tags:["Religion","Gesellschaft"]},
+    {title:"Am Rande der Auflösung", who:"Christian Doerr", href:"interviews/doerr.html", fmt:"Interview", tags:["Bildung","Gesellschaft"]},
+    {title:"Generationen verbinden, Zukunft sichern", who:"Prof. Dr. Heiko Kleve", href:"interviews/kleve.html", fmt:"Interview", tags:["Wirtschaft","Familie"]},
+    {title:"Dunkelflaute", who:"Dr. Martin Burckhardt", href:"blickwinkel/dunkelflaute.html", fmt:"Blickwinkel", tags:["Energie","Politik"]},
+    {title:"Wirtschaftliche Anforderungen", who:"Andrea Thoma-Böck", href:"blickwinkel/thoma-boeck.html", fmt:"Blickwinkel", tags:["Energie","Wirtschaft"]},
+    {title:"Quo vadis Energiewende?", who:"Dr. Robert Koch", href:"blickwinkel/quo-vadis.html", fmt:"Blickwinkel", tags:["Energie","Wissenschaft"]},
+    {title:"Wege aus der Wendekrise", who:"Glimpel, Kasper, Leidinger und Preußer", href:"blickwinkel/wendekrise.html", fmt:"Blickwinkel", tags:["Energie","Wirtschaft"]},
+    {title:"Ist die deutsche Energietransformation auf dem richtigen Kurs?", who:"Markus Ahorner", href:"blickwinkel/energie-transformation.html", fmt:"Blickwinkel", tags:["Energie","Wirtschaft"]},
+    {title:"Gefangen im System", who:"Herbert Saurugg", href:"blickwinkel/gefangen-im-system.html", fmt:"Blickwinkel", tags:["Energie","Gesellschaft"]},
+    {title:"Energiebilanzen darf man nicht ignorieren", who:"Dr.-Ing. Bernhard Leidinger", href:"blickwinkel/energiebilanzen.html", fmt:"Blickwinkel", tags:["Energie","Wissenschaft"]},
+    {title:"Im Rückspiegel: Ich dachte, dass Energie nicht verloren geht", who:"Markus Coenen", href:"kolumnen/im-rueckspiegel-energiewende.html", fmt:"Kolumne", tags:["Energie"]},
+    {title:"#HASHTAG: Energiewende", who:"Markus Coenen", href:"kolumnen/hashtag-energiewende.html", fmt:"Kolumne", tags:["Energie"]}
   ];
 
   var counts = {};

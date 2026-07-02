@@ -367,3 +367,6 @@ blockquote { font-family: var(--font-quote); font-style: italic; font-size: 1.45
 .grid--dense .card__person { font-size: .84rem; }
 .grid--dense .card__lead { font-size: .87rem; line-height: 1.45; -webkit-line-clamp: 3; }
 #iv-grid { transition: opacity .25s ease; }
+
+/* Kleiner Sekundär-Button (z. B. Kolumnen-Einzelbeitrag zurück zur Serie) */
+.btn--sm { padding: .5rem 1.1rem; font-size: .88rem; }
