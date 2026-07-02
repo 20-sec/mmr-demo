@@ -330,3 +330,30 @@ blockquote { font-family: var(--font-quote); font-style: italic; font-size: 1.45
 .poem__stanza:last-child { margin-bottom: 0; }
 .poem-source { font-size: .9rem; color: var(--muted); margin-top: var(--s-l); padding-top: var(--s-m); border-top: 1px solid var(--rule); max-width: 60ch; }
 .poem-source b { color: var(--text); font-weight: 600; }
+
+/* ---- Energiebilanzen: Datentabellen, Info-Kasten, Charts, Listen ---- */
+.beitrag-body .eb-table { margin: var(--s-l) 0; overflow-x: auto; }
+.eb-table table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); font-size: .9rem; }
+.eb-table caption { font-family: var(--font-display); font-weight: 600; font-size: 1.06rem; color: var(--gruen-tief); text-align: left; padding: 0 0 var(--s-xs); }
+.eb-table thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); font-weight: 600; border-bottom: 2px solid var(--gruen-tief); padding: .5rem .55rem; text-align: right; }
+.eb-table thead th.eb-l { text-align: left; }
+.eb-table thead th.eb-g { border-bottom-color: var(--rule); }
+.eb-table td { padding: .5rem .55rem; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+.eb-table td.eb-l { text-align: left; color: var(--text); line-height: 1.35; }
+.eb-table td.eb-a, .eb-table td.eb-v { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.eb-table td.eb-g { text-align: center; font-variant-numeric: tabular-nums; font-weight: 600; color: var(--gruen-tief); background: #f2f5e0; border-left: 1px solid #e7ecc9; border-right: 1px solid #e7ecc9; white-space: nowrap; }
+.eb-table tr.eb-sum td { border-top: 2px solid var(--gruen-tief); border-bottom: none; font-weight: 700; }
+.eb-table tr.eb-sum td.eb-g { background: #f2f5e0; }
+
+.beitrag-body .eb-box { background: #f1f5e0; border-left: 4px solid var(--gruen-signal); border-radius: 4px; padding: var(--s-m); margin: var(--s-l) 0; }
+.eb-box p { font-size: .95rem; line-height: 1.65; color: #333; margin-bottom: var(--s-s); }
+.eb-box p:last-child { margin-bottom: 0; }
+
+.beitrag-body .eb-chart { margin: var(--s-l) 0; }
+.eb-chart img { width: 100%; max-width: 620px; display: block; margin: 0 auto; border: 1px solid var(--rule); border-radius: 4px; }
+.eb-chart figcaption { font-size: .82rem; color: var(--muted); text-align: center; margin-top: var(--s-xs); }
+
+.beitrag-body ul.eb-list, .beitrag-body ol.eb-list { margin: 0 0 var(--s-m); padding-left: 1.4rem; }
+.beitrag-body .eb-list li { font-size: 1.05rem; line-height: 1.7; margin-bottom: var(--s-s); }
+.beitrag-body ol.eb-quellen { font-size: .88rem; color: var(--muted); line-height: 1.55; padding-left: 1.3rem; }
+.beitrag-body ol.eb-quellen li { margin-bottom: var(--s-xs); }
