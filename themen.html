@@ -34,7 +34,15 @@
     .tw-bar { display: flex; align-items: center; gap: var(--s-m); flex-wrap: wrap; margin: var(--s-l) 0 var(--s-m); }
     .tw-count { font-size: .95rem; color: var(--muted); }
     .tw-reset { font-size: .9rem; color: var(--gruen-tief); font-weight: 600; cursor: pointer; background: none; border: none; padding: 0; }
-    .tw-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--s-m); }
+    .tw-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--s-m); }
+    /* Themen-Uebersicht: Liste links, Partner-Spalte rechts (sticky) */
+    .tw-cols { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: var(--s-l); align-items: start; }
+    .tw-aside { position: sticky; top: var(--s-m); }
+    .sponsor--rail { text-align: center; padding: var(--s-m); }
+    .sponsor--rail .sponsor__ey { color: #9a7b3a; }
+    .sponsor__partners--stack { flex-direction: column; gap: var(--s-m); }
+    .sponsor__partners--stack .sponsor__partner { max-width: none; width: 100%; }
+    @media (max-width: 860px) { .tw-cols { grid-template-columns: 1fr; } .tw-aside { position: static; margin-top: var(--s-l); max-width: 420px; } }
     .tw-item { display: block; border: 1px solid var(--rule); border-radius: 10px; padding: var(--s-m); color: var(--text); background: var(--bg); }
     .tw-item:hover { border-color: var(--gruen-tief); }
     .tw-item__fmt { font-size: .72rem; text-transform: uppercase; letter-spacing: .14em; color: var(--gruen-tief); font-weight: 600; }
@@ -80,19 +88,19 @@
         <span class="tw-count" id="count"></span>
         <button class="tw-reset" id="reset" hidden>Alle Themen zeigen</button>
       </div>
-      <div class="tw-list" id="list"></div>
-    </div>
-  </section>
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="sponsor">
-        <div class="sponsor__grid">
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Der Themen-Bereich wird ermöglicht von</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">VOLTA</span><span class="sponsor-logo">LUMEN</span><span class="sponsor-logo">KEBIRA</span></div>
+      <div class="tw-cols">
+        <div class="tw-list" id="list"></div>
+        <aside class="tw-aside">
+          <div class="sponsor sponsor--rail">
+            <div class="sponsor__ey">Diese Übersicht wird präsentiert von</div>
+            <div class="sponsor__partners sponsor__partners--stack" data-shuffle>
+              <div class="sponsor__partner"><span class="sponsor-logo">VOLTA</span><p class="sponsor__claim">Energie, die weiterdenkt.</p></div>
+              <div class="sponsor__partner"><span class="sponsor-logo">LUMEN</span><p class="sponsor__claim">Klarheit in komplexen Fragen.</p></div>
+              <div class="sponsor__partner"><span class="sponsor-logo">KEBIRA</span><p class="sponsor__claim">Stiftung für Vielfalt und Bildung.</p></div>
+            </div>
+            <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei Partner der Themen-Übersicht.</div>
           </div>
-        </div>
-        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. 3 Partnerplätze für den Themen-Bereich.</div>
+        </aside>
       </div>
     </div>
   </section>
@@ -338,6 +346,9 @@
   }
   resetEl.addEventListener('click', function () { select(null); });
   render(null);
+  document.querySelectorAll('[data-shuffle]').forEach(function (el) {
+    for (var i = el.children.length; i; i--) el.appendChild(el.children[Math.random() * i | 0]);
+  });
 </script>
 </body>
 </html>
