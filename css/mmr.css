@@ -372,3 +372,18 @@ blockquote { font-family: var(--font-quote); font-style: italic; font-size: 1.45
 
 /* Kleiner Sekundär-Button (z. B. Kolumnen-Einzelbeitrag zurück zur Serie) */
 .btn--sm { padding: .5rem 1.1rem; font-size: .88rem; }
+
+/* ---------- Sponsoring (Partner-Patenschaft, Goldton) ---------- */
+/* Grün gehört der Redaktion, Gold gehört den Partnern. Ruhige Bänder, keine Werbebanner. */
+.sponsor { border-top: 1px solid var(--pate); border-bottom: 1px solid var(--pate); background: linear-gradient(180deg, #faf6ee, #f5eede); border-radius: 10px; padding: var(--s-m); }
+.sponsor__grid { display: flex; flex-wrap: wrap; gap: var(--s-m) var(--s-xl); align-items: flex-start; justify-content: center; }
+.sponsor__col { text-align: center; }
+.sponsor__ey { font-size: .68rem; text-transform: uppercase; letter-spacing: .18em; color: #9a7b3a; font-weight: 700; margin-bottom: .6rem; }
+.sponsor__logos { display: flex; gap: var(--s-s); justify-content: center; flex-wrap: wrap; align-items: center; }
+.sponsor-logo { display: inline-flex; align-items: center; justify-content: center; height: 42px; padding: 0 1.1rem; border: 1px solid #ddd3c0; border-radius: 6px; background: var(--bg); font-family: var(--font-display); font-weight: 600; letter-spacing: .08em; color: #7a746a; font-size: .98rem; transition: color .2s, border-color .2s; }
+.sponsor-logo:hover { color: var(--text); border-color: var(--pate); }
+.sponsor__note { text-align: center; font-size: .72rem; letter-spacing: .04em; color: #9a8a6a; margin-top: var(--s-m); }
+.sponsor--dark { background: var(--gruen-schwarz); border-color: rgba(200,169,106,.5); }
+.sponsor--dark .sponsor__ey { color: var(--pate); }
+.sponsor--dark .sponsor-logo { background: rgba(241,246,214,.05); border-color: rgba(200,169,106,.35); color: #d3c8ac; }
+.sponsor--dark .sponsor__note { color: #8f9a67; }
