@@ -39,23 +39,21 @@
     </div>
   </section>
 
-  <section class="section" style="padding-top:var(--s-l);padding-bottom:0">
-    <div class="wrap">
-      <div class="sponsor sponsor--break" style="margin-top:0">
-        <div class="sponsor__ey">Der Interview-Bereich wird unterstützt von</div>
-        <div class="sponsor__partners" data-shuffle>
-          <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
-          <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
-          <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
-        </div>
-        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
-      </div>
-    </div>
-  </section>
-
   <section class="section" style="padding-top:var(--s-l)">
     <div class="wrap">
       <div id="iv-grid" class="grid grid--dense" style="opacity:0">
+
+        <div class="iv-break">
+          <div class="sponsor sponsor--break" style="margin:0">
+            <div class="sponsor__ey">Der Interview-Bereich wird unterstützt von</div>
+            <div class="sponsor__partners" data-shuffle>
+              <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
+              <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
+              <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
+            </div>
+            <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
+          </div>
+        </div>
 
         <a class="card" href="interviews/abdelaziz-ditzow.html">
           <div class="card__media duo"><img src="assets/portraits/abdelaziz-ditzow.jpg" alt="Mary Abdelaziz-Ditzow"></div>
@@ -809,12 +807,22 @@
         (function () {
           var g = document.getElementById('iv-grid');
           if (!g) return;
+          var band = g.querySelector('.iv-break');              // Partner-Stoerer herausnehmen
+          if (band) band.parentNode.removeChild(band);
           var cards = Array.prototype.slice.call(g.querySelectorAll('.card'));
           for (var i = cards.length - 1; i > 0; i--) {         // Fisher-Yates
             var j = Math.floor(Math.random() * (i + 1));
             var t = cards[i]; cards[i] = cards[j]; cards[j] = t;
           }
           cards.forEach(function (c) { g.appendChild(c); });    // in neuer Reihenfolge anhaengen
+          if (band) {                                           // Stoerer nach der 3. Reihe wieder einsetzen
+            var lastTop = null, rows = 0, target = null;
+            for (var k = 0; k < cards.length; k++) {
+              var top = cards[k].offsetTop;
+              if (lastTop === null || top > lastTop + 4) { rows++; lastTop = top; if (rows === 4) { target = cards[k]; break; } }
+            }
+            if (target) g.insertBefore(band, target); else g.appendChild(band);
+          }
           g.style.opacity = '1';
         })();
       </script>

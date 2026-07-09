@@ -395,3 +395,6 @@ blockquote { font-family: var(--font-quote); font-style: italic; font-size: 1.45
 .sponsor__partner { flex: 1 1 160px; max-width: 230px; text-align: center; }
 .sponsor__partner .sponsor-logo { margin: 0 auto; }
 .sponsor__claim { font-size: .82rem; line-height: 1.4; color: #8a7b58; margin: .65rem 0 0; }
+/* Partner-Stoerer als volle Grid-Reihe in der Interview-Auflistung */
+.iv-break { grid-column: 1 / -1; }
+.iv-break .sponsor--break { margin: 0; }
