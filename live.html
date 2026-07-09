@@ -13,12 +13,13 @@
     .mvp-note { background: var(--anriss-bg); color: var(--anriss); font-size: .85rem; font-weight: 500; text-align: center; padding: .55rem var(--s-m); border-bottom: 1px solid #ecdcb4; }
     .mvp-note b { font-weight: 700; }
 
-    /* Featured Live-Termin: Porträt | Details | Ticket */
+    /* Grosser Live-Termin: Portraet | Details | Ticket */
     .live-event { display: grid; grid-template-columns: minmax(240px, .95fr) 1.35fr minmax(300px, 1fr); background: var(--bg-alt); border-radius: 14px; overflow: hidden; border: 1px solid var(--rule); }
+    .live-event + .live-event { margin-top: var(--s-m); }
     .live-event__main { padding: var(--s-l); }
     .live-event__aside { background: var(--gruen-schwarz); color: #f1f6d6; padding: var(--s-l) var(--s-m); display: flex; flex-direction: column; }
 
-    /* Großes Gäste-Porträt (Platzhalter) */
+    /* Grosses Gaeste-Portraet (Platzhalter) */
     .ev-portrait { position: relative; background: linear-gradient(158deg, #33421a, var(--gruen-schwarz)); display: flex; align-items: flex-end; min-height: 380px; }
     .ev-portrait__sil { position: absolute; left: 50%; top: 46%; transform: translate(-50%,-50%); width: 58%; max-width: 200px; color: rgba(241,246,214,.13); }
     .ev-portrait__mm { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); text-align: center; font-family: var(--font-display); font-weight: 600; font-size: 3.4rem; color: rgba(241,246,214,.9); letter-spacing: .05em; }
@@ -53,8 +54,8 @@
     .ticket-qa b { color: var(--gruen-signal); }
     .ticket-mvp { font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; color: #8f9a67; margin-top: var(--s-s); text-align: center; }
 
-    /* Termine 2 + 3 */
-    .term-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-m); margin-top: var(--s-m); }
+    /* Weitere Termine (Zwei-Spalten) */
+    .term-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-m); }
     .term2 { display: flex; flex-direction: column; background: var(--bg-alt); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; }
     .term2__img { position: relative; aspect-ratio: 16/9; background: linear-gradient(158deg, #33421a, var(--gruen-schwarz)); display: flex; align-items: center; justify-content: center; }
     .term2__img .sil { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 74px; color: rgba(241,246,214,.14); }
@@ -102,7 +103,7 @@
   </div>
 </header>
 
-<div class="mvp-note">Vorschau eines möglichen Formats. Alle Termine und Gäste („Mustermann") sind <b>Beispiele</b>. Hier wird noch nichts verkauft.</div>
+<div class="mvp-note">Vorschau eines möglichen Formats. Alle Termine und Gäste („Mustermann", „Beispiel") sind <b>Beispiele</b>. Hier wird noch nichts verkauft.</div>
 
 <main>
   <section class="hero" style="padding-bottom:var(--s-m)">
@@ -116,7 +117,7 @@
 
   <section class="section" style="padding-top:var(--s-l)">
     <div class="wrap">
-      <h2 class="section__title" style="margin-bottom:var(--s-m)">Der nächste Live-Termin</h2>
+      <h2 class="section__title" style="margin-bottom:var(--s-m)">Die nächsten Live-Termine</h2>
 
       <div class="live-event">
         <div class="ev-portrait">
@@ -155,6 +156,44 @@
         </div>
       </div>
 
+      <div class="live-event">
+        <div class="ev-portrait">
+          <svg class="ev-portrait__sil" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4.2"/><path d="M3.5 21.5c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5z"/></svg>
+          <div class="ev-portrait__mm">CB</div>
+          <div class="ev-portrait__cap"><b>Claudia Beispiel</b><span>Beispielbild · Gast</span></div>
+        </div>
+
+        <div class="live-event__main">
+          <div class="ev-datebar"><span class="dot"></span> Donnerstag, 30. Juli 2026 · 19:30 Uhr · Livestream</div>
+          <h3 class="ev-title">Zwischen Zweifel und Zuversicht</h3>
+          <div class="ev-byline">Ralf M. Ruthardt im Gespräch mit <b>Claudia Beispiel</b></div>
+          <p class="ev-desc">Noch ein Beispiel-Gespräch, diesmal über Zweifel, Zuversicht und die Frage, was uns trägt. Auch hier bist du live dabei und stellst danach deine eigene Frage.</p>
+          <ul class="ev-incl">
+            <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#CAD909"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="#1b240e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Live im Stream dabei, in Echtzeit</span></li>
+            <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#CAD909"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="#1b240e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><span class="hl">Exklusive Fragerunde danach:</span> stell dem Gast deine eigene Frage</span></li>
+            <li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#CAD909"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="#1b240e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aufzeichnung zum Nachschauen für Ticketinhaber</span></li>
+          </ul>
+        </div>
+
+        <div class="live-event__aside">
+          <div class="ticket-eyebrow">Tickets</div>
+          <div class="tier">
+            <div class="tier__head"><span class="tier__name">Einzelticket</span><span class="tier__price">19&nbsp;€</span></div>
+            <div class="tier__sub">Für diesen einen Termin.</div>
+            <a href="#" class="btn btn--ghostlight">Einzelticket kaufen</a>
+          </div>
+          <div class="tier">
+            <div class="tier__badge">Alle Termine · beliebt</div>
+            <div class="tier__head"><span class="tier__name">Quartalsticket</span><span class="tier__price">195&nbsp;€</span></div>
+            <div class="tier__sub">Alle Live-Termine eines Quartals, ein Preis.</div>
+            <a href="#" class="btn">Quartalsticket kaufen</a>
+          </div>
+          <div class="ticket-qa"><b>Das Besondere:</b> Die Fragerunde nach dem Gespräch ist nur für Ticketinhaber. Deine Frage, direkt an den Gast, nicht im Kommentarfeld, sondern live.</div>
+          <div class="ticket-mvp">Beispiel · MVP-Vorschau</div>
+        </div>
+      </div>
+
+      <h2 class="section__title" style="margin:var(--s-l) 0 var(--s-m)">Weitere Termine</h2>
       <div class="term-row">
         <div class="term2">
           <div class="term2__img">
@@ -163,7 +202,7 @@
           </div>
           <div class="term2__body">
             <div class="term2__date">Donnerstag, 6. August 2026 · 19:30 Uhr</div>
-            <h3 class="term2__title">Ein zweites Beispielgespräch</h3>
+            <h3 class="term2__title">Ein Beispielgespräch</h3>
             <div class="term2__guest">Ralf M. Ruthardt im Gespräch mit Erika Mustermann</div>
             <div class="term2__foot">
               <span class="term2__price">19 € <small>Einzelticket</small></span>
@@ -175,12 +214,44 @@
         <div class="term2">
           <div class="term2__img">
             <svg class="sil" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4.2"/><path d="M3.5 21.5c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5z"/></svg>
-            <span class="mm">MM</span>
+            <span class="mm">TB</span>
           </div>
           <div class="term2__body">
             <div class="term2__date">Donnerstag, 20. August 2026 · 19:30 Uhr</div>
             <h3 class="term2__title">Noch ein Beispieltermin</h3>
-            <div class="term2__guest">Ralf M. Ruthardt im Gespräch mit Max Mustermann</div>
+            <div class="term2__guest">Ralf M. Ruthardt im Gespräch mit Thomas Beispiel</div>
+            <div class="term2__foot">
+              <span class="term2__price">19 € <small>Einzelticket</small></span>
+              <a href="#" class="btn btn--sm">Ticket</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="term2">
+          <div class="term2__img">
+            <svg class="sil" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4.2"/><path d="M3.5 21.5c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5z"/></svg>
+            <span class="mm">PM</span>
+          </div>
+          <div class="term2__body">
+            <div class="term2__date">Donnerstag, 3. September 2026 · 19:30 Uhr</div>
+            <h3 class="term2__title">Ein weiteres Beispiel</h3>
+            <div class="term2__guest">Ralf M. Ruthardt im Gespräch mit Petra Mustermann</div>
+            <div class="term2__foot">
+              <span class="term2__price">19 € <small>Einzelticket</small></span>
+              <a href="#" class="btn btn--sm">Ticket</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="term2">
+          <div class="term2__img">
+            <svg class="sil" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4.2"/><path d="M3.5 21.5c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5z"/></svg>
+            <span class="mm">JB</span>
+          </div>
+          <div class="term2__body">
+            <div class="term2__date">Donnerstag, 17. September 2026 · 19:30 Uhr</div>
+            <h3 class="term2__title">Beispielgespräch vier</h3>
+            <div class="term2__guest">Ralf M. Ruthardt im Gespräch mit Jonas Beispiel</div>
             <div class="term2__foot">
               <span class="term2__price">19 € <small>Einzelticket</small></span>
               <a href="#" class="btn btn--sm">Ticket</a>
@@ -189,7 +260,7 @@
         </div>
       </div>
 
-      <p class="more-note">Mit dem Quartalsticket bist du bei allen drei Terminen dabei. Weitere folgen, mit dem Newsletter verpasst du keinen.</p>
+      <p class="more-note">Mit dem Quartalsticket bist du bei allen Terminen eines Quartals dabei. Weitere folgen, mit dem Newsletter verpasst du keinen.</p>
     </div>
   </section>
 
