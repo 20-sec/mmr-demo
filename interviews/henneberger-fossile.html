@@ -108,6 +108,15 @@
           <span class="turn__who">Kathrin Henneberger</span>
           <p>Ja, das war damals eine tolle und erfolgreiche Sache.</p>
         </div>
+        <div class="sponsor sponsor--break">
+          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
+          <div class="sponsor__partners" data-shuffle>
+            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
+          </div>
+          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
+        </div>
         <div class="turn turn--q">
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Machen wir einen Gedankensprung und sprechen wir über die Elektromobilität. Kann man sagen, dass es beispielsweise in den großen Metropolen in China eine politische Notwendigkeit zur Elektromobilität gab und gibt, um den Smog aus den Ballungsräumen rauszukriegen? Klar, es gibt weitere Gründe, wie die bei Elektroautos geringere technologischen Einstiegshürden in den Bau von Fahrzeugen, im Vergleich zum Verbrenner. Wir bleiben jedoch beim Smogproblem in den Großstädten. Man setzt in dort auf Elektromobilität – und verbrennt die Kohle in Kraftwerken auf dem Land. Dort trägt der Wind den Smog davon und die Städte bleiben sauberer als zuvor. Kann man sagen, dass wir in Europa bzw. in Deutschland da und dort weniger die Notwendigkeit haben, als insbesondere Schwellenländer oder junge, stark wachsende Industrienationen? Ist man deshalb dort rascher und agiler beim Einstieg in die Elektromobilität?</p>
@@ -135,23 +144,6 @@
       <p style="margin-top:var(--s-l)"><a href="../archiv.html">← Zurück zu allen Interviews</a></p>
     </div>
   </article>
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="sponsor">
-        <div class="sponsor__grid">
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Diese Interview-Reihe wird ermöglicht von</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">NOVARA</span></div>
-          </div>
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Partner dieses Gesprächs</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">MERIDIAN</span><span class="sponsor-logo">AUREA</span></div>
-          </div>
-        </div>
-        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Je Gespräch: 1 Gesamtpartner und 2 eigene Plätze.</div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -201,5 +193,6 @@
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
 </body>
 </html>

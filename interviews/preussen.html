@@ -117,6 +117,15 @@
           <span class="turn__who">Paul von Preußen</span>
           <p>Genau. Denn es gibt Themenbereiche, in denen die junge Generation den erfahrenen Leuten häufig etwas voraushaben: bei Zukunftsthemen. Insbesondere dort, wo junge Menschen mit diesen digitalen Kanälen aufgewachsen sind. Auch ich kenne keine Welt ohne soziale Medien. Und natürlich sind auch die technologischen Innovationen Gegenstand unseres Reverse Mentoring. Wir sind mit dem Smartphone in der Hand groß geworden – du nicht, lieber Ralf. (lacht)</p>
         </div>
+        <div class="sponsor sponsor--break">
+          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
+          <div class="sponsor__partners" data-shuffle>
+            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
+          </div>
+          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
+        </div>
         <div class="turn turn--q">
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Ja, da bin ich sehr bei dir. (lacht) Lass mich ein Beispiel dazu machen: Ich denke gerade an die On-Premise-Softwareentwicklung. Vereinfacht gesagt: das Erstellen und Hosten von Anwendungen auf eigener Hardware im eigenen Rechenzentrum. Bei den Informatikern war es ein großer Unterschied, ob du einen ehemaligen On-Premise-Entwickler an eine Cloud-Technologie gesetzt hast – oder eben einen Digital Native, der gar nichts anderes kannte. Der erste musste „umdenken“ und der junge Informatiker hat aus sich heraus gehandelt. Er kannte ja die Welt vor der Cloud überhaupt nicht. Wenn ich den Service bei Digital8 richtig verstehe, dann kuratierst du erstens einen Pool an jungen Leuten mit entsprechenden Eignungen. Und zweitens übernimmt deine Firma das Matching zu den Anforderungen und dem Profil der jeweiligen Führungskraft.</p>
@@ -144,23 +153,6 @@
       <p style="margin-top:var(--s-l)"><a href="../archiv.html">← Zurück zu allen Interviews</a></p>
     </div>
   </article>
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="sponsor">
-        <div class="sponsor__grid">
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Diese Interview-Reihe wird ermöglicht von</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">NOVARA</span></div>
-          </div>
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Partner dieses Gesprächs</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">MERIDIAN</span><span class="sponsor-logo">AUREA</span></div>
-          </div>
-        </div>
-        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Je Gespräch: 1 Gesamtpartner und 2 eigene Plätze.</div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -210,5 +202,6 @@
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
 </body>
 </html>

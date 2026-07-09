@@ -87,6 +87,15 @@
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Nun sind Sie auf der Liste einer quasi Anti-Partei, nämlich TEAM FREIHEIT. Lassen Sie uns an Ihren konkreten Forderungen teilhaben, damit wir eine Vorstellung bekommen, wie TEAM FREIHEIT sich zu diesem Thema positioniert.</p>
         </div>
+        <div class="sponsor sponsor--break">
+          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
+          <div class="sponsor__partners" data-shuffle>
+            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
+          </div>
+          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
+        </div>
         <div class="turn turn--a">
           <span class="turn__who">Christof Ronge</span>
           <p>Mehr Gestaltungsfreiheit für Betreiber, Betroffene und Angehörige. Solange Zimmer den bisherigen DIN-Standards entsprechen, sollten sie weiter genutzt werden dürfen. Planungssicherheit statt ständig neuer Regelungen. Und vor allem Wahlfreiheit: Wer ein Einzelzimmer möchte, soll es bekommen. Wer im Doppelzimmer leben will – gerade auch Paare –, muss das weiterhin dürfen. Pflege darf nicht ideologisch verordnet werden, sondern muss sich an den Menschen orientieren.</p>
@@ -106,23 +115,6 @@
       <p style="margin-top:var(--s-l)"><a href="../archiv.html">← Zurück zu allen Interviews</a></p>
     </div>
   </article>
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="sponsor">
-        <div class="sponsor__grid">
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Diese Interview-Reihe wird ermöglicht von</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">NOVARA</span></div>
-          </div>
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Partner dieses Gesprächs</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">MERIDIAN</span><span class="sponsor-logo">AUREA</span></div>
-          </div>
-        </div>
-        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Je Gespräch: 1 Gesamtpartner und 2 eigene Plätze.</div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -172,5 +164,6 @@
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
 </body>
 </html>

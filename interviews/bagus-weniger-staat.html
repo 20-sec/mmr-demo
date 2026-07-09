@@ -119,6 +119,15 @@
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Wie früher zwischen den Bundesländern in Deutschland: Da gab es quasi einen Bildungswettbewerb. Das Abitur in Bayern und Baden-Württemberg war dann mehr für Unternehmen wertiger, als ein meinetwegen in Bremen erworbenes Abitur. Ihr Impuls würde bedeuten, dass auf den Instanzen von Bundesländern oder Kommunen Freiräume entstehen, die einen Wettbewerb um Standortvorteile mit sich bringen könnten. Man hört schon Stimmen rufen, dass das ausufern und zu Ungerechtigkeiten oder sonst was führen würde. Nun, diese Stimmen blenden wir kurzerhand an dieser Stelle aus, um den Gedanken weiter zu verfolgen.</p>
         </div>
+        <div class="sponsor sponsor--break">
+          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
+          <div class="sponsor__partners" data-shuffle>
+            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
+          </div>
+          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
+        </div>
         <div class="turn turn--a">
           <span class="turn__who">Philipp Bagus</span>
           <p>Genau, der Wettbewerb würde dann dazu führen, dass die Regulierung von alleine wegfällt, nicht angewendet wird oder so ausgelegt wird, dass sie wirkungslos bleibt. Das wäre dann die praktische Auswirkung. Das ist elegant, weil die Regulierung formal noch besteht, aber sie praxis- und lebensnah ausgehöhlt werden kann. Man braucht quasi nur ein übergeordnetes Gesetz, was die Auslegung und die Anwendung auf den untersten Instanzen regelt.</p>
@@ -150,23 +159,6 @@
       <p style="margin-top:var(--s-l)"><a href="../archiv.html">← Zurück zu allen Interviews</a></p>
     </div>
   </article>
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="sponsor">
-        <div class="sponsor__grid">
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Diese Interview-Reihe wird ermöglicht von</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">NOVARA</span></div>
-          </div>
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Partner dieses Gesprächs</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">MERIDIAN</span><span class="sponsor-logo">AUREA</span></div>
-          </div>
-        </div>
-        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Je Gespräch: 1 Gesamtpartner und 2 eigene Plätze.</div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -216,5 +208,6 @@
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
 </body>
 </html>

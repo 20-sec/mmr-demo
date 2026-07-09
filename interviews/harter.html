@@ -95,6 +95,15 @@
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Man kann somit von einem qualitativen Wachstum sprechen, welcher einem quantitativen Rückgang der Kirchenmitglieder gegenübersteht. Nun, religiöse Medien erreichen oft eine relativ klar definierte Leserschaft. Soll die Tagespost in erster Linie eine Stimme für die katholische Community sein oder verstehen Sie sie eher als Beitrag zu einer breiteren gesellschaftlichen Debatte?</p>
         </div>
+        <div class="sponsor sponsor--break">
+          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
+          <div class="sponsor__partners" data-shuffle>
+            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
+          </div>
+          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
+        </div>
         <div class="turn turn--a">
           <span class="turn__who">Franziska Harter</span>
           <p>Eindeutig Letzteres. Der „Community“-Gedanke ist Katholiken von Haus aus fremd. Katholisch heißt universal. Als Weltchristen haben wir nicht den Auftrag, in kleinen Festungen des „heiligen Rests“ uns vom Rest der Welt abzuschneiden, sondern in der Welt zu leben und dort segensreich zu wirken, gemeinsam mit allen Menschen guten Willens, und gleichzeitig mit einem klaren Bekenntnis zu Jesus Christus. Das gilt auch für eine Zeitung wie die Tagespost, die sich in alle gesellschaftlichen Debatten einbringt und ganz gezielt auch katholische und nicht-katholische Positionen miteinander in Dialog bringt zu Zukunftsfragen, die alle Menschen angehen: Wie wird KI die Vorstellung vom Menschen verändern? Wie schaffen wir eine familienfreundliche Gesellschaft? Wie wird sich die weltpolitische Neuordnung auf uns Europäer auswirken? Wie verändert sich die Gesellschaft, wenn Einsamkeit und Hoffnungslosigkeit zunehmen und alle Formen von Bindungen schwächer werden?</p>
@@ -114,23 +123,6 @@
       <p style="margin-top:var(--s-l)"><a href="../archiv.html">← Zurück zu allen Interviews</a></p>
     </div>
   </article>
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="sponsor">
-        <div class="sponsor__grid">
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Diese Interview-Reihe wird ermöglicht von</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">NOVARA</span></div>
-          </div>
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Partner dieses Gesprächs</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">MERIDIAN</span><span class="sponsor-logo">AUREA</span></div>
-          </div>
-        </div>
-        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Je Gespräch: 1 Gesamtpartner und 2 eigene Plätze.</div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -180,5 +172,6 @@
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
 </body>
 </html>

@@ -79,6 +79,15 @@
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Du hast in Deinen Arbeiten immer wieder die Verbindung von Literatur, Gesellschaft und individueller Erfahrung betont. Kann Literatur — jenseits von bloßem Wissenstransfer — in unserer „modernen Welt“ immer noch wesentlich dazu beitragen, Weisheit generationenübergreifend lebendig zu halten? Oder bleibt sie doch letztlich nur ein Spiegel ihrer Zeit?</p>
         </div>
+        <div class="sponsor sponsor--break">
+          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
+          <div class="sponsor__partners" data-shuffle>
+            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
+          </div>
+          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
+        </div>
         <div class="turn turn--a">
           <span class="turn__who">Mario Andreotti</span>
           <p>Vergessen wir zunächst eines nicht: Jede große Dichtung bewahrt in sich eine Deutung der menschlichen Existenz auf, die uns, falls wir sie aus ihrer historischen Umhüllung zu befreien verstehen, etwas über uns selbst sagen kann. Wenn wir uns beispielsweise mit der fast 2500 Jahre alten Tragödie „König Ödipus“ von Sophokles heute noch beschäftigen, so wohl deshalb, weil das Schicksal des Ödipus, seinen Vater zu erschlagen und seine Mutter zu heiraten, als verdrängter Kinderwunsch auch das unsere hätte werden können. Und wenn uns, um ein weiteres Beispiel zu wählen, Franz Kafkas Parabel „Vor dem Gesetz“ heute nach über 100 Jahren noch packt, so deshalb, weil sie in gültiger Form zeigt, wie der Mensch immer von Neuem versucht, seiner Existenz einen Sinn abzugewinnen, obwohl er weiß, dass dieser Versuch in einer sinnentleerten Welt zum Scheitern verurteilt ist. Was ich damit sagen will: Jede große Dichtung hat gleichsam zwei Gesichter. Zum einen ist sie Spiegel ihrer Zeit, ist sie von einer bestimmten historischen Situation geprägt, und zum andern ist sie als Kunst überzeitlich, besitzt sie eine gewisse Zeitlosigkeit, sodass wir als Leser eben spüren, dass es in einer Erzählung, einem Roman, einem Theaterstück nicht um irgendetwas, sondern letztlich um uns selber geht. Die Dichter des barocken Jesuitentheaters haben dafür die lateinische Formel „Hic tua res agitur“ verwendet, wörtlich übersetzt „Hier wird deine Sache verhandelt“. So kann etwa Jeremias Gotthelfs Novelle „Die schwarze Spinne“ aus dem Jahr 1842 auch uns moderne Menschen noch lehren, dass jeder Fortschritt, jedes Neue erst dann segensreich und von Erfolg gekrönt ist, wenn es die Tradition nicht verleugnet. Keine Frage: Die Literatur ist ein taugliches Mittel, vielleicht das tauglichste von allen, Welterfahrung weiterzugeben, Auseinandersetzung mit Welt und Umwelt zu spiegeln und darzustellen. Das gilt gerade auch für unsere moderne Welt.</p>
@@ -94,23 +103,6 @@
       <p style="margin-top:var(--s-l)"><a href="../archiv.html">← Zurück zu allen Interviews</a></p>
     </div>
   </article>
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="sponsor">
-        <div class="sponsor__grid">
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Diese Interview-Reihe wird ermöglicht von</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">NOVARA</span></div>
-          </div>
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Partner dieses Gesprächs</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">MERIDIAN</span><span class="sponsor-logo">AUREA</span></div>
-          </div>
-        </div>
-        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Je Gespräch: 1 Gesamtpartner und 2 eigene Plätze.</div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -160,5 +152,6 @@
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
 </body>
 </html>

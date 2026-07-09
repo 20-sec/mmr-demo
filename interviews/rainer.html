@@ -112,6 +112,15 @@
           <p>Lassen Sie uns an dieser Stelle eine Exkursion machen: Wie muss man sich die Ausbildung und das Training für Sie und Ihr Team vorstellen? Aus dem Vorgespräch habe ich verstanden, dass Sie das nicht in Gänze offenlegen dürfen – jedoch, einige Impressionen würden zur Transparenz beitragen.</p>
           <h3 class="turn__sub">Anschlags- und Terrorszenarien</h3>
         </div>
+        <div class="sponsor sponsor--break">
+          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
+          <div class="sponsor__partners" data-shuffle>
+            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
+          </div>
+          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
+        </div>
         <div class="turn turn--a">
           <span class="turn__who">„Rainer“</span>
           <p>Nun, ich verstehe das Interesse und werde auf drei Trainingskontexte eingehen: Quartalsweise führen wir gemeinsam mit der Airborne Medical Group medizinische Trainings im Bereich Combat Medic durch. Ergänzend hierzu finden waffentechnische und taktische Ausbildungen mit einem Unternehmen statt, dessen Namen ich hier nicht nennen möchte. Dabei geht es unter anderem um CQB, Anschlags- und Terrorszenarien sowie Geisellagen. Nach einem achtstündigen Schießtraining liegen dabei nicht selten weit über tausend Schuss 9 mm am Boden. Diese Ausbildungsinhalte sind fester Bestandteil unseres strukturierten Ausbildungs- und Trainingsplans. Das jahrelange Krav-Maga-Training mit Martin Luna aus Spanien hat uns deutlich vor Augen geführt, wie entscheidend Erkennen und Wahrnehmen insbesondere in Messerdynamiken sind. Von ebenso zentraler taktischer Bedeutung sind das Fahrtraining im Verbund sowie das taktische Training rund um das Kraftfahrzeug. Diese Fähigkeiten sind essenziell, um auch in hochdynamischen und reaktiven Einsatzlagen jederzeit handlungsfähig zu bleiben und die Lage- und Handlungskontrolle zu gewährleisten.</p>
@@ -133,23 +142,6 @@
       <p style="margin-top:var(--s-l)"><a href="../archiv.html">← Zurück zu allen Interviews</a></p>
     </div>
   </article>
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="sponsor">
-        <div class="sponsor__grid">
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Diese Interview-Reihe wird ermöglicht von</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">NOVARA</span></div>
-          </div>
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Partner dieses Gesprächs</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">MERIDIAN</span><span class="sponsor-logo">AUREA</span></div>
-          </div>
-        </div>
-        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Je Gespräch: 1 Gesamtpartner und 2 eigene Plätze.</div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -199,5 +191,6 @@
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
 </body>
 </html>

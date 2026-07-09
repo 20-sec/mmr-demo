@@ -127,6 +127,15 @@
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Eine weitere Hypothese: Tut sich Lyrik auch deshalb schwer, weil wir in der westlichen Welt weitgehend in Lebensumständen sind, in denen ein Fleischstück des Sonntags nicht eine Besonderheit im Verlauf einer Woche ist, sondern wir potentiell uns tagtäglich Fleisch gönnen könnten – und dabei womöglich bei zu günstigem Hackfleisch landen, das gepresst auf den Burgern im Fastfood liegt? Ist uns der bequem und täglich konsumierbare Burger lieber als ein mit Bedacht und Mühe köstlich zubereiteter Sonntagsbraten? (lacht)</p>
         </div>
+        <div class="sponsor sponsor--break">
+          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
+          <div class="sponsor__partners" data-shuffle>
+            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
+          </div>
+          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
+        </div>
         <div class="turn turn--a">
           <span class="turn__who">Erich Pfefferlen</span>
           <p>Ich weiß, was du sagen möchtest. – Wir haben viel oder gar zu viel an Büchern und wir werden ganz bequem im Alltag mit unwesentlichen, aber gedankenlos konsumierbaren Texten versorgt. Dies gilt für alle Genres – bis hin zum Film und zu TV-Serien. Man will sich nicht mehr anstrengen, um zu verstehen oder gar selbst sich anstrengend neue Gedanken einbringen, um so zu neuen Erkenntnissen zu gelangen. Das Plakative und schnell Konsumierbare wird in Kauf genommen, um sich nicht anstrengen zu müssen. Das gilt aber für viele andere Bereiche in unserem Leben auch. Nehmen wir nur einmal die Erotik. Früher war der Minnegesang. Da hat sich ein Mann viel Zeit und Mühe gegeben, eine Frau zu umwerben – und sehnlichst gehofft, dass sie ihr weißes Taschentüchlein aus dem Fenster herabschweben lässt. Und heute …? Dies ist sicherlich ein idealistisches Bild aus romantisch verklärten Zeiten des Mittelalters, zeigt aber doch auf, wie unser heutiges zwischenmenschliches Agieren so viel anders in unserer so hektischen Lebenswelt mit oberflächlichsten Beziehungen wie zum Beispiel Facebook-Freunden geworden ist. Vielfach, so könnte man resümieren, hat heute Oberflächlichkeit über den Tiefgang gesiegt, ob bei zwischenmenschlichen Beziehungen oder bei der Rezeption von Literatur, wodurch ein Erkennen und die Wertschätzung gegenüber dem Anderen und an Schönem leider nur allzu oft verloren ging.</p>
@@ -158,23 +167,6 @@
       <p style="margin-top:var(--s-l)"><a href="../archiv.html">← Zurück zu allen Interviews</a></p>
     </div>
   </article>
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="sponsor">
-        <div class="sponsor__grid">
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Diese Interview-Reihe wird ermöglicht von</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">NOVARA</span></div>
-          </div>
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Partner dieses Gesprächs</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">MERIDIAN</span><span class="sponsor-logo">AUREA</span></div>
-          </div>
-        </div>
-        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Je Gespräch: 1 Gesamtpartner und 2 eigene Plätze.</div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -224,5 +216,6 @@
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
 </body>
 </html>

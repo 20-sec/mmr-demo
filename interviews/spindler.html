@@ -75,6 +75,15 @@
           <span class="turn__who">Thomas Spindler</span>
           <p>Ja, es geht mir um das Alltägliche. Jüdisches Leben im Alltag stattfinden lassen, indem das gemeinsam nicht nur anlassbezogen betont, sondern tagtäglich gelebt wird. Wenn wir die Zeit nehmen, aus der unser 2019 in Jerusalem wiederentdecktes „jüdischdeutsches Liederbuch von 1912“ stammt, dann sehen wir eine Epoche, in der Deutsche jüdischen Glaubens und Deutsche christlichen Glaubens nahezu vollständig emanzipiert und gleichberechtigt waren. Man stand gemeinsam an den Werkbänken der Fabriken, nahm gemeinsam am Schulunterricht teil, war in Sport- und Chorgemeinschaften und opferte gemeinsam als Soldat sein Leben im 1. Weltkrieg. Wir sind von dieser Art des Zusammenlebens und Respekts Lichtjahre entfernt. Dennoch ist es für uns gerade in unseren Schulprojekten ein wichtiges Moment, auf diese Epoche hinzuweisen, die nicht Fiktion, sondern gelebte Realität war.</p>
         </div>
+        <div class="sponsor sponsor--break">
+          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
+          <div class="sponsor__partners" data-shuffle>
+            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
+          </div>
+          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
+        </div>
         <div class="turn turn--q">
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Angesichts wachsender antisemitischer Tendenzen in Deutschland und darüber hinaus: Welche Wirksamkeit sehen Sie bei der Kultur, über das einzelne Erlebnis hinaus aktiv eine Haltung zu bewirken, bei der jüdisches Leben sichtbar willkommen ist?</p>
@@ -90,23 +99,6 @@
       <p style="margin-top:var(--s-l)"><a href="../archiv.html">← Zurück zu allen Interviews</a></p>
     </div>
   </article>
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="sponsor">
-        <div class="sponsor__grid">
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Diese Interview-Reihe wird ermöglicht von</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">NOVARA</span></div>
-          </div>
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Partner dieses Gesprächs</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">MERIDIAN</span><span class="sponsor-logo">AUREA</span></div>
-          </div>
-        </div>
-        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Je Gespräch: 1 Gesamtpartner und 2 eigene Plätze.</div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -156,5 +148,6 @@
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
 </body>
 </html>

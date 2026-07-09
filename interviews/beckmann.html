@@ -71,6 +71,15 @@
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Es gibt gesellschaftspolitische und nachrichtliche Sendeformate, welche eine hohe Reichweite haben. Werden dort Redaktionen und Moderation regelmäßig personell neu besetzt, um den in der Natur der Sache liegenden personifizierten Einfluss Einzelner zeitlich zu begrenzen? Schlussendlich haben Redaktion und Moderation oftmals mehr öffentlichen Einfluss als so manche gewählte Mandatstragende.</p>
         </div>
+        <div class="sponsor sponsor--break">
+          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
+          <div class="sponsor__partners" data-shuffle>
+            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
+          </div>
+          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
+        </div>
         <div class="turn turn--a">
           <span class="turn__who">Frank Beckmann</span>
           <p>Wir setzen sehr bewusst auch auf personelle Rotation, auf Entwicklung und auf neue Stimmen. Es gibt Formate, in denen das regelmäßige Wechseln der Moderation, der Presenter oder sichtbaren Reporterinnen und Reporter zur DNA gehört, weil unterschiedliche Blickwinkel das Programm bereichern. Beispiele im NDR sind das junge Investigativ-Magazin „STRG_F“, unser Medienmagazin „ZAPP“, aber auch in der „NDR Talk Show“ gibt es immer wieder mal ein neues Gesicht im Moderationsteam. Unterschiedliche Blickwinkel bereichern unsere Programme, davon bin ich fest überzeugt. Darum war ich ehrlich gesagt auch sehr überrascht, dass unsere Entscheidung, beim Magazin „KLAR“ eine weitere Moderatorin im Wechsel mit Julia Ruhs dazuzuholen, für so viel – aus meiner Sicht unnötige – Aufregung gesorgt hat. Wir bieten jetzt mehr Perspektiven, nicht weniger. Gleichzeitig wissen wir, dass Gesichter und Stimmen, die regelmäßig im Programm erscheinen, für viele Menschen sehr wichtig sind. Sie schaffen Vertrauen und Verbundenheit. Auch das gehört zur Medienrealität. Wichtig ist aber: Auch starke Persönlichkeiten im Programm arbeiten in einem redaktionellen System. Entscheidungen über Themen, Gewichtung und Tonalität werden nie allein von einer Person getroffen, sondern im Team. Und diese Teams sind im NDR auch vielfältig zusammengesetzt – fachlich, altersmäßig, perspektivisch. Aber man kann immer noch besser werden – wir gucken auch bei der Zusammensetzung unserer Teams künftig noch stärker darauf, dass sie die Gesellschaft, über und für die wir berichten, auch repräsentieren.</p>
@@ -86,23 +95,6 @@
       <p style="margin-top:var(--s-l)"><a href="../archiv.html">← Zurück zu allen Interviews</a></p>
     </div>
   </article>
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="sponsor">
-        <div class="sponsor__grid">
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Diese Interview-Reihe wird ermöglicht von</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">NOVARA</span></div>
-          </div>
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Partner dieses Gesprächs</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">MERIDIAN</span><span class="sponsor-logo">AUREA</span></div>
-          </div>
-        </div>
-        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Je Gespräch: 1 Gesamtpartner und 2 eigene Plätze.</div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -152,5 +144,6 @@
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
 </body>
 </html>

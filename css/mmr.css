@@ -387,3 +387,11 @@ blockquote { font-family: var(--font-quote); font-style: italic; font-size: 1.45
 .sponsor--dark .sponsor__ey { color: var(--pate); }
 .sponsor--dark .sponsor-logo { background: rgba(241,246,214,.05); border-color: rgba(200,169,106,.35); color: #d3c8ac; }
 .sponsor--dark .sponsor__note { color: #8f9a67; }
+/* Drei gleichrangige Partner mit Nutzen-Satz; als Trenner im Interview */
+.sponsor--break { margin: var(--s-xl) 0; text-align: center; }
+.sponsor--break .sponsor__ey { color: #9a7b3a; }
+.sponsor__ey--center { text-align: center; }
+.sponsor__partners { display: flex; flex-wrap: wrap; gap: var(--s-m) var(--s-l); justify-content: center; align-items: flex-start; margin-top: var(--s-m); }
+.sponsor__partner { flex: 1 1 160px; max-width: 230px; text-align: center; }
+.sponsor__partner .sponsor-logo { margin: 0 auto; }
+.sponsor__claim { font-size: .82rem; line-height: 1.4; color: #8a7b58; margin: .65rem 0 0; }

@@ -150,6 +150,15 @@
           <span class="turn__who">Scarlett Eckert</span>
           <p>An Land haben wir bei steigender Bevölkerung ein Platzproblem, aber Algen wachsen im Wasser und die Ozeane bieten viel Fläche. Hier kann man skalieren. Die Schülerinnen und Schüler beschäftigen sich damit und so kommen rationale Erkenntnisse und der Genuss auf der Zunge zusammen. Dann werden die Eltern beim nächsten Einkauf nach knusprigen Algenchips gefragt.</p>
         </div>
+        <div class="sponsor sponsor--break">
+          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
+          <div class="sponsor__partners" data-shuffle>
+            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
+          </div>
+          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
+        </div>
         <div class="turn turn--q">
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Sie haben vom Erkenntnisgewinn bei Schülerinnen und Schülern gesprochen. Wenn ich mir das in der Realität von Lebensmittelproduktion, Logistik und Handel vorstelle, dann ist die Frage, was anschließend von gesunden Algen noch übrig bleibt. Bleiben wir bei den Kartoffelchips, die wir im Lebensmitteleinzelhandel im Regal stehen sehen. Klar, da ist die Kartoffel – aber eben plus Zucker, plus Salz und weiteren Zusatzstoffen. Nun gab es einen Trend hin zu Chips basierend auf Erbsen oder Linsen. Unabhängig vom landwirtschaftlichen Rohstoff braucht es für Lagerfähigkeit, einheitlichen Geschmack und der für eine hohe Produktivität erforderlichen Verarbeitungseigenschaften (industrielle Produktion) einige Zusatzstoffe. Das sind dann beispielsweise Texturverbesserer, Emulgatoren, Antioxidationsmittel und so weiter. Nun, die Vorteile gegenüber Kartoffelchips, also Proteingehalt, Fettgehalt und Ballaststoffe, bleiben bestehen. Jedoch, ohne Zusatzstoffe scheint eine industrielle Lebensmittelverarbeitung nicht zu funktionieren. Wo findet man aktuell beispielsweise Algenchips?</p>
@@ -185,23 +194,6 @@
       <p style="margin-top:var(--s-l)"><a href="../archiv.html">← Zurück zu allen Interviews</a></p>
     </div>
   </article>
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="sponsor">
-        <div class="sponsor__grid">
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Diese Interview-Reihe wird ermöglicht von</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">NOVARA</span></div>
-          </div>
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Partner dieses Gesprächs</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">MERIDIAN</span><span class="sponsor-logo">AUREA</span></div>
-          </div>
-        </div>
-        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Je Gespräch: 1 Gesamtpartner und 2 eigene Plätze.</div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -251,5 +243,6 @@
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
 </body>
 </html>

@@ -107,6 +107,15 @@
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Bei MITMENSCHENREDEN handelt es sich um ein Magazin, welches zum Perspektivenwechsel einlädt. Der Polarisierung und dem Populismus soll mit freundlichen Argumenten und mit nachvollziehbaren Erfahrungen begegnet werden. Wenn Sie, Lisa Marie und Florian, auf Ihre vielen Reisen zurückblicken: Welche Impressionen haben Sie für uns, die zu einem Perspektivenwechsel einladen? Also raus aus der Produktivität oder dem Konsumieren und rein in eine andere Wahrnehmung. Ein, zwei Beispiele sind willkommen.</p>
         </div>
+        <div class="sponsor sponsor--break">
+          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
+          <div class="sponsor__partners" data-shuffle>
+            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
+          </div>
+          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
+        </div>
         <div class="turn turn--a">
           <span class="turn__who">Lisa Marie Smit</span>
           <p>Wir haben das Glück, durch unsere Reisen und unsere Leidenschaft zur Natur viele unterschiedliche Perspektiven kennenzulernen. Was uns dabei besonders beeindruckt hat, ist, wie stark die Wahrnehmung der Welt durch den eigenen Lebenskontext geprägt ist. Ein Beispiel, das uns besonders in Erinnerung geblieben ist, war eine Reise nach Borneo. Dort haben wir intensiv an einem Projekt über Palmöl gearbeitet. Dabei wurde uns bewusst, wie komplex dieses ganze Themenfeld ist und welche Positionen es dort alle zu bedenken gibt. Von den Arbeitern auf den Plantagen über die Naturschützer vor Ort bis hin zu unserem Blick als Konsument auf die Dinge – jeder Gedanke und jede Meinung hat hier ihre Berechtigung. Wir haben erfahren, dass es oft nicht nur einen richtigen Weg gibt, sondern viele unterschiedliche Wege, die je nach Blickwinkel und Erfahrung gerechtfertigt sind. Diese Erfahrung hat uns gezeigt, wie wichtig es ist, nicht alles als schwarz oder weiß zu betrachten, sondern Raum für Nuancen und andere Sichtweisen zu lassen, ohne dabei den eigenen Standpunkt zu verlieren. Es ist gut, nach einer langen Reise, fünf bis sechs Wochen abseits des Alltags, noch einmal ganz neu auf Dinge zu schauen und Situationen vielleicht anders zu bewerten.</p>
@@ -134,23 +143,6 @@
       <p style="margin-top:var(--s-l)"><a href="../archiv.html">← Zurück zu allen Interviews</a></p>
     </div>
   </article>
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="sponsor">
-        <div class="sponsor__grid">
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Diese Interview-Reihe wird ermöglicht von</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">NOVARA</span></div>
-          </div>
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Partner dieses Gesprächs</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">MERIDIAN</span><span class="sponsor-logo">AUREA</span></div>
-          </div>
-        </div>
-        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Je Gespräch: 1 Gesamtpartner und 2 eigene Plätze.</div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -200,5 +192,6 @@
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
 </body>
 </html>

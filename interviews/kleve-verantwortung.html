@@ -138,6 +138,15 @@
           <span class="turn__who">Heiko Kleve</span>
           <p>Das Bürgergeld habe ich nicht im Detail im Blick. Das müsste man sich im Einzelnen anschauen. Klar, es muss zwischen den arbeitenden Leuten und Bürgergeldempfängern eine spürbare Differenz geben. Es muss Menschen deutlich besser gehen, die ihre Lebensgestaltung selbst in die Hand nehmen. Bei den aktuellen Regelungen ist für viele Menschen die Differenz scheinbar nicht spürbar. Als Liberaler lehne ich staatliche Interventionen im Sinne eines Mietdeckels und so weiter ab. Dort sehen wir gemessen an der Zielsetzung gegenteilige Effekte.</p>
         </div>
+        <div class="sponsor sponsor--break">
+          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
+          <div class="sponsor__partners" data-shuffle>
+            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
+          </div>
+          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
+        </div>
         <div class="turn turn--q">
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Nochmals zum Punkt, dass es weniger staatliche Regelungen geben könnte und dadurch die Gefahr bestünde, dass Menschen durch das institutionalisierte „soziale Netz“ fallen. Dann könnte doch das soziale Umfeld wieder aktiv werden. Wir nehmen unseren Mut zusammen und entbürokratisieren massiv – und als Gesellschaft bringen wir in den besagten Fällen das Engagement auf, uns zu kümmern. Das ist doch genau die Mentalität, auf die Sie zu Beginn des Gesprächs hingewiesen haben: Das soziale Eingebundensein.</p>
@@ -171,23 +180,6 @@
       <p style="margin-top:var(--s-l)"><a href="../archiv.html">← Zurück zu allen Interviews</a></p>
     </div>
   </article>
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="sponsor">
-        <div class="sponsor__grid">
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Diese Interview-Reihe wird ermöglicht von</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">NOVARA</span></div>
-          </div>
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Partner dieses Gesprächs</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">MERIDIAN</span><span class="sponsor-logo">AUREA</span></div>
-          </div>
-        </div>
-        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Je Gespräch: 1 Gesamtpartner und 2 eigene Plätze.</div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -237,5 +229,6 @@
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
 </body>
 </html>

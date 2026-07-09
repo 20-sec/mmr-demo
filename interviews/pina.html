@@ -87,6 +87,15 @@
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Welche Erfahrungen hat Fundalib mit der Wirksamkeit literarischer und philosophischer Werke – Romane, Essays, Essaybände – als Mittel zur Verbreitung liberaler Ideen?</p>
         </div>
+        <div class="sponsor sponsor--break">
+          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
+          <div class="sponsor__partners" data-shuffle>
+            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
+          </div>
+          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
+        </div>
         <div class="turn turn--a">
           <span class="turn__who">Juan Pina</span>
           <p>Für uns ist es von entscheidender Bedeutung, der spanischen Gesellschaft (und der gesamten spanischsprachigen Welt) eine Vielzahl von Materialien zur Verfügung zu stellen, die sich positiv auf den Grad der bestehenden Freiheit auswirken können. Aus diesem Grund erstellen wir seit einem Jahrzehnt Indizes zur wirtschaftlichen Freiheit und Steuerwettbewerbsfähigkeit und veröffentlichen jedes Jahr eine Vielzahl von Studien, Berichten und Policy Briefs, zusätzlich zu unserem Monatsmagazin mit liberalen Meinungsbeiträgen zu aktuellen Themen. Seit April 2025 sind wir aber auch ein Verlag. Und wir sind sehr hoffnungsvoll, was dieses neue Unterfangen angeht. In den letzten Monaten haben wir bereits mehr als dreißig Bücher veröffentlicht, sowohl Sachbücher als auch Belletristik. Wir sind der einzige der drei spanischsprachigen liberalen Verlage, der Belletristik in seinem Katalog führt, und wir halten dies für unerlässlich. Es sei daran erinnert, dass Belletristik und sogar Science-Fiction einen sehr positiven Einfluss auf die Entwicklung des amerikanischen Libertarismus in den 1960er und 1970er Jahren hatten. Menschen entwickeln ihre Ideen durch Geschichten. Das Erzählen von Geschichten mit einem freiheitsfreundlichen Hintergrund, wie Sie es durch hervorragende Romane und so kraftvolle Figuren wie Max Grund tun, ist ein wirksames Mittel, um den zuvor erwähnten kulturellen Kampf zu gewinnen. Fundalib ist stolz darauf, neben seiner Arbeit als Think Tank auch als Verlag dazu beitragen zu können.</p>
@@ -106,23 +115,6 @@
       <p style="margin-top:var(--s-l)"><a href="../archiv.html">← Zurück zu allen Interviews</a></p>
     </div>
   </article>
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="sponsor">
-        <div class="sponsor__grid">
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Diese Interview-Reihe wird ermöglicht von</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">NOVARA</span></div>
-          </div>
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Partner dieses Gesprächs</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">MERIDIAN</span><span class="sponsor-logo">AUREA</span></div>
-          </div>
-        </div>
-        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Je Gespräch: 1 Gesamtpartner und 2 eigene Plätze.</div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -172,5 +164,6 @@
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
 </body>
 </html>

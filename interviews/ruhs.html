@@ -139,6 +139,15 @@
           <span class="turn__who">Julia Ruhs</span>
           <p>Wobei historische Vergleiche immer etwas problematisch sind. Aber ja, die Gefahr von extremistischen Regimen kommt in meinen Augen oft im Mantel des Guten – bloß verursachen sie Böses. Das zeigt auch der Abwehrreflex gegen die AfD. Das ist ein gesunder Reflex gegen einen totalitären Staat. Allerdings fehlt die Differenzierung, dass während der Pandemie auch sehr absolut agiert wurde, auch das gehört aufgearbeitet. Das eine wird massiv problematisiert und das andere wird kaum aufgearbeitet. Hier fehlt mir die Differenzierung. Es wäre gut, wenn mehr Leute hinstehen und ihre Meinung gut begründet äußern. Es braucht Menschen, die den Mut zum Widerspruch aufbringen. Außerdem finde ich schon, dass es auch heute noch guten Journalismus gibt und dafür möchte ich selbst auch einstehen.</p>
         </div>
+        <div class="sponsor sponsor--break">
+          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
+          <div class="sponsor__partners" data-shuffle>
+            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
+            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
+          </div>
+          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
+        </div>
         <div class="turn turn--q">
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Lassen Sie uns noch einen Gedankensprung machen. – Wenn wir beispielsweise in die politischen Talkshows schauen, sehen wir oftmals die gleichen Gesichter – und kaum mit nennenswerter Wortmeldezeit den gemeinen Bürger mit seinen guten Argumenten und seinen redenswerten Erfahrungen.</p>
@@ -174,23 +183,6 @@
       <p style="margin-top:var(--s-l)"><a href="../archiv.html">← Zurück zu allen Interviews</a></p>
     </div>
   </article>
-  <section class="section" style="padding-top:0">
-    <div class="wrap">
-      <div class="sponsor">
-        <div class="sponsor__grid">
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Diese Interview-Reihe wird ermöglicht von</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">NOVARA</span></div>
-          </div>
-          <div class="sponsor__col">
-            <div class="sponsor__ey">Partner dieses Gesprächs</div>
-            <div class="sponsor__logos"><span class="sponsor-logo">MERIDIAN</span><span class="sponsor-logo">AUREA</span></div>
-          </div>
-        </div>
-        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Je Gespräch: 1 Gesamtpartner und 2 eigene Plätze.</div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -240,5 +232,6 @@
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
 </body>
 </html>
