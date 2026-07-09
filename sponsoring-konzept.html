@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sponsoring-Konzept — Mit Menschen reden</title>
+  <meta name="description" content="Konzept-Vorschau: Wie Sponsoring pro Bereich aussehen kann. Erkennbar, aber nicht aufdringlich. Grün gehört der Redaktion, Gold den Partnern.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/mmr.css">
+  <style>
+    .mvp-note { background: var(--anriss-bg); color: var(--anriss); font-size: .85rem; font-weight: 500; text-align: center; padding: .55rem var(--s-m); border-bottom: 1px solid #ecdcb4; }
+    .mvp-note b { font-weight: 700; }
+
+    .prinzip { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s-m) var(--s-l); }
+    .prinzip__item { display: flex; gap: .8rem; }
+    .prinzip__n { flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--pate); color: #9a7b3a; font-weight: 700; font-size: .9rem; display: flex; align-items: center; justify-content: center; }
+    .prinzip__item h3 { font-size: 1.1rem; margin-bottom: .25rem; }
+    .prinzip__item p { color: var(--muted); font-size: .95rem; margin: 0; }
+
+    /* Bereichs-Demo */
+    .area { padding: var(--s-l) 0; border-top: 1px solid var(--rule); }
+    .area__head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s-s); flex-wrap: wrap; margin-bottom: var(--s-m); }
+    .area__name { font-family: var(--font-display); font-size: 1.7rem; font-weight: 600; }
+    .area__slots { font-size: .72rem; text-transform: uppercase; letter-spacing: .16em; font-weight: 700; color: #9a7b3a; background: #f6efe0; border: 1px solid #e6d6b6; border-radius: 999px; padding: .3rem .8rem; }
+    .area__why { color: var(--muted); font-size: .96rem; margin: var(--s-m) 0 0; max-width: 62ch; }
+    .demo-context { font-size: .74rem; text-transform: uppercase; letter-spacing: .14em; color: var(--muted); font-weight: 600; margin-bottom: .5rem; }
+
+    /* Partner-Band (Gold, ruhig) */
+    .pband { border-top: 1px solid var(--pate); border-bottom: 1px solid var(--pate); background: linear-gradient(180deg, #faf6ee, #f5eede); padding: var(--s-m); border-radius: 10px; text-align: center; }
+    .pband__ey { font-size: .72rem; text-transform: uppercase; letter-spacing: .2em; color: #9a7b3a; font-weight: 700; margin-bottom: var(--s-s); }
+    .pband__logos { display: flex; gap: var(--s-m); justify-content: center; flex-wrap: wrap; align-items: center; }
+    .plogo { display: inline-flex; align-items: center; justify-content: center; height: 46px; padding: 0 1.3rem; border: 1px solid #ddd3c0; border-radius: 6px; background: var(--bg); font-family: var(--font-display); font-weight: 600; letter-spacing: .09em; color: #7a746a; font-size: 1.05rem; transition: color .2s, border-color .2s; }
+    .plogo:hover { color: var(--text); border-color: var(--pate); }
+
+    .pband--live { background: var(--gruen-schwarz); border-color: rgba(200,169,106,.5); }
+    .pband--live .pband__ey { color: var(--pate); }
+    .pband--live .plogo { background: rgba(241,246,214,.05); border-color: rgba(200,169,106,.35); color: #d3c8ac; }
+    .pband--live .plogo:hover { color: #fff; border-color: var(--pate); }
+
+    /* Inline-Partner (eine Kolumne / eine Rubrik) */
+    .pcard { background: var(--bg-alt); border: 1px solid var(--rule); border-radius: 12px; padding: var(--s-m); max-width: 460px; }
+    .pcard__label { font-family: var(--font-display); font-size: 1.4rem; margin-bottom: .3rem; }
+    .pcard__desc { color: var(--muted); font-size: .95rem; margin-bottom: var(--s-m); }
+    .pcard__foot { border-top: 1px dashed var(--pate); padding-top: .8rem; display: flex; align-items: center; gap: .7rem; }
+    .pcard__foot .cap { font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; color: #9a7b3a; font-weight: 600; }
+    .plogo--sm { height: 34px; font-size: .9rem; padding: 0 .9rem; }
+
+    .two-level { display: grid; gap: var(--s-m); }
+
+    @media (max-width: 720px) { .prinzip { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="logo" href="index.html"><img src="assets/logo-header.png" alt="mit menschen reden, Magazin für den Perspektivenwechsel"></a>
+    <button class="nav-toggle" aria-label="Menü" aria-expanded="false">☰</button>
+    <nav class="nav">
+      <a href="archiv.html">Interviews</a>
+      <a href="themen.html">Themen</a>
+      <a href="kolumnen/index.html">Kolumnen</a>
+      <a href="rubriken.html">Rubriken</a>
+      <a href="blickwinkel.html">Blickwinkel</a>
+      <a href="live.html">Live</a>
+      <a href="#" class="cta">Newsletter</a>
+    </nav>
+  </div>
+</header>
+
+<div class="mvp-note">Konzept-Vorschau für Markus. Alle Partner (NOVARA, MERIDIAN …) sind <b>Platzhalter</b>. Es geht hier nur um die grafische Idee pro Bereich.</div>
+
+<main>
+  <section class="hero" style="padding-bottom:var(--s-m)">
+    <div class="wrap">
+      <span class="hero__tick" style="background:var(--pate)"></span>
+      <div class="eyebrow" style="color:#9a7b3a">Sponsoring · Konzept</div>
+      <h1 class="hero__title" style="max-width:18ch">Partner, nicht Werbung</h1>
+      <p class="hero__lead" style="max-width:62ch;border-left-color:var(--pate)">Sponsoring, das man erkennt, ohne dass es stört. Das Magazin bleibt redaktionell, die Partner werden sichtbar getragen, nicht laut beworben. Zwei Farben trennen die Welten: Grün gehört der Redaktion, Gold gehört den Partnern.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:var(--s-l)">
+    <div class="wrap">
+      <h2 class="section__title" style="margin-bottom:var(--s-l)">Das Prinzip</h2>
+      <div class="prinzip">
+        <div class="prinzip__item">
+          <div class="prinzip__n">1</div>
+          <div><h3>Patenschaft statt Anzeige</h3><p>Ein Partner ermöglicht einen Bereich, er verkauft nicht darin. Logo und Name, höchstens ein kurzer Satz, nie ein Kaufaufruf.</p></div>
+        </div>
+        <div class="prinzip__item">
+          <div class="prinzip__n">2</div>
+          <div><h3>Gold als Partner-Signal</h3><p>Alles Redaktionelle bleibt grün. Alles Partnerbezogene trägt den ruhigen Goldton. Der Leser weiß immer, was was ist.</p></div>
+        </div>
+        <div class="prinzip__item">
+          <div class="prinzip__n">3</div>
+          <div><h3>Feste, ruhige Plätze</h3><p>Partner sitzen an den Rändern: unter einem Beitrag, am Fuß eines Bereichs, in der Seitenspalte. Nie im Lesefluss, nie als Pop-up.</p></div>
+        </div>
+        <div class="prinzip__item">
+          <div class="prinzip__n">4</div>
+          <div><h3>Logos ruhen, bis man hinsieht</h3><p>Gedämpft dargestellt, farbig erst beim Darüberfahren. Präsenz ohne Aufdringlichkeit.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap">
+      <h2 class="section__title">Pro Bereich</h2>
+
+      <!-- Interviews -->
+      <div class="area">
+        <div class="area__head"><span class="area__name">Interviews</span><span class="area__slots">3 Partnerplätze</span></div>
+        <div class="demo-context">So am Fuß des Interview-Bereichs und dezent unter jedem Gespräch</div>
+        <div class="pband">
+          <div class="pband__ey">Die Interviews werden ermöglicht von</div>
+          <div class="pband__logos"><span class="plogo">NOVARA</span><span class="plogo">MERIDIAN</span><span class="plogo">AUREA</span></div>
+        </div>
+        <p class="area__why">Drei Partner tragen die ganze Reihe. Der Leser sieht sie am Ende, nicht im Gespräch. Erkennbar, aber ruhig.</p>
+      </div>
+
+      <!-- Themen -->
+      <div class="area">
+        <div class="area__head"><span class="area__name">Themen</span><span class="area__slots">3 Partnerplätze</span></div>
+        <div class="demo-context">Im Themen-Index, unter der Themen-Auswahl</div>
+        <div class="pband">
+          <div class="pband__ey">Themen-Partner</div>
+          <div class="pband__logos"><span class="plogo">VOLTA</span><span class="plogo">LUMEN</span><span class="plogo">KEBIRA</span></div>
+        </div>
+        <p class="area__why">Wer nach Themen sucht, sieht, wer diese Vielfalt möglich macht. Gleiche Handschrift wie bei den Interviews.</p>
+      </div>
+
+      <!-- Kolumnen -->
+      <div class="area">
+        <div class="area__head"><span class="area__name">Kolumnen</span><span class="area__slots">1 übergeordnet + 1 je Kolumne</span></div>
+        <div class="demo-context">Zwei Ebenen: ein Pate für den Bereich, ein eigener je Kolumne</div>
+        <div class="two-level">
+          <div class="pband">
+            <div class="pband__ey">Die Kolumnen werden ermöglicht von</div>
+            <div class="pband__logos"><span class="plogo">ORVAL</span></div>
+          </div>
+          <div class="pcard">
+            <div class="pcard__label">Afrika neu gelesen</div>
+            <div class="pcard__desc">Die Kolumne von Veronika Wetzel.</div>
+            <div class="pcard__foot"><span class="cap">Partner dieser Kolumne</span><span class="plogo plogo--sm">HELIOS</span></div>
+          </div>
+        </div>
+        <p class="area__why">Ein Pate für den ganzen Kolumnen-Bereich, plus je Kolumne ein eigener Partner. So kann eine einzelne Stimme ihren eigenen Förderer haben.</p>
+      </div>
+
+      <!-- Rubriken -->
+      <div class="area">
+        <div class="area__head"><span class="area__name">Rubriken</span><span class="area__slots">1 übergeordnet + 1 je Rubrik</span></div>
+        <div class="demo-context">Wie bei den Kolumnen: Bereich plus einzelne Rubrik</div>
+        <div class="two-level">
+          <div class="pband">
+            <div class="pband__ey">Die Rubriken werden ermöglicht von</div>
+            <div class="pband__logos"><span class="plogo">SENFT &amp; CO.</span></div>
+          </div>
+          <div class="pcard">
+            <div class="pcard__label">Wer liest schon Lyrik</div>
+            <div class="pcard__desc">Gedichte, die innehalten lassen.</div>
+            <div class="pcard__foot"><span class="cap">Partner dieser Rubrik</span><span class="plogo plogo--sm">VERANO</span></div>
+          </div>
+        </div>
+        <p class="area__why">Ein Pate für den Bereich, und jede Rubrik kann zusätzlich ihren eigenen Partner tragen.</p>
+      </div>
+
+      <!-- Blickwinkel -->
+      <div class="area">
+        <div class="area__head"><span class="area__name">Blickwinkel</span><span class="area__slots">3 Partnerplätze</span></div>
+        <div class="demo-context">Wie bei den Interviews, für die Fachbeiträge</div>
+        <div class="pband">
+          <div class="pband__ey">Die Blickwinkel werden ermöglicht von</div>
+          <div class="pband__logos"><span class="plogo">KANTOR</span><span class="plogo">FIDELIS</span><span class="plogo">AXENT</span></div>
+        </div>
+        <p class="area__why">Drei Partner für die Fachbeiträge. Gleiches Muster, damit die Seite eine ruhige, einheitliche Sprache spricht.</p>
+      </div>
+
+      <!-- Live -->
+      <div class="area">
+        <div class="area__head"><span class="area__name">Live</span><span class="area__slots">3 Partnerplätze</span></div>
+        <div class="demo-context">Im dunklen Live-Look, hier darf es etwas präsenter sein</div>
+        <div class="pband pband--live">
+          <div class="pband__ey">Die Live-Reihe wird präsentiert von</div>
+          <div class="pband__logos"><span class="plogo">MERIDIAN</span><span class="plogo">NOVARA</span><span class="plogo">VOLTA</span></div>
+        </div>
+        <p class="area__why">Event-Sponsoring akzeptiert jeder als selbstverständlich. „Präsentiert von" statt „ermöglicht von", drei Partner, im Look der Live-Seite.</p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div>
+      <div class="site-footer__brand"><img src="assets/logo-footer.png" alt="mit menschen reden"></div>
+      <p style="color:rgba(255,255,255,.6);font-size:.9rem;max-width:38ch">Magazin für den Perspektivenwechsel. Lange, ehrliche Gespräche mit Menschen, die etwas zu sagen haben. Alle Gespräche frei lesbar.</p>
+    </div>
+    <div>
+      <h4>Magazin</h4>
+      <ul>
+        <li><a href="archiv.html">Interviews</a></li>
+        <li><a href="themen.html">Themen</a></li>
+        <li><a href="kolumnen/index.html">Kolumnen</a></li>
+        <li><a href="rubriken.html">Rubriken</a></li>
+        <li><a href="blickwinkel.html">Blickwinkel</a></li>
+        <li><a href="live.html">Live</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Mitmachen</h4>
+      <ul>
+        <li><a href="#">Portrait</a></li>
+        <li><a href="#">Patenschaft</a></li>
+        <li><a href="#">Newsletter</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Verlag</h4>
+      <ul>
+        <li><a href="#">Über uns</a></li>
+        <li><a href="#">Impressum</a></li>
+        <li><a href="#">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap site-footer__bottom">
+    <span>© Mit Menschen reden · Edition PJB · Ralf M. Ruthardt</span>
+    <span>Prototyp Neubau · CI-Grün #CAD909</span>
+  </div>
+</footer>
+
+<script>
+  var t = document.querySelector('.nav-toggle'), n = document.querySelector('.nav');
+  t && t.addEventListener('click', function () {
+    var open = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
+</body>
+</html>
