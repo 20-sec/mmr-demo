@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unterstützen — Mit Menschen reden</title>
+  <meta name="description" content="Mit Menschen reden bleibt frei lesbar. Unterstütze das Magazin als Leser mit einer Spende oder als Partner mit einer Patenschaft für einen Bereich.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/mmr.css">
+  <style>
+    .u-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--s-l); margin-top: var(--s-l); }
+    .u-card { background: var(--bg-alt); border: 1px solid var(--rule); border-radius: 12px; padding: var(--s-l); display: flex; flex-direction: column; }
+    .u-card__k { font-size: .72rem; text-transform: uppercase; letter-spacing: .18em; color: var(--muted); font-weight: 600; margin-bottom: .5rem; }
+    .u-card h3 { font-family: var(--font-display); font-size: 1.5rem; margin: 0 0 var(--s-s); }
+    .u-card p { color: var(--muted); font-size: .98rem; line-height: 1.6; margin-bottom: var(--s-m); }
+    .u-card .btn { align-self: flex-start; margin-top: auto; }
+    .u-pate { background: linear-gradient(180deg, #faf6ee, #f5eede); border: 1px solid var(--pate); border-radius: 14px; padding: var(--s-l); margin-top: var(--s-l); }
+    .u-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: var(--s-m); margin: var(--s-l) 0; }
+    .u-area { background: #fff; border: 1px solid var(--pate); border-radius: 10px; padding: var(--s-m); }
+    .u-area__n { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: .25rem; }
+    .u-area__s { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: #8a7b58; font-weight: 600; }
+    .u-note { font-size: .82rem; color: #8a7b58; margin-top: var(--s-s); }
+    .btn--pate { background: var(--pate); color: #1a1a1a; }
+    .btn--pate:hover { filter: brightness(.96); }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="logo" href="index.html"><img src="assets/logo-header.png" alt="mit menschen reden, Magazin für den Perspektivenwechsel"></a>
+    <button class="nav-toggle" aria-label="Menü" aria-expanded="false">☰</button>
+    <nav class="nav">
+      <a href="archiv.html">Interviews</a>
+      <a href="themen.html">Themen</a>
+      <a href="kolumnen/index.html">Kolumnen</a>
+      <a href="rubriken.html">Rubriken</a>
+      <a href="blickwinkel.html">Blickwinkel</a>
+      <a href="live.html">Live</a>
+      <a href="#" class="cta">Newsletter</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:var(--s-m)">
+    <div class="wrap">
+      <span class="hero__tick"></span>
+      <div class="eyebrow">Unterstützen</div>
+      <h1 class="hero__title" style="max-width:20ch">Frei zu lesen. Möglich gemacht von vielen.</h1>
+      <p class="muted" style="max-width:62ch">Mit Menschen reden ist und bleibt frei lesbar. Kein Bezahlschrank, keine Hürde. Getragen wird das von Menschen, die den Perspektivenwechsel wichtig finden, und von Partnern, die einen ganzen Bereich ermöglichen. Hier sind die Wege, mitzutragen.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:var(--s-l)">
+    <div class="wrap">
+      <h2 style="font-family:var(--font-display);font-size:1.9rem;max-width:24ch">Für Leserinnen und Leser</h2>
+      <p class="muted" style="max-width:56ch">Schon ein kleiner Beitrag hält die Fähre auf Kurs. Zwei Wege, beide ohne Haken.</p>
+
+      <div class="u-cards">
+        <div class="u-card">
+          <div class="u-card__k">Regelmäßig</div>
+          <h3>Monatlich unterstützen</h3>
+          <p>Ein fester Betrag im Monat, ab dem, was für dich passt. Jederzeit kündbar, mit einem kleinen Blick hinter die Kulissen.</p>
+          <a class="btn" href="#">Auf Patreon unterstützen</a>
+        </div>
+        <div class="u-card">
+          <div class="u-card__k">Einmalig</div>
+          <h3>Einmalig danke sagen</h3>
+          <p>Ein einmaliger Betrag, ganz ohne Bindung. Schnell und direkt, in unter einer Minute.</p>
+          <a class="btn" href="#">Mit PayPal spenden</a>
+        </div>
+      </div>
+      <p class="u-note">Konzept-Vorschau: die Zahlungswege sind noch Platzhalter.</p>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="patenschaft">
+    <div class="wrap">
+      <h2 style="font-family:var(--font-display);font-size:1.9rem;max-width:26ch">Für Partner: eine Patenschaft übernehmen</h2>
+      <p class="muted" style="max-width:60ch">Unternehmen und Stiftungen können einen ganzen Bereich des Magazins ermöglichen. Kein Werbebanner, sondern eine ruhige Zeile: Ermöglicht von. Grün gehört der Redaktion, Gold gehört den Partnern. Das Logo steht sichtbar, mit einem Satz zum Nutzen, und der Bereich bleibt redaktionell unabhängig.</p>
+
+      <div class="u-pate">
+        <div class="sponsor__ey" style="color:#9a7b3a">Die Bereiche und ihre Partnerplätze</div>
+        <div class="u-areas">
+          <div class="u-area"><div class="u-area__n">Interviews</div><div class="u-area__s">3 Partnerplätze</div></div>
+          <div class="u-area"><div class="u-area__n">Themen</div><div class="u-area__s">3 Partnerplätze</div></div>
+          <div class="u-area"><div class="u-area__n">Blickwinkel</div><div class="u-area__s">3 Partnerplätze</div></div>
+          <div class="u-area"><div class="u-area__n">Kolumnen</div><div class="u-area__s">1 Platz je Kolumne</div></div>
+          <div class="u-area"><div class="u-area__n">Rubriken</div><div class="u-area__s">1 Platz je Rubrik</div></div>
+          <div class="u-area"><div class="u-area__n">Live</div><div class="u-area__s">3 Partnerplätze</div></div>
+        </div>
+        <a class="btn btn--pate" href="#">Pate werden</a>
+        <p class="u-note">Konzept-Vorschau: Platzhalter-Partner, Plätze frei.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2 style="font-family:var(--font-display);font-size:1.9rem;max-width:24ch">Advertorial im Blickwinkel</h2>
+      <p class="muted" style="max-width:60ch">Wer eine eigene Botschaft platzieren will, kann im Blickwinkel einen bezahlten Beitrag veröffentlichen. Klar als Advertorial gekennzeichnet, im gewohnten Layout, redaktionell sauber getrennt. So bleibt für die Leser transparent, was Redaktion ist und was ein Partner sagt.</p>
+      <p style="margin-top:var(--s-m)"><a class="btn btn--ghost" href="blickwinkel/advertorial-musterfirma.html">Beispiel ansehen</a></p>
+      <p class="muted" style="max-width:60ch;margin-top:var(--s-l);font-size:.95rem">Eines gilt für alle Wege: Wer unterstützt, kauft Sichtbarkeit. Einfluss auf das, was die Redaktion schreibt, ist nicht Teil des Angebots.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div>
+      <div class="site-footer__brand"><img src="assets/logo-footer.png" alt="mit menschen reden"></div>
+      <p style="color:rgba(255,255,255,.6);font-size:.9rem;max-width:38ch">Magazin für den Perspektivenwechsel. Lange, ehrliche Gespräche mit Menschen, die etwas zu sagen haben. Alle Gespräche frei lesbar.</p>
+      <p class="site-footer__support"><a class="btn btn--sm" href="unterstuetzen.html">Unterstützen</a></p>
+    </div>
+    <div>
+      <h4>Magazin</h4>
+      <ul>
+        <li><a href="archiv.html">Interviews</a></li>
+        <li><a href="themen.html">Themen</a></li>
+        <li><a href="kolumnen/index.html">Kolumnen</a></li>
+        <li><a href="rubriken.html">Rubriken</a></li>
+        <li><a href="blickwinkel.html">Blickwinkel</a></li>
+        <li><a href="live.html">Live</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Mitmachen</h4>
+      <ul>
+        <li><a href="#">Portrait</a></li>
+        <li><a href="unterstuetzen.html#patenschaft">Patenschaft</a></li>
+        <li><a href="#">Newsletter</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Verlag</h4>
+      <ul>
+        <li><a href="#">Über uns</a></li>
+        <li><a href="#">Impressum</a></li>
+        <li><a href="#">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap site-footer__bottom">
+    <span>© Mit Menschen reden · Edition PJB · Ralf M. Ruthardt</span>
+    <span>Prototyp Neubau · CI-Grün #CAD909</span>
+  </div>
+</footer>
+
+<script>
+  var t = document.querySelector('.nav-toggle'), n = document.querySelector('.nav');
+  t && t.addEventListener('click', function () {
+    var open = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
+</body>
+</html>

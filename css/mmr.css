@@ -373,6 +373,16 @@ blockquote { font-family: var(--font-quote); font-style: italic; font-size: 1.45
 /* Kleiner Sekundär-Button (z. B. Kolumnen-Einzelbeitrag zurück zur Serie) */
 .btn--sm { padding: .5rem 1.1rem; font-size: .88rem; }
 
+/* Footer-Unterstuetzen-Button: dunkler Text auf Signalgruen (Footer-Link-Overrides neutralisieren) */
+.site-footer .btn { color: var(--text); border-bottom: none; }
+.site-footer .btn:hover { color: var(--text); border-bottom: none; filter: brightness(.96); }
+.site-footer__support { margin-top: var(--s-m); }
+
+/* Advertorial-Kennzeichnung (Blickwinkel): Gold, klar getrennt von der Redaktion */
+.adv-badge { display: inline-block; background: var(--pate); color: #1a1a1a; font-family: var(--font-sans); font-size: .7rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; padding: .3rem .7rem; border-radius: 3px; margin-bottom: var(--s-s); }
+.adv-note { border-left: 3px solid var(--pate); background: #faf6ee; color: #7a6a42; font-size: .85rem; line-height: 1.55; padding: .7rem var(--s-s); margin: 0 0 var(--s-m); border-radius: 0 6px 6px 0; }
+.adv-flag { color: var(--pate); font-weight: 700; letter-spacing: .1em; }
+
 /* ---------- Sponsoring (Partner-Patenschaft, Goldton) ---------- */
 /* Grün gehört der Redaktion, Gold gehört den Partnern. Ruhige Bänder, keine Werbebanner. */
 .sponsor { border-top: 1px solid var(--pate); border-bottom: 1px solid var(--pate); background: linear-gradient(180deg, #faf6ee, #f5eede); border-radius: 10px; padding: var(--s-m); }
