@@ -110,6 +110,15 @@
       <p>Der Zubau an Offshore-Windkraftanlagen kollidiert mit dem Naturschutz der Wattenmeere und der im Vergleich zu Ländern wie Frankreich oder Spanien zu geringen Länge der Küstenlinien. Hier sind die Erträge deutlich höher als im Onshore-Bereich, aber die Kosten sind immens.</p>
       <p>Das Gleiche gilt für Gezeiten- oder Wellenkraftwerke, deren Aufstellung im Wattenmeer eher schwierig ist.</p>
       <p>Darüber hinaus müssen für die Nutzung wetterabhängiger Energien Stromspeicher in unvorstellbarer Größenordnung aufgestellt werden, um 14 Tage Dunkelflaute zu überbrücken, denn der heutige Stromimport aus dem Ausland ist nicht sicher verfügbar, wenn dort auch Strommangel herrscht.</p>
+      <div class="sponsor sponsor--break">
+        <div class="sponsor__ey">Die Blickwinkel werden unterstützt von</div>
+        <div class="sponsor__partners" data-shuffle>
+          <div class="sponsor__partner"><span class="sponsor-logo">KANTOR</span><p class="sponsor__claim">Recht für die offene Gesellschaft.</p></div>
+          <div class="sponsor__partner"><span class="sponsor-logo">FIDELIS</span><p class="sponsor__claim">Vermögen mit langem Blick.</p></div>
+          <div class="sponsor__partner"><span class="sponsor-logo">AXENT</span><p class="sponsor__claim">Technologie für den Mittelstand.</p></div>
+        </div>
+        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Blickwinkel.</div>
+      </div>
       <h2>Ausbaupotential steuerbarer Energien, wie Wasserkraft &amp; Geothermie</h2>
       <p>Ein möglicher Zubau von Wasserkraft ist in Deutschland stark begrenzt, da es zu wenig nutzbare Flüsse ohne Schiffsverkehr oder Naturschutzgebiete gibt. Wir müssten von Flensburg bis Garmisch-Partenkirchen einen etwa 2.500 bis 3.000 m hohen Gebirgszug errichten, um proportional so viel Wasserkraft wie in Norwegen oder Österreich erzeugen zu können. Wir benötigen diese Höhe als Wasserscheide für die von Westen nach Osten strömenden Wolken sowie als Gefälle für das Regenwasser in neuen Flüssen, die auf der Westseite des neu zu errichtenden künstlichen Gebirgszugs über Laufwasserkraftwerke zum Rhein strömen. Dazu müssten dann Oberseen hergestellt werden, in denen das Wasser bis zum Zeitpunkt des Bedarfs gesammelt wird und in die hinein auch Wasser, welches bereits durch die Turbinen geströmt ist, bei Windstromüberschuss hochgepumpt wird, um dann bei Engpässen erneut über die Turbinen zu Tal strömen zu können. In Deutschland bestehende Gebirge reichen nicht aus. Will man in Deutschland die Wasserkraft so wie in Norwegen oder Österreich intensiv nutzen, müssten Eingriffe in die Natur vorgenommen werden und künstliche Gebirge gebildet werden.</p>
       <p>Für Geothermiekraftwerke ist das Potenzial grundsätzlich gegeben, allerdings wird es deutlich schwieriger als zum Beispiel in Larderello in der italienischen Toskana.3 In der Münchner Region und am oberen Rheingraben muss man nicht so tief bohren wie in den übrigen Regionen, wo die Mindestbohrtiefe 5.000 bis 6.000 m beträgt.</p>
@@ -177,5 +186,6 @@
   var t = document.querySelector('.nav-toggle'), n = document.querySelector('.nav');
   t && t.addEventListener('click', function () { var open = n.classList.toggle('open'); t.setAttribute('aria-expanded', open ? 'true' : 'false'); });
 </script>
+<script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
 </body>
 </html>

@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/mmr.css">
+  <noscript><style>#bw-grid{opacity:1 !important}</style></noscript>
 </head>
 <body>
 
@@ -40,7 +41,19 @@
 
   <section class="section" style="padding-top:var(--s-l)">
     <div class="wrap">
-      <div class="grid">
+      <div id="bw-grid" class="grid" style="opacity:0">
+
+        <div class="iv-break">
+          <div class="sponsor sponsor--break" style="margin:0">
+            <div class="sponsor__ey">Die Blickwinkel werden unterstützt von</div>
+            <div class="sponsor__partners" data-shuffle>
+              <div class="sponsor__partner"><span class="sponsor-logo">KANTOR</span><p class="sponsor__claim">Recht für die offene Gesellschaft.</p></div>
+              <div class="sponsor__partner"><span class="sponsor-logo">FIDELIS</span><p class="sponsor__claim">Vermögen mit langem Blick.</p></div>
+              <div class="sponsor__partner"><span class="sponsor-logo">AXENT</span><p class="sponsor__claim">Technologie für den Mittelstand.</p></div>
+            </div>
+            <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Blickwinkel.</div>
+          </div>
+        </div>
 
         <a class="card" href="blickwinkel/gruell.html">
           <div class="card__media"><img src="assets/beitraege/gruell.jpg" alt="Vertrauensrepublik Deutschland"></div>
@@ -326,6 +339,25 @@
   t && t.addEventListener('click', function () {
     var open = n.classList.toggle('open');
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  (function () {                                            // Partner-Stoerer nach der 3. Reihe der Blickwinkel-Liste
+    var g = document.getElementById('bw-grid');
+    if (!g) return;
+    var band = g.querySelector('.iv-break');
+    if (band) {
+      band.parentNode.removeChild(band);
+      var cards = Array.prototype.slice.call(g.querySelectorAll('.card'));
+      var lastTop = null, rows = 0, target = null;
+      for (var k = 0; k < cards.length; k++) {
+        var top = cards[k].offsetTop;
+        if (lastTop === null || top > lastTop + 4) { rows++; lastTop = top; if (rows === 4) { target = cards[k]; break; } }
+      }
+      if (target) g.insertBefore(band, target); else g.appendChild(band);
+    }
+    g.style.opacity = '1';
+  })();
+  document.querySelectorAll('[data-shuffle]').forEach(function (el) {
+    for (var i = el.children.length; i; i--) el.appendChild(el.children[Math.random() * i | 0]);
   });
 </script>
 </body>
