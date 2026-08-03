@@ -407,10 +407,10 @@ blockquote { font-family: var(--font-quote); font-style: italic; font-size: 1.45
 .sponsor--break { margin: var(--s-xl) 0; text-align: center; }
 .sponsor--break .sponsor__ey { color: #9a7b3a; }
 .sponsor__ey--center { text-align: center; }
-.sponsor__partners { display: flex; flex-wrap: wrap; gap: var(--s-m) var(--s-l); justify-content: center; align-items: flex-start; margin-top: var(--s-m); }
-.sponsor__partner { flex: 1 1 160px; max-width: 230px; text-align: center; }
+.sponsor__partners { display: flex; flex-wrap: wrap; gap: var(--s-m) var(--s-m); justify-content: center; align-items: flex-start; margin-top: var(--s-m); }
+.sponsor__partner { flex: 1 1 150px; max-width: 210px; text-align: center; }
 .sponsor__partner .sponsor-logo { margin: 0 auto; }
-.sponsor__claim { font-size: .82rem; line-height: 1.4; color: #8a7b58; margin: .65rem 0 0; }
+.sponsor__claim { font-size: .82rem; line-height: 1.4; color: #8a7b58; margin: .65rem 0 0; hyphens: auto; overflow-wrap: break-word; }
 /* Partner-Stoerer als volle Grid-Reihe in der Interview-Auflistung */
 .iv-break { grid-column: 1 / -1; }
 .iv-break .sponsor--break { margin: 0; }
