@@ -415,3 +415,5 @@ blockquote { font-family: var(--font-quote); font-style: italic; font-size: 1.45
 /* Partner-Stoerer als volle Grid-Reihe in der Interview-Auflistung */
 .iv-break { grid-column: 1 / -1; }
 .iv-break .sponsor--break { margin: 0; }
+/* Volle Breite im Beitrag (aus der Lesespalte ausbrechen, wie auf der Uebersicht) */
+.sponsor--wide { --bw: min(calc(100vw - var(--s-m) * 2), calc(var(--max-wide) - var(--s-m) * 2)); width: var(--bw); margin-left: calc((100% - var(--bw)) / 2); }
