@@ -411,7 +411,7 @@ blockquote { font-family: var(--font-quote); font-style: italic; font-size: 1.45
 .sponsor__partners { display: flex; flex-wrap: wrap; gap: var(--s-m) var(--s-m); justify-content: center; align-items: flex-start; margin-top: var(--s-m); }
 .sponsor__partner { flex: 1 1 150px; max-width: 210px; text-align: center; }
 .sponsor__partner .sponsor-logo { margin: 0 auto; }
-.sponsor__claim { font-size: .66rem; line-height: 1.35; color: #8a7b58; margin: .5rem 0 0; hyphens: auto; overflow-wrap: break-word; }
+.sponsor__claim { font-size: .68rem; line-height: 1.4; color: #8a7b58; margin: .55rem auto 0; max-width: 22ch; hyphens: manual; text-wrap: balance; }
 /* Partner-Stoerer als volle Grid-Reihe in der Interview-Auflistung */
 .iv-break { grid-column: 1 / -1; }
 .iv-break .sponsor--break { margin: 0; }
