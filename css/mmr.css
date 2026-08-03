@@ -385,9 +385,10 @@ blockquote { font-family: var(--font-quote); font-style: italic; font-size: 1.45
 
 /* Echte Partner-Logos im Sponsor-Band: ruhige weisse Kachel, ganze Kachel verlinkt */
 .sponsor__partners a.sponsor__partner { display: block; color: inherit; text-decoration: none; border-bottom: none; }
-.sponsor-logo-img { display: flex; align-items: center; justify-content: center; height: 68px; background: #fff; border: 1px solid #e6ded0; border-radius: 8px; padding: 8px 14px; transition: border-color .2s; }
+.sponsor-logo-img { display: flex; align-items: center; justify-content: center; height: 58px; }
 .sponsor-logo-img img { max-height: 100%; max-width: 100%; width: auto; }
-.sponsor__partners a.sponsor__partner:hover .sponsor-logo-img { border-color: var(--pate); }
+.sponsor__partners a.sponsor__partner { transition: opacity .2s; }
+.sponsor__partners a.sponsor__partner:hover { opacity: .72; }
 
 /* ---------- Sponsoring (Partner-Patenschaft, Goldton) ---------- */
 /* Grün gehört der Redaktion, Gold gehört den Partnern. Ruhige Bänder, keine Werbebanner. */
@@ -410,7 +411,7 @@ blockquote { font-family: var(--font-quote); font-style: italic; font-size: 1.45
 .sponsor__partners { display: flex; flex-wrap: wrap; gap: var(--s-m) var(--s-m); justify-content: center; align-items: flex-start; margin-top: var(--s-m); }
 .sponsor__partner { flex: 1 1 150px; max-width: 210px; text-align: center; }
 .sponsor__partner .sponsor-logo { margin: 0 auto; }
-.sponsor__claim { font-size: .82rem; line-height: 1.4; color: #8a7b58; margin: .65rem 0 0; hyphens: auto; overflow-wrap: break-word; }
+.sponsor__claim { font-size: .66rem; line-height: 1.35; color: #8a7b58; margin: .5rem 0 0; hyphens: auto; overflow-wrap: break-word; }
 /* Partner-Stoerer als volle Grid-Reihe in der Interview-Auflistung */
 .iv-break { grid-column: 1 / -1; }
 .iv-break .sponsor--break { margin: 0; }
