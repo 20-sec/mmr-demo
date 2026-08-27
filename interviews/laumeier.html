@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mileis Reformkurs: Stabilisierung mit offenem Ausgang — Mit Menschen reden</title>
   <meta name="description" content="Argentinien steht unter Javier Milei zwischen makroökonomischer Stabilisierung, sozialen Kosten und neuem Investorenvertrauen. Quentin Laumeier ordnet ein, was trägt – und welche Lehren Südamerika daraus ziehen kann.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/mmr.css">
 </head>
 <body>
@@ -23,7 +20,7 @@
       <a href="../rubriken.html">Rubriken</a>
       <a href="../blickwinkel.html">Blickwinkel</a>
       <a href="../live.html">Live</a>
-      <a href="#" class="cta">Newsletter</a>
+      <a href="../newsletter.html" class="cta">Newsletter</a>
     </nav>
   </div>
 </header>
@@ -75,15 +72,7 @@
           <span class="turn__who">Quentin Laumeier</span>
           <p>Argentinien ist tatsächlich ein Sonderfall, auch innerhalb Lateinamerikas, da sich wirtschaftsliberalere und restriktive Regierungen seit den 1930er-Jahren über Jahrzehnte hinweg abwechselten, begleitet von stetig wechselnden Regelungen für die Gesamtwirtschaft. Das Land hat zudem mehrere gescheiterte Reformversuche hinter sich, die die Lage im Endeffekt noch verschärften, zunächst in den 1990er-Jahren unter Präsident Menem und zuletzt von 2015 bis 2019 unter Mauricio Macri. Das Gesamtbild stellt sich in anderen südamerikanischen Ländern differenzierter dar. Brasilien als größter Binnenmarkt des Kontinents hat zum einen infrastrukturelle Herausforderungen, zum anderen ist das Steuersystem extrem komplex. Die Hauptherausforderungen in Peru sehe ich darin, dass die Wirtschaft kaum diversifiziert ist, die geografischen Gegebenheiten den Ausbau von Infrastruktur erschweren und die politische Instabilität hoch ist. So hatte Peru in den letzten zehn Jahren neun Präsidenten. Chile ist stark vom Kupferbergbau abhängig. Gleichzeitig gab es dort in den letzten Jahren keine vergleichbaren wirtschaftspolitischen Umbrüche, was für eine höhere Stabilität und bessere Planbarkeit spricht. Es gibt dennoch einige Punkte, die andere Länder übernehmen können. Dazu zählen grundlegende wirtschaftliche Prinzipien, die in Argentinien aktuell zum Tragen kommen, wie Haushaltsdisziplin, der Abbau von Subventionen für nicht überlebensfähige Sektoren oder bessere Rahmenbedingungen für Investitionen, etwa im argentinischen Fall das RIGI. Da Argentinien auf dem Weg in eine erneute Wirtschaftskrise war, musste massiv gegengesteuert werden. Die Schocktherapie war in diesem Kontext eine Reaktion auf eine außergewöhnliche Ausgangslage und kein allgemeines Modell für die Region. Andere Länder können daher moderatere Reformansätze verfolgen, um gar nicht erst in die Lage Argentiniens zu kommen.</p>
         </div>
-        <div class="sponsor sponsor--break">
-          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
-          <div class="sponsor__partners" data-shuffle>
-            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
-            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
-            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
-          </div>
-          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
-        </div>
+        <!-- Partnerplatz frei, ausgeblendet bis Belegung -->
         <div class="turn turn--q">
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Wenn man den Blick von Argentinien auf Lateinamerika insgesamt weitet: Welche drei Faktoren werden in den kommenden Jahren entscheidend dafür sein, ob die Region wirtschaftlich aufholt – mehr Marktöffnung und Rechtssicherheit, mehr industrielle Eigenständigkeit oder vor allem politische und institutionelle Verlässlichkeit? Und welche Lehre liefert der Fall Milei dafür bereits heute?</p>
@@ -123,22 +112,21 @@
       <h4>Mitmachen</h4>
       <ul>
         <li><a href="#">Portrait</a></li>
-        <li><a href="../unterstuetzen.html#patenschaft">Patenschaft</a></li>
-        <li><a href="#">Newsletter</a></li>
+        <li><a href="../newsletter.html">Newsletter</a></li>
       </ul>
     </div>
     <div>
       <h4>Verlag</h4>
       <ul>
-        <li><a href="#">Über uns</a></li>
-        <li><a href="#">Impressum</a></li>
-        <li><a href="#">Datenschutz</a></li>
+        <li><a href="../ueber-uns.html">Über uns</a></li>
+        <li><a href="../impressum.html">Impressum</a></li>
+        <li><a href="../datenschutz.html">Datenschutz</a></li>
       </ul>
     </div>
   </div>
   <div class="wrap site-footer__bottom">
     <span>© Mit Menschen reden · Edition PJB · Ralf M. Ruthardt</span>
-    <span>Prototyp Neubau · CI-Grün #CAD909</span>
+    <a href="#" class="js-cookie-settings">Cookie-Einstellungen</a>
   </div>
 </footer>
 
@@ -150,5 +138,6 @@
   });
 </script>
 <script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
+  <script defer src="../js/consent.js"></script>
 </body>
 </html>

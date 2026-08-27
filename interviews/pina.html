@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gegen neuen Kollektivismus — Mit Menschen reden</title>
   <meta name="description" content="Juan Pina spricht Anfang 2026 über Freiheit, liberale Demokratie, Europas ideologische Bruchlinien und den Kampf gegen neuen Kollektivismus von links und rechts. Ein Gespräch über Think Tanks, Narrative, Literatur – und die Notwendigkeit, Freiheit wieder offensiv zu erzählen.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/mmr.css">
 </head>
 <body>
@@ -23,7 +20,7 @@
       <a href="../rubriken.html">Rubriken</a>
       <a href="../blickwinkel.html">Blickwinkel</a>
       <a href="../live.html">Live</a>
-      <a href="#" class="cta">Newsletter</a>
+      <a href="../newsletter.html" class="cta">Newsletter</a>
     </nav>
   </div>
 </header>
@@ -87,15 +84,7 @@
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Welche Erfahrungen hat Fundalib mit der Wirksamkeit literarischer und philosophischer Werke – Romane, Essays, Essaybände – als Mittel zur Verbreitung liberaler Ideen?</p>
         </div>
-        <div class="sponsor sponsor--break">
-          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
-          <div class="sponsor__partners" data-shuffle>
-            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
-            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
-            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
-          </div>
-          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
-        </div>
+        <!-- Partnerplatz frei, ausgeblendet bis Belegung -->
         <div class="turn turn--a">
           <span class="turn__who">Juan Pina</span>
           <p>Für uns ist es von entscheidender Bedeutung, der spanischen Gesellschaft (und der gesamten spanischsprachigen Welt) eine Vielzahl von Materialien zur Verfügung zu stellen, die sich positiv auf den Grad der bestehenden Freiheit auswirken können. Aus diesem Grund erstellen wir seit einem Jahrzehnt Indizes zur wirtschaftlichen Freiheit und Steuerwettbewerbsfähigkeit und veröffentlichen jedes Jahr eine Vielzahl von Studien, Berichten und Policy Briefs, zusätzlich zu unserem Monatsmagazin mit liberalen Meinungsbeiträgen zu aktuellen Themen. Seit April 2025 sind wir aber auch ein Verlag. Und wir sind sehr hoffnungsvoll, was dieses neue Unterfangen angeht. In den letzten Monaten haben wir bereits mehr als dreißig Bücher veröffentlicht, sowohl Sachbücher als auch Belletristik. Wir sind der einzige der drei spanischsprachigen liberalen Verlage, der Belletristik in seinem Katalog führt, und wir halten dies für unerlässlich. Es sei daran erinnert, dass Belletristik und sogar Science-Fiction einen sehr positiven Einfluss auf die Entwicklung des amerikanischen Libertarismus in den 1960er und 1970er Jahren hatten. Menschen entwickeln ihre Ideen durch Geschichten. Das Erzählen von Geschichten mit einem freiheitsfreundlichen Hintergrund, wie Sie es durch hervorragende Romane und so kraftvolle Figuren wie Max Grund tun, ist ein wirksames Mittel, um den zuvor erwähnten kulturellen Kampf zu gewinnen. Fundalib ist stolz darauf, neben seiner Arbeit als Think Tank auch als Verlag dazu beitragen zu können.</p>
@@ -139,22 +128,21 @@
       <h4>Mitmachen</h4>
       <ul>
         <li><a href="#">Portrait</a></li>
-        <li><a href="../unterstuetzen.html#patenschaft">Patenschaft</a></li>
-        <li><a href="#">Newsletter</a></li>
+        <li><a href="../newsletter.html">Newsletter</a></li>
       </ul>
     </div>
     <div>
       <h4>Verlag</h4>
       <ul>
-        <li><a href="#">Über uns</a></li>
-        <li><a href="#">Impressum</a></li>
-        <li><a href="#">Datenschutz</a></li>
+        <li><a href="../ueber-uns.html">Über uns</a></li>
+        <li><a href="../impressum.html">Impressum</a></li>
+        <li><a href="../datenschutz.html">Datenschutz</a></li>
       </ul>
     </div>
   </div>
   <div class="wrap site-footer__bottom">
     <span>© Mit Menschen reden · Edition PJB · Ralf M. Ruthardt</span>
-    <span>Prototyp Neubau · CI-Grün #CAD909</span>
+    <a href="#" class="js-cookie-settings">Cookie-Einstellungen</a>
   </div>
 </footer>
 
@@ -166,5 +154,6 @@
   });
 </script>
 <script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
+  <script defer src="../js/consent.js"></script>
 </body>
 </html>

@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>#HASHTAG: Energiewende — Mit Menschen reden</title>
   <meta name="description" content="Die Kolumne #HASHTAG von Markus Coenen: drei Perspektiven auf die Energiewende. Frei lesbar.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/mmr.css">
 </head>
 <body>
@@ -23,7 +20,7 @@
       <a href="../rubriken.html">Rubriken</a>
       <a href="../blickwinkel.html">Blickwinkel</a>
       <a href="../live.html">Live</a>
-      <a href="#" class="cta">Newsletter</a>
+      <a href="../newsletter.html" class="cta">Newsletter</a>
     </nav>
   </div>
 </header>
@@ -61,13 +58,7 @@
         <div class="hk-cta">🔋 #Energiewende #ErneuerbareEnergien #Stromnetz #Nachhaltigkeit #WasJetzt #ZukunftGestalten</div>
       </div>
 
-      <div class="sponsor sponsor--break">
-        <div class="sponsor__ey">Diese Kolumne wird ermöglicht von</div>
-        <div class="sponsor__partners">
-          <div class="sponsor__partner"><span class="sponsor-logo">SIGNAL</span><p class="sponsor__claim">Debatte mit Haltung.</p></div>
-        </div>
-        <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Exklusiver Partner der Kolumne „#HASHTAG".</div>
-      </div>
+      <!-- Partnerplatz frei, ausgeblendet bis Belegung -->
 
       <div class="hk-card">
         <h2 class="hk-card__num">#ErneuerbarOderErneuert?</h2>
@@ -109,22 +100,21 @@
       <h4>Mitmachen</h4>
       <ul>
         <li><a href="#">Portrait</a></li>
-        <li><a href="../unterstuetzen.html#patenschaft">Patenschaft</a></li>
-        <li><a href="#">Newsletter</a></li>
+        <li><a href="../newsletter.html">Newsletter</a></li>
       </ul>
     </div>
     <div>
       <h4>Verlag</h4>
       <ul>
-        <li><a href="#">Über uns</a></li>
-        <li><a href="#">Impressum</a></li>
-        <li><a href="#">Datenschutz</a></li>
+        <li><a href="../ueber-uns.html">Über uns</a></li>
+        <li><a href="../impressum.html">Impressum</a></li>
+        <li><a href="../datenschutz.html">Datenschutz</a></li>
       </ul>
     </div>
   </div>
   <div class="wrap site-footer__bottom">
     <span>© Mit Menschen reden · Edition PJB · Ralf M. Ruthardt</span>
-    <span>Prototyp Neubau · CI-Grün #CAD909</span>
+    <a href="#" class="js-cookie-settings">Cookie-Einstellungen</a>
   </div>
 </footer>
 
@@ -135,5 +125,6 @@
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+  <script defer src="../js/consent.js"></script>
 </body>
 </html>

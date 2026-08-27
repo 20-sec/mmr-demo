@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wie Liberalismus Menschen erreicht — Mit Menschen reden</title>
   <meta name="description" content="Man kennt ihn als Autor von bislang 29 Fachbüchern, in denen er sich mit Armut, Reichtum, Kapitalismus und mit der Politik beschäftigt. Seine Analysen sind brillant argumentiert. Der promovierte Historiker und Soziologe war zudem ein erfolgreicher PR-Unternehmer. Nun hat Dr. Dr. Rainer Zitelmann als Autor das Genre gewechselt und einen Roman geschrieben. Er war mit Ralf M. Ruthardt im Gespräch.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/mmr.css">
 </head>
 <body>
@@ -23,7 +20,7 @@
       <a href="../rubriken.html">Rubriken</a>
       <a href="../blickwinkel.html">Blickwinkel</a>
       <a href="../live.html">Live</a>
-      <a href="#" class="cta">Newsletter</a>
+      <a href="../newsletter.html" class="cta">Newsletter</a>
     </nav>
   </div>
 </header>
@@ -143,15 +140,7 @@
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Wer war das?</p>
         </div>
-        <div class="sponsor sponsor--break">
-          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
-          <div class="sponsor__partners" data-shuffle>
-            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
-            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
-            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
-          </div>
-          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
-        </div>
+        <!-- Partnerplatz frei, ausgeblendet bis Belegung -->
         <div class="turn turn--a">
           <span class="turn__who">Rainer Zitelmann</span>
           <p>Celine Nadolny. Sie zählt zu den einflussreichsten Sachbuchkritikern im deutschsprachigen Raum. Als Gründerin des mehrfach ausgezeichneten Blogs Book of Finance hat sie sich auf Rezensionen von Finanz- und Wirtschaftsliteratur spezialisiert. Neben ihrer publizistischen Tätigkeit wurde sie als Leader of Tomorrow beim St. Gallen Symposium ausgezeichnet und steht auf der renommierten Forbes 30 Under 30-Liste. Aber sie ist auch sehr schön, 2022 war sie Vize-Miss Germany.</p>
@@ -215,22 +204,21 @@
       <h4>Mitmachen</h4>
       <ul>
         <li><a href="#">Portrait</a></li>
-        <li><a href="../unterstuetzen.html#patenschaft">Patenschaft</a></li>
-        <li><a href="#">Newsletter</a></li>
+        <li><a href="../newsletter.html">Newsletter</a></li>
       </ul>
     </div>
     <div>
       <h4>Verlag</h4>
       <ul>
-        <li><a href="#">Über uns</a></li>
-        <li><a href="#">Impressum</a></li>
-        <li><a href="#">Datenschutz</a></li>
+        <li><a href="../ueber-uns.html">Über uns</a></li>
+        <li><a href="../impressum.html">Impressum</a></li>
+        <li><a href="../datenschutz.html">Datenschutz</a></li>
       </ul>
     </div>
   </div>
   <div class="wrap site-footer__bottom">
     <span>© Mit Menschen reden · Edition PJB · Ralf M. Ruthardt</span>
-    <span>Prototyp Neubau · CI-Grün #CAD909</span>
+    <a href="#" class="js-cookie-settings">Cookie-Einstellungen</a>
   </div>
 </footer>
 
@@ -242,5 +230,6 @@
   });
 </script>
 <script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
+  <script defer src="../js/consent.js"></script>
 </body>
 </html>

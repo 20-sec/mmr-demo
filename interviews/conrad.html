@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Soziale Sicherheit als Standortfaktor — Mit Menschen reden</title>
   <meta name="description" content="Die politische Linke erlebt derzeit einen bemerkenswerten Aufwind in den Umfragen – trotz wirtschaftlicher Unsicherheiten und wachsender Sorgen um den Standort Deutschland. In Zeiten hoher Energiepreise, Unsicherheiten bei der Rohstoffversorgung, geostrategischer Verwerfungen und politisch gesteuerter Energiewende sieht sich die deutsche Wirtschaft massiv unter globalem Wettbewerbsdruck. MITMENSCHENREDEN sprach mit der Bundestagsabgeordneten Agnes Conrad (Die Linke) über wirtschaftspolitische Strategien, den Mittelstand und die soziale Verantwortung von Unternehmen.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/mmr.css">
 </head>
 <body>
@@ -23,7 +20,7 @@
       <a href="../rubriken.html">Rubriken</a>
       <a href="../blickwinkel.html">Blickwinkel</a>
       <a href="../live.html">Live</a>
-      <a href="#" class="cta">Newsletter</a>
+      <a href="../newsletter.html" class="cta">Newsletter</a>
     </nav>
   </div>
 </header>
@@ -87,15 +84,7 @@
           <h3 class="turn__sub">Politik muss die Basis legen</h3>
           <p>Für mich ist das ein bisschen wie bei einem gut laufenden Handwerksbetrieb: Wenn das Fundament stimmt, kann man solide bauen. Und dieses Fundament muss die Politik legen. Wir setzen dabei auf drei Säulen: 1. Planungssichere Abgaben- und Förderstrukturen – keine ständig wechselnden Programme, sondern etwas, worauf man sich verlassen kann. 2. Echte Entbürokratisierung, die im Alltag spürbar wird: einheitliche digitale Standards, weniger Doppelzuständigkeiten, weniger Papierkram. 3. Fachkräftesicherung, indem wir in Ausbildung investieren, tarifgebundene Arbeit stärken, Arbeitsbedingungen verbessern und gezielte Zuwanderung ermöglichen. Wirtschaftliche Stärke und soziale Verantwortung sind für mich keine Gegensätze – eher wie zwei Seiten derselben Medaille. Wenn Unternehmen verlässlich planen können und Beschäftigte gute Bedingungen haben, profitieren am Ende beide.</p>
         </div>
-        <div class="sponsor sponsor--break">
-          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
-          <div class="sponsor__partners" data-shuffle>
-            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
-            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
-            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
-          </div>
-          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
-        </div>
+        <!-- Partnerplatz frei, ausgeblendet bis Belegung -->
         <div class="turn turn--q">
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Wenn Sie die wirtschaftspolitische Vision Ihrer Partei in einem Satz zusammenfassen müssten – wie sähe ein „gerechtes und starkes Deutschland“ aus Ihrer Sicht aus?</p>
@@ -139,22 +128,21 @@
       <h4>Mitmachen</h4>
       <ul>
         <li><a href="#">Portrait</a></li>
-        <li><a href="../unterstuetzen.html#patenschaft">Patenschaft</a></li>
-        <li><a href="#">Newsletter</a></li>
+        <li><a href="../newsletter.html">Newsletter</a></li>
       </ul>
     </div>
     <div>
       <h4>Verlag</h4>
       <ul>
-        <li><a href="#">Über uns</a></li>
-        <li><a href="#">Impressum</a></li>
-        <li><a href="#">Datenschutz</a></li>
+        <li><a href="../ueber-uns.html">Über uns</a></li>
+        <li><a href="../impressum.html">Impressum</a></li>
+        <li><a href="../datenschutz.html">Datenschutz</a></li>
       </ul>
     </div>
   </div>
   <div class="wrap site-footer__bottom">
     <span>© Mit Menschen reden · Edition PJB · Ralf M. Ruthardt</span>
-    <span>Prototyp Neubau · CI-Grün #CAD909</span>
+    <a href="#" class="js-cookie-settings">Cookie-Einstellungen</a>
   </div>
 </footer>
 
@@ -166,5 +154,6 @@
   });
 </script>
 <script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
+  <script defer src="../js/consent.js"></script>
 </body>
 </html>

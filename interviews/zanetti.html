@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mehr Debatte wagen — Mit Menschen reden</title>
   <meta name="description" content="Mit dem Leonhard-Kreis hat Claudio Zanetti eine Plattform geschaffen, die freiheitliches Denken stärken und Menschen verbinden will. Der Jurist, Publizist und ehemalige Nationalrat der Schweizerischen Volkspartei (SVP) fühlt sich der Eigenverantwortung, Vernunft und der Debattenkultur verpflichtet. Im Gespräch erläutert Claudio Zanetti die Beweggründe für die Gründung, die Ziele des Vereins und seine Sicht auf den Zustand des Liberalismus – nicht nur im deutschsprachigen Raum.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/mmr.css">
 </head>
 <body>
@@ -23,7 +20,7 @@
       <a href="../rubriken.html">Rubriken</a>
       <a href="../blickwinkel.html">Blickwinkel</a>
       <a href="../live.html">Live</a>
-      <a href="#" class="cta">Newsletter</a>
+      <a href="../newsletter.html" class="cta">Newsletter</a>
     </nav>
   </div>
 </header>
@@ -109,15 +106,7 @@
           <span class="turn__who">Claudio Zanetti</span>
           <p>Die gute Botschaft ist, dass sich viele der Probleme sehr einfach lösen ließen. Man muss dem Apparat lediglich die Mittel entziehen. Nur so wird sich der Staat auf das Wesentliche beschränken. Die Herausforderung ist, Grundlegendes zu ändern. Bei Wahlen in Deutschland erkennt man ja, dass es eine konservative, leistungsbereite Mehrheit gibt. Leider dringt diese bisher nicht durch, weil sich die CDU/CSU auf der linken Seite des Parteienspektrums einmauern hat lassen. Nun, über die Verbandelung von Medien und Politik haben wir bereits gesprochen. Diese gilt es aufzulösen. Und: Die Politik muss von ideologischen Doktrinen befreit werden und Vernunft Einzug halten. Es ist völlig destruktiv, wie man bei Gegenargumenten zur linksgrünen Energie- oder Klimapolitik sofort als „rechts“ oder „rechtsextrem“ diffamiert wird. Dabei liegt im Falle von politisch-rechts die Diffamierung allein darin, dass man „rechts“ seit Jahren negativ geframt hat. Lassen Sie es mich so formulieren: Als Leonhard-Kreis können wir Menschen sensibilisieren, eine Plattform für den Austausch von Argumenten geben und uns für die freie Meinungsäußerung einsetzen.</p>
         </div>
-        <div class="sponsor sponsor--break">
-          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
-          <div class="sponsor__partners" data-shuffle>
-            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
-            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
-            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
-          </div>
-          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
-        </div>
+        <!-- Partnerplatz frei, ausgeblendet bis Belegung -->
         <div class="turn turn--q">
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Geben Sie uns bitte noch eine Vorstellung davon, wie sich der Verein personell darstellt.</p>
@@ -170,22 +159,21 @@
       <h4>Mitmachen</h4>
       <ul>
         <li><a href="#">Portrait</a></li>
-        <li><a href="../unterstuetzen.html#patenschaft">Patenschaft</a></li>
-        <li><a href="#">Newsletter</a></li>
+        <li><a href="../newsletter.html">Newsletter</a></li>
       </ul>
     </div>
     <div>
       <h4>Verlag</h4>
       <ul>
-        <li><a href="#">Über uns</a></li>
-        <li><a href="#">Impressum</a></li>
-        <li><a href="#">Datenschutz</a></li>
+        <li><a href="../ueber-uns.html">Über uns</a></li>
+        <li><a href="../impressum.html">Impressum</a></li>
+        <li><a href="../datenschutz.html">Datenschutz</a></li>
       </ul>
     </div>
   </div>
   <div class="wrap site-footer__bottom">
     <span>© Mit Menschen reden · Edition PJB · Ralf M. Ruthardt</span>
-    <span>Prototyp Neubau · CI-Grün #CAD909</span>
+    <a href="#" class="js-cookie-settings">Cookie-Einstellungen</a>
   </div>
 </footer>
 
@@ -197,5 +185,6 @@
   });
 </script>
 <script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
+  <script defer src="../js/consent.js"></script>
 </body>
 </html>

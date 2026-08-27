@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mehr als schöne Worte — Mit Menschen reden</title>
   <meta name="description" content="Warum Gedichte mehr sind als schöne Worte: Im Gespräch mit Lyriker Erich Pfefferlen über die Kraft der Sprache, die Kunst des Weglassens – und warum Lyrik unsere Gesellschaft braucht, gerade jetzt. Ein Plädoyer für das Poetische.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/mmr.css">
 </head>
 <body>
@@ -23,7 +20,7 @@
       <a href="../rubriken.html">Rubriken</a>
       <a href="../blickwinkel.html">Blickwinkel</a>
       <a href="../live.html">Live</a>
-      <a href="#" class="cta">Newsletter</a>
+      <a href="../newsletter.html" class="cta">Newsletter</a>
     </nav>
   </div>
 </header>
@@ -127,15 +124,7 @@
           <span class="turn__who">Ralf M. Ruthardt</span>
           <p>Eine weitere Hypothese: Tut sich Lyrik auch deshalb schwer, weil wir in der westlichen Welt weitgehend in Lebensumständen sind, in denen ein Fleischstück des Sonntags nicht eine Besonderheit im Verlauf einer Woche ist, sondern wir potentiell uns tagtäglich Fleisch gönnen könnten – und dabei womöglich bei zu günstigem Hackfleisch landen, das gepresst auf den Burgern im Fastfood liegt? Ist uns der bequem und täglich konsumierbare Burger lieber als ein mit Bedacht und Mühe köstlich zubereiteter Sonntagsbraten? (lacht)</p>
         </div>
-        <div class="sponsor sponsor--break">
-          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
-          <div class="sponsor__partners" data-shuffle>
-            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
-            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
-            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
-          </div>
-          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
-        </div>
+        <!-- Partnerplatz frei, ausgeblendet bis Belegung -->
         <div class="turn turn--a">
           <span class="turn__who">Erich Pfefferlen</span>
           <p>Ich weiß, was du sagen möchtest. – Wir haben viel oder gar zu viel an Büchern und wir werden ganz bequem im Alltag mit unwesentlichen, aber gedankenlos konsumierbaren Texten versorgt. Dies gilt für alle Genres – bis hin zum Film und zu TV-Serien. Man will sich nicht mehr anstrengen, um zu verstehen oder gar selbst sich anstrengend neue Gedanken einbringen, um so zu neuen Erkenntnissen zu gelangen. Das Plakative und schnell Konsumierbare wird in Kauf genommen, um sich nicht anstrengen zu müssen. Das gilt aber für viele andere Bereiche in unserem Leben auch. Nehmen wir nur einmal die Erotik. Früher war der Minnegesang. Da hat sich ein Mann viel Zeit und Mühe gegeben, eine Frau zu umwerben – und sehnlichst gehofft, dass sie ihr weißes Taschentüchlein aus dem Fenster herabschweben lässt. Und heute …? Dies ist sicherlich ein idealistisches Bild aus romantisch verklärten Zeiten des Mittelalters, zeigt aber doch auf, wie unser heutiges zwischenmenschliches Agieren so viel anders in unserer so hektischen Lebenswelt mit oberflächlichsten Beziehungen wie zum Beispiel Facebook-Freunden geworden ist. Vielfach, so könnte man resümieren, hat heute Oberflächlichkeit über den Tiefgang gesiegt, ob bei zwischenmenschlichen Beziehungen oder bei der Rezeption von Literatur, wodurch ein Erkennen und die Wertschätzung gegenüber dem Anderen und an Schönem leider nur allzu oft verloren ging.</p>
@@ -191,22 +180,21 @@
       <h4>Mitmachen</h4>
       <ul>
         <li><a href="#">Portrait</a></li>
-        <li><a href="../unterstuetzen.html#patenschaft">Patenschaft</a></li>
-        <li><a href="#">Newsletter</a></li>
+        <li><a href="../newsletter.html">Newsletter</a></li>
       </ul>
     </div>
     <div>
       <h4>Verlag</h4>
       <ul>
-        <li><a href="#">Über uns</a></li>
-        <li><a href="#">Impressum</a></li>
-        <li><a href="#">Datenschutz</a></li>
+        <li><a href="../ueber-uns.html">Über uns</a></li>
+        <li><a href="../impressum.html">Impressum</a></li>
+        <li><a href="../datenschutz.html">Datenschutz</a></li>
       </ul>
     </div>
   </div>
   <div class="wrap site-footer__bottom">
     <span>© Mit Menschen reden · Edition PJB · Ralf M. Ruthardt</span>
-    <span>Prototyp Neubau · CI-Grün #CAD909</span>
+    <a href="#" class="js-cookie-settings">Cookie-Einstellungen</a>
   </div>
 </footer>
 
@@ -218,5 +206,6 @@
   });
 </script>
 <script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
+  <script defer src="../js/consent.js"></script>
 </body>
 </html>

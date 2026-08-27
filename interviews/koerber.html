@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Respekt als demokratische Ressource — Mit Menschen reden</title>
   <meta name="description" content="Die Hamburger Körber-Stiftung zählt zu den bedeutendsten privaten Stiftungen Deutschlands. Sie wurde 1959 von dem Unternehmer und Erfinder Kurt A. Körber gegründet – mit dem Ziel, gesellschaftliche Verantwortung und unternehmerisches Denken miteinander zu verbinden. Heute engagiert sich die Stiftung in zahlreichen Themenfeldern, von Bildung und Wissenschaft über internationale Verständigung bis hin zu Demokratie und gesellschaftlichem Zusammenhalt. Im Gespräch mit Julian Claaßen, er verantwortet den Bereich Kommunikation der Körber-Stiftung, und Sven Tetzlaff, Leiter des Bereichs Demokratie und Zusammenhalt, geht es um die Frage, wie gesellschaftlicher Dialog gelingen kann – in Zeiten wachsender Polarisierung, digitaler Entfremdung und schwindender Orte der Begegnung. Das Gespräch zeigt eindrucksvoll, wie die Stiftung versucht, aus ihrer hanseatischen Tradition heraus Brücken zu bauen: zwischen Meinungen, Milieus und Generationen.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/mmr.css">
 </head>
 <body>
@@ -23,7 +20,7 @@
       <a href="../rubriken.html">Rubriken</a>
       <a href="../blickwinkel.html">Blickwinkel</a>
       <a href="../live.html">Live</a>
-      <a href="#" class="cta">Newsletter</a>
+      <a href="../newsletter.html" class="cta">Newsletter</a>
     </nav>
   </div>
 </header>
@@ -165,15 +162,7 @@
           <span class="turn__who">Julian Claaßen</span>
           <p>Als Körber-Stiftung haben wir das Projekt 2023 in drei Kommunen erprobt. Da war die Stadt Neubrandenburg in Mecklenburg-Vorpommern dabei. Buchholz und der Kreistag Rendsburg-Eckernförde haben sich ebenfalls beteiligt. Klar, wir haben nur begrenzte Ressourcen und somit haben wir uns regional fokussiert. Mittlerweile sind es sechs Kommunen, die sich unseren Kodex erarbeitet haben.</p>
         </div>
-        <div class="sponsor sponsor--break">
-          <div class="sponsor__ey">Diese Interview-Reihe wird unterstützt von</div>
-          <div class="sponsor__partners" data-shuffle>
-            <div class="sponsor__partner"><span class="sponsor-logo">NOVARA</span><p class="sponsor__claim">Digitale Werkzeuge für den offenen Diskurs.</p></div>
-            <div class="sponsor__partner"><span class="sponsor-logo">MERIDIAN</span><p class="sponsor__claim">Strategieberatung mit langem Atem.</p></div>
-            <div class="sponsor__partner"><span class="sponsor-logo">AUREA</span><p class="sponsor__claim">Stiftung für Bildung und Begegnung.</p></div>
-          </div>
-          <div class="sponsor__note">Konzept-Vorschau · Platzhalter-Partner. Drei gleichrangige Partner der Interviews.</div>
-        </div>
+        <!-- Partnerplatz frei, ausgeblendet bis Belegung -->
         <div class="turn turn--a">
           <span class="turn__who">Sven Tetzlaff</span>
           <p>Julian Claaßen spricht von „erarbeiten“. Genau das ist uns wichtig. Denn wir wollen den Gesprächskodex nicht überstülpen. Dieser soll vor Ort erarbeitet und verabschiedet werden. Da gibt es Raum für eigene Formulierungen und damit die Würdigung spezifischer Kontexte der Beteiligten. Zwischenzeitlich gibt es eine ganze Anzahl von Kommunen, mit denen wir da unterwegs sind. So beispielsweise auch in Rheinland-Pfalz, wo im Frühjahr 2026 Kommunalwahlen anstehen.</p>
@@ -246,22 +235,21 @@
       <h4>Mitmachen</h4>
       <ul>
         <li><a href="#">Portrait</a></li>
-        <li><a href="../unterstuetzen.html#patenschaft">Patenschaft</a></li>
-        <li><a href="#">Newsletter</a></li>
+        <li><a href="../newsletter.html">Newsletter</a></li>
       </ul>
     </div>
     <div>
       <h4>Verlag</h4>
       <ul>
-        <li><a href="#">Über uns</a></li>
-        <li><a href="#">Impressum</a></li>
-        <li><a href="#">Datenschutz</a></li>
+        <li><a href="../ueber-uns.html">Über uns</a></li>
+        <li><a href="../impressum.html">Impressum</a></li>
+        <li><a href="../datenschutz.html">Datenschutz</a></li>
       </ul>
     </div>
   </div>
   <div class="wrap site-footer__bottom">
     <span>© Mit Menschen reden · Edition PJB · Ralf M. Ruthardt</span>
-    <span>Prototyp Neubau · CI-Grün #CAD909</span>
+    <a href="#" class="js-cookie-settings">Cookie-Einstellungen</a>
   </div>
 </footer>
 
@@ -273,5 +261,6 @@
   });
 </script>
 <script>document.querySelectorAll('[data-shuffle]').forEach(function(el){for(var i=el.children.length;i;i--)el.appendChild(el.children[Math.random()*i|0]);});</script>
+  <script defer src="../js/consent.js"></script>
 </body>
 </html>
