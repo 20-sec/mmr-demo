@@ -2,13 +2,13 @@
   Mit Menschen reden — Consent-Management (Cookie-Banner)
   ------------------------------------------------------------------
   - Kategorie "Notwendig": immer aktiv (speichert nur die Consent-Wahl).
-  - Kategorie "Statistik": Google Analytics 4, ausschliesslich nach Einwilligung.
+  - Kategorie "Statistik": Google Analytics 4, ausschließlich nach Einwilligung.
   - Google Consent Mode v2: Standard = alles verweigert, Update erst bei Zustimmung.
 
   ANALYTICS AKTIVIEREN: unten GA_ID auf die eigene Mess-ID setzen
   (z. B. 'G-XXXXXXXXXX'). Solange GA_ID leer ist, wird NICHTS geladen,
   auch nicht bei erteilter Zustimmung. Der Banner funktioniert trotzdem
-  vollstaendig und merkt sich die Wahl.
+  vollständig und merkt sich die Wahl.
 */
 (function () {
   'use strict';
@@ -57,7 +57,7 @@
     gtag('config', GA_ID, { anonymize_ip: true });
   }
 
-  // ---------- Pfad zur Datenschutzseite (tiefenunabhaengig) ----------
+  // ---------- Pfad zur Datenschutzseite (tiefenunabhängig) ----------
   function siteRoot() {
     var s = document.querySelector('script[src$="consent.js"]');
     if (s && s.src) return s.src.replace(/js\/consent\.js(\?.*)?$/, '');
@@ -81,15 +81,15 @@
       '<div class="consent__card">',
       '  <div class="consent__head">',
       '    <h2 class="consent__title">Datenschutz und Reichweitenmessung</h2>',
-      '    <p class="consent__text">Diese Seite braucht nur wenige notwendige Daten fuer den reinen Betrieb. Zusaetzlich wuerden wir gern anonymisiert messen, wie die Seite genutzt wird (Google Analytics), um sie besser zu machen. Das passiert ausschliesslich mit deiner Einwilligung, und du kannst deine Wahl jederzeit aendern. Mehr dazu in der <a href="' + dsHref + '">Datenschutzerklaerung</a>.</p>',
+      '    <p class="consent__text">Diese Seite braucht nur wenige notwendige Daten für den reinen Betrieb. Zusätzlich würden wir gern anonymisiert messen, wie die Seite genutzt wird (Google Analytics), um sie besser zu machen. Das passiert ausschließlich mit deiner Einwilligung, und du kannst deine Wahl jederzeit ändern. Mehr dazu in der <a href="' + dsHref + '">Datenschutzerklärung</a>.</p>',
       '  </div>',
       '  <div class="consent__options" ' + (showSettings ? '' : 'hidden') + '>',
       '    <div class="consent__opt">',
-      '      <div class="consent__opt-main"><span class="consent__opt-name">Notwendig</span><span class="consent__opt-desc">Fuer den sicheren Betrieb der Seite. Speichert nur deine Cookie-Entscheidung.</span></div>',
+      '      <div class="consent__opt-main"><span class="consent__opt-name">Notwendig</span><span class="consent__opt-desc">Für den sicheren Betrieb der Seite. Speichert nur deine Cookie-Entscheidung.</span></div>',
       '      <label class="consent__switch consent__switch--locked"><input type="checkbox" checked disabled aria-label="Notwendig, immer aktiv"><span class="consent__slider"></span></label>',
       '    </div>',
       '    <div class="consent__opt">',
-      '      <div class="consent__opt-main"><span class="consent__opt-name">Statistik</span><span class="consent__opt-desc">Anonyme Reichweitenmessung mit Google Analytics. Zeigt uns, welche Gespraeche gelesen werden.</span></div>',
+      '      <div class="consent__opt-main"><span class="consent__opt-name">Statistik</span><span class="consent__opt-desc">Anonyme Reichweitenmessung mit Google Analytics. Zeigt uns, welche Gespräche gelesen werden.</span></div>',
       '      <label class="consent__switch"><input type="checkbox" id="consent-stats" aria-label="Statistik, anonyme Reichweitenmessung mit Google Analytics"' + (statsOn ? ' checked' : '') + '><span class="consent__slider"></span></label>',
       '    </div>',
       '  </div>',
@@ -135,7 +135,7 @@
     } else {
       render(false);
     }
-    // Footer-Link "Cookie-Einstellungen" oeffnet den Banner erneut
+    // Footer-Link "Cookie-Einstellungen" öffnet den Banner erneut
     document.addEventListener('click', function (e) {
       var t = e.target.closest('.js-cookie-settings');
       if (!t) return;
