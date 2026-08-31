@@ -306,6 +306,8 @@ a:hover { border-bottom-color: var(--gruen-tief); }
 .hero__title { max-width: 14ch; margin: 0 0 var(--s-m); }
 .hero__lead { font-family: var(--font-quote); font-style: normal; font-weight: 400; font-size: 1.24rem; line-height: 1.55; color: #3b3e34; max-width: 48ch; border-left: 2px solid var(--gruen-signal); padding-left: var(--s-m); }
 .hero__person { font-size: .98rem; color: var(--muted); margin: var(--s-s) 0 var(--s-m); }
+.hero__split { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--s-l); align-items: center; }
+@media (max-width: 760px) { .hero__split { grid-template-columns: 1fr; } .hero__split .duo { max-width: 420px; } }
 
 /* ---------- Sektionen ---------- */
 .section { padding: var(--s-xl) 0; }
