@@ -148,8 +148,19 @@
     var f = document.getElementById('nl-form');
     if (!f) return;
     f.addEventListener('submit', function (e) {
+      // Spam-Falle. Ist sie gefuellt, kann das zweierlei heissen:
+      // Autofill des Browsers (dann steht dort genau die eingetippte Adresse,
+      // und wir raeumen auf) oder ein Bot (dann brechen wir ab).
       var hp = f.querySelector('#nl-check');
-      if (hp && hp.value) { e.preventDefault(); return; }
+      var mail = f.querySelector('#nl-email');
+      if (hp && hp.value) {
+        if (mail && hp.value.trim().toLowerCase() === mail.value.trim().toLowerCase()) {
+          hp.value = '';
+        } else {
+          e.preventDefault();
+          return;
+        }
+      }
       e.preventDefault();
       var body = new URLSearchParams(new FormData(f)).toString();
       var done = function () {
@@ -165,25 +176,6 @@
     });
   })();
 </script>
-<script>
-  // Sicherheitsnetz fuer die Spam-Falle: Hat ein Browser sie trotz display:none und
-  // readonly befuellt, und steht dort die Adresse, die gerade eingetippt wurde, war es
-  // das Autofill und kein Bot. Dann wird das Feld geleert, sonst lehnt Brevo die
-  // Anmeldung ab. Ein echter Bot traegt dort etwas anderes ein und bleibt haengen.
-  (function () {
-    var form = document.getElementById('nl-form');
-    if (!form) return;
-    form.addEventListener('submit', function () {
-      var falle = document.getElementById('nl-check');
-      var mail = document.getElementById('nl-email');
-      if (!falle || !falle.value) return;
-      if (mail && falle.value.trim().toLowerCase() === mail.value.trim().toLowerCase()) {
-        falle.value = '';
-      }
-    });
-  })();
-</script>
-
   <script defer src="js/consent.js"></script>
 </body>
 </html>
