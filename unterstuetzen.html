@@ -66,7 +66,7 @@
     .mf .btn { justify-self: start; }
     .mf__note { font-size: .8rem; color: rgba(255,255,255,.55); line-height: 1.5; margin: 0; }
     .mf__note a { color: var(--gruen-signal); }
-    .mf-hp { position: absolute; left: -5000px; }
+    .mf-hp { display: none; }   /* siehe Kommentar am Feld: Autofill darf die Spam-Falle nicht sehen */
     .mf-success { background: rgba(202,217,9,.12); border: 1px solid var(--gruen-signal); border-radius: 10px; padding: var(--s-m); }
     .mf-success h3 { font-family: var(--font-display); font-size: 1.3rem; margin: 0 0 .5rem; color: #fff; }
     .mf-success p { color: rgba(255,255,255,.8); margin: 0; font-size: .95rem; }
@@ -178,9 +178,13 @@
                 <label class="mf__label" for="mf-mail">E-Mail-Adresse</label>
                 <input class="mf__input" id="mf-mail" type="email" name="EMAIL" required autocomplete="email" placeholder="name@firma.de">
               </div>
+              <!-- Spam-Falle. Der Name sieht fuer die Autofill-Heuristik nach einem
+                   E-Mail-Feld aus, deshalb drei Sperren: display:none, readonly und
+                   autocomplete="off". Sonst befuellt der Browser sie und das Formular
+                   tut beim Absenden gar nichts. -->
               <div class="mf-hp" aria-hidden="true">
                 <label for="mf-check">Bitte dieses Feld leer lassen</label>
-                <input type="text" id="mf-check" name="email_address_check" value="" tabindex="-1" autocomplete="off">
+                <input type="text" id="mf-check" name="email_address_check" value="" tabindex="-1" autocomplete="off" readonly>
               </div>
               <button class="btn" type="submit">Mediadaten anfordern</button>
               <p class="mf__note">Wir schicken Ihnen die Mediadaten als PDF und melden uns einmal persönlich. Kein Newsletter, keine Weitergabe. Wie wir mit Ihren Daten umgehen, steht in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
@@ -245,7 +249,11 @@
   mf && mf.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!mf.reportValidity()) return;
-    if (document.getElementById('mf-check').value) return;
+    // Spam-Falle: nur abbrechen, wenn dort etwas anderes steht als die eingetippte
+    // Adresse. Steht die Adresse drin, war es das Autofill und nicht ein Bot.
+    var falle = document.getElementById('mf-check').value.trim();
+    var mail = document.getElementById('mf-mail').value.trim();
+    if (falle && falle.toLowerCase() !== mail.toLowerCase()) return;
     var wert = function (id) { return document.getElementById(id).value.trim(); };
     var text = 'Name: ' + wert('mf-name')
              + '\nFirma: ' + wert('mf-firma')

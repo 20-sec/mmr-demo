@@ -29,7 +29,8 @@
     .nl-form__btn { flex: 0 0 auto; border: none; cursor: pointer; }
     .nl-form__note { font-family: var(--font-sans); font-size: .85rem; line-height: 1.6; color: var(--muted); margin: var(--s-m) 0 0; max-width: 46ch; }
     .nl-form__note a { color: var(--gruen-tief); text-decoration: underline; text-underline-offset: 2px; }
-    .nl-hp { position: absolute; left: -9999px; top: -9999px; height: 0; width: 0; overflow: hidden; }
+    .nl-hp { display: none; }   /* display:none statt Off-Screen: Browser-Autofill fuellt
+                                 off-screen gestellte Felder mit, nicht gerenderte nicht. */
     .nl-success { margin-top: var(--s-l); padding: var(--s-l); background: var(--bg-alt); border: 1px solid var(--rule); border-radius: 12px; max-width: 40rem; }
     .nl-success h2 { font-family: var(--font-display); font-size: 1.6rem; margin: 0 0 var(--s-s); }
     .nl-success p { font-family: var(--font-sans); font-size: 1rem; line-height: 1.7; color: var(--muted); margin: 0; }
@@ -72,9 +73,16 @@
             <input id="nl-email" class="nl-form__input" type="email" name="EMAIL" required autocomplete="email" placeholder="deine@email.de">
             <button class="btn nl-form__btn" type="submit">Anmelden</button>
           </div>
+          <!-- Spam-Falle von Brevo. Das Feld heisst "email_address_check" und sieht fuer
+               die Autofill-Heuristik der Browser nach einem E-Mail-Feld aus. Chrome und
+               Safari haben es deshalb mitbefuellt, Brevo hat die Anmeldung als Spam
+               verworfen und niemand kam in die Liste. Drei Sperren dagegen: display:none
+               (nicht gerendert), readonly (Autofill fasst readonly-Felder nicht an) und
+               autocomplete="off". Zusaetzlich raeumt das Skript unten auf, falls ein
+               Browser es doch befuellt. -->
           <div class="nl-hp" aria-hidden="true">
             <label for="nl-check">Bitte dieses Feld leer lassen</label>
-            <input type="text" id="nl-check" name="email_address_check" value="" tabindex="-1" autocomplete="off">
+            <input type="text" id="nl-check" name="email_address_check" value="" tabindex="-1" autocomplete="off" readonly>
           </div>
           <input type="hidden" name="locale" value="de">
           <input type="hidden" name="html_type" value="simple">
@@ -157,6 +165,25 @@
     });
   })();
 </script>
+<script>
+  // Sicherheitsnetz fuer die Spam-Falle: Hat ein Browser sie trotz display:none und
+  // readonly befuellt, und steht dort die Adresse, die gerade eingetippt wurde, war es
+  // das Autofill und kein Bot. Dann wird das Feld geleert, sonst lehnt Brevo die
+  // Anmeldung ab. Ein echter Bot traegt dort etwas anderes ein und bleibt haengen.
+  (function () {
+    var form = document.getElementById('nl-form');
+    if (!form) return;
+    form.addEventListener('submit', function () {
+      var falle = document.getElementById('nl-check');
+      var mail = document.getElementById('nl-email');
+      if (!falle || !falle.value) return;
+      if (mail && falle.value.trim().toLowerCase() === mail.value.trim().toLowerCase()) {
+        falle.value = '';
+      }
+    });
+  })();
+</script>
+
   <script defer src="js/consent.js"></script>
 </body>
 </html>
