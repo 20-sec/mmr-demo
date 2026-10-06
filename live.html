@@ -70,10 +70,16 @@
     /* Terminfenster: bis zu drei kommende Termine nebeneinander */
     .term-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--s-m); }
     .term2__img .mm { user-select: none; }
-    .term-leer { background: var(--bg-alt); border: 1px solid var(--rule); border-radius: 14px; padding: var(--s-l); }
-    .term-leer h2 { font-family: var(--font-display); font-size: 1.6rem; margin: 0 0 var(--s-s); max-width: 24ch; }
-    .term-leer p { color: var(--muted); max-width: 60ch; line-height: 1.6; margin: 0 0 var(--s-s); }
-    .term-leer__btns { display: flex; flex-wrap: wrap; gap: var(--s-s); margin-top: var(--s-m); }
+    /* Platzhalter-Karte: zeigt die Form des kommenden Termins, ohne etwas zu versprechen */
+    .term2--platz { border-style: dashed; border-color: #cfc8ba; background: transparent; }
+    .term2--platz .term2__img { background: repeating-linear-gradient(135deg, #eceade, #eceade 10px, #e4e1d3 10px, #e4e1d3 20px); }
+    .term2--platz .term2__img .platz-punkt { width: 54px; height: 54px; border-radius: 50%; border: 2px dashed #b9b2a2; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.4rem; color: #9d9686; }
+    .term2--platz .term2__date { color: #9d9686; }
+    .term2--platz .term2__title { color: #6f6a5e; font-size: 1.2rem; }
+    .term2--platz .term2__guest { color: #9d9686; }
+    .term2--platz .term2__foot { color: #9d9686; font-size: .88rem; }
+    .term-intro { color: var(--muted); max-width: 62ch; line-height: 1.6; margin: 0 0 var(--s-m); }
+    .term-fuss { margin-top: var(--s-m); display: flex; flex-wrap: wrap; gap: var(--s-s); align-items: center; }
     @media (max-width: 700px) { .term-grid { grid-template-columns: 1fr; } }
     .term2 { display: flex; flex-direction: column; background: var(--bg-alt); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; }
     .term2__img { position: relative; aspect-ratio: 16/9; background: linear-gradient(158deg, #33421a, var(--gruen-schwarz)); display: flex; align-items: center; justify-content: center; }
@@ -136,20 +142,46 @@
   <section class="section" style="padding-top:var(--s-l)">
     <div class="wrap">
       <div class="eyebrow">Die nächsten Termine</div>
+      <p class="term-intro">Die Termine werden in Kürze veröffentlicht. Wir stehen gerade in vielen Gesprächen und brauchen dafür noch etwas Geduld. Sobald ein Termin steht, erscheint er hier an erster Stelle, mit Gast, Thema und Uhrzeit. So wird es aussehen:</p>
 
       <!-- Das Terminfenster pflegt sich selbst: Es liest die Liste TERMINE unten,
-           wirft vergangene Termine heraus und zeigt die drei naechsten. Solange
-           kein Termin eingetragen ist, bleibt der Kasten darunter stehen. -->
-      <div id="termine" class="term-grid" hidden></div>
+           wirft vergangene Termine heraus und zeigt die drei naechsten. Freie
+           Plaetze bleiben als gestrichelte Vorschau stehen, damit man sieht, wie
+           die Reihe spaeter aussieht. Ohne JavaScript bleiben alle drei stehen. -->
+      <div id="termine" class="term-grid">
+        <article class="term2 term2--platz">
+          <div class="term2__img"><span class="platz-punkt">1</span></div>
+          <div class="term2__body">
+            <div class="term2__date">Termin folgt</div>
+            <h3 class="term2__title">Hier steht bald der nächste Termin</h3>
+            <p class="term2__guest">Ralf M. Ruthardt im Gespräch mit …</p>
+            <div class="term2__foot"><span>Gast und Thema stehen bald fest</span></div>
+          </div>
+        </article>
+        <article class="term2 term2--platz">
+          <div class="term2__img"><span class="platz-punkt">2</span></div>
+          <div class="term2__body">
+            <div class="term2__date">Termin folgt</div>
+            <h3 class="term2__title">Und hier der übernächste</h3>
+            <p class="term2__guest">Ralf M. Ruthardt im Gespräch mit …</p>
+            <div class="term2__foot"><span>Gast und Thema stehen bald fest</span></div>
+          </div>
+        </article>
+        <article class="term2 term2--platz">
+          <div class="term2__img"><span class="platz-punkt">3</span></div>
+          <div class="term2__body">
+            <div class="term2__date">Termin folgt</div>
+            <h3 class="term2__title">Und hier der dritte</h3>
+            <p class="term2__guest">Ralf M. Ruthardt im Gespräch mit …</p>
+            <div class="term2__foot"><span>Gast und Thema stehen bald fest</span></div>
+          </div>
+        </article>
+      </div>
 
-      <div id="termine-leer" class="term-leer">
-        <h2>Die Termine stehen bald fest</h2>
-        <p>Wir sind gerade in vielen Gesprächen. Sobald die ersten Termine feststehen, finden Sie sie genau hier, mit Gast, Thema und Uhrzeit.</p>
-        <p>Wer sie als Erster erfahren will, trägt sich in den Newsletter ein. Ein Ticket können Sie schon jetzt sichern: Es ist an keinen Termin gebunden und verfällt nicht.</p>
-        <div class="term-leer__btns">
-          <a class="btn" href="newsletter.html">Termine per Newsletter</a>
-          <a class="btn btn--ghost" href="unterstuetzen.html#live">Tickets ansehen</a>
-        </div>
+      <div class="term-fuss">
+        <a class="btn" href="newsletter.html">Termine per Newsletter</a>
+        <a class="btn btn--ghost" href="unterstuetzen.html#live">Tickets ansehen</a>
+        <span class="u-hint" style="color:var(--muted);font-size:.9rem">Ein Ticket ist an keinen Termin gebunden und verfällt nicht.</span>
       </div>
     </div>
   </section>
@@ -225,7 +257,6 @@
 
   (function () {
     var ziel = document.getElementById('termine');
-    var leer = document.getElementById('termine-leer');
     if (!ziel) return;
 
     var jetzt = Date.now();
@@ -237,6 +268,7 @@
       .sort(function (a, b) { return a.zeit - b.zeit; })
       .slice(0, 3);
 
+    // Nichts eingetragen: die drei Platzhalter aus dem HTML bleiben einfach stehen.
     if (!kommend.length) return;
 
     var tage = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
@@ -252,7 +284,7 @@
                  .filter(Boolean).slice(0, 2).map(function (w) { return w[0]; }).join('');
     };
 
-    ziel.innerHTML = kommend.map(function (t) {
+    var karte = function (t) {
       var d = new Date(t.zeit);
       var wann = tage[d.getDay()] + ', ' + d.getDate() + '. ' + monate[d.getMonth()]
                + ' · ' + ('0' + d.getHours()).slice(-2) + '.' + ('0' + d.getMinutes()).slice(-2)
@@ -272,10 +304,18 @@
            +     '</div>'
            +   '</div>'
            + '</article>';
-    }).join('');
+    };
 
-    ziel.hidden = false;
-    if (leer) leer.hidden = true;
+    // Echte Termine ruecken von vorne ein, die restlichen Plaetze bleiben Vorschau.
+    var platzhalter = Array.prototype.slice.call(ziel.querySelectorAll('.term2--platz'));
+    ziel.innerHTML = kommend.map(karte).join('')
+                   + platzhalter.slice(kommend.length).map(function (el) { return el.outerHTML; }).join('');
+
+    // Steht die Reihe voll, braucht es den Hinweis auf weitere Gespraeche nicht mehr.
+    var intro = document.querySelector('.term-intro');
+    if (intro && kommend.length >= 3) {
+      intro.textContent = 'Diese Gespräche stehen als Nächstes an. Ihr Ticket gilt für ein Live-Gespräch Ihrer Wahl.';
+    }
   })();
 </script>
 
