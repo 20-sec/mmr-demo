@@ -67,6 +67,14 @@
 
     /* Weitere Termine (Zwei-Spalten) */
     .term-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-m); }
+    /* Terminfenster: bis zu drei kommende Termine nebeneinander */
+    .term-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--s-m); }
+    .term2__img .mm { user-select: none; }
+    .term-leer { background: var(--bg-alt); border: 1px solid var(--rule); border-radius: 14px; padding: var(--s-l); }
+    .term-leer h2 { font-family: var(--font-display); font-size: 1.6rem; margin: 0 0 var(--s-s); max-width: 24ch; }
+    .term-leer p { color: var(--muted); max-width: 60ch; line-height: 1.6; margin: 0 0 var(--s-s); }
+    .term-leer__btns { display: flex; flex-wrap: wrap; gap: var(--s-s); margin-top: var(--s-m); }
+    @media (max-width: 700px) { .term-grid { grid-template-columns: 1fr; } }
     .term2 { display: flex; flex-direction: column; background: var(--bg-alt); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; }
     .term2__img { position: relative; aspect-ratio: 16/9; background: linear-gradient(158deg, #33421a, var(--gruen-schwarz)); display: flex; align-items: center; justify-content: center; }
     .term2__img .sil { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 74px; color: rgba(241,246,214,.14); }
@@ -126,9 +134,30 @@
   </section>
 
   <section class="section" style="padding-top:var(--s-l)">
+    <div class="wrap">
+      <div class="eyebrow">Die nächsten Termine</div>
+
+      <!-- Das Terminfenster pflegt sich selbst: Es liest die Liste TERMINE unten,
+           wirft vergangene Termine heraus und zeigt die drei naechsten. Solange
+           kein Termin eingetragen ist, bleibt der Kasten darunter stehen. -->
+      <div id="termine" class="term-grid" hidden></div>
+
+      <div id="termine-leer" class="term-leer">
+        <h2>Die Termine stehen bald fest</h2>
+        <p>Wir sind gerade in vielen Gesprächen. Sobald die ersten Termine feststehen, finden Sie sie genau hier, mit Gast, Thema und Uhrzeit.</p>
+        <p>Wer sie als Erster erfahren will, trägt sich in den Newsletter ein. Ein Ticket können Sie schon jetzt sichern: Es ist an keinen Termin gebunden und verfällt nicht.</p>
+        <div class="term-leer__btns">
+          <a class="btn" href="newsletter.html">Termine per Newsletter</a>
+          <a class="btn btn--ghost" href="unterstuetzen.html#live">Tickets ansehen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
     <div class="read" style="text-align:center">
       <p style="font-family:var(--font-quote);font-size:1.2rem;line-height:1.7;color:#3b3e34">Zwei Tickets stehen bereit: live zugeschaltet und im Chat fragen, oder danach in der kleinen Runde mit dem Gast und Ralf M. Ruthardt sprechen.</p>
-      <p style="margin-top:var(--s-l)"><a class="btn" href="unterstuetzen.html#live">Tickets ansehen</a> <a class="btn btn--ghost" href="newsletter.html">Termin erfahren</a></p>
+      <p style="margin-top:var(--s-l)"><a class="btn" href="unterstuetzen.html#live">Tickets ansehen</a></p>
     </div>
   </section>
 </main>
@@ -180,6 +209,76 @@
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script>
+  /* Hier werden Termine gepflegt, sonst nirgends. Ein Eintrag:
+       {
+         datum: "2026-11-13T19:30",            Pflicht, Format JJJJ-MM-TTThh:mm
+         gast: "Prof. Dr. Beispiel",           Pflicht
+         titel: "Worum es geht",               Pflicht
+         kuerzel: "PB",                        optional, sonst aus dem Namen
+         bild: "assets/portraits/beispiel.jpg" optional, sonst Initialen
+       }
+     Vergangene Termine verschwinden von selbst, gezeigt werden die drei naechsten.
+     Ist die Liste leer, bleibt der Geduld-Kasten stehen. */
+  var TERMINE = [
+  ];
+
+  (function () {
+    var ziel = document.getElementById('termine');
+    var leer = document.getElementById('termine-leer');
+    if (!ziel) return;
+
+    var jetzt = Date.now();
+    var kommend = TERMINE
+      .map(function (t) { return Object.assign({}, t, { zeit: new Date(t.datum).getTime() }); })
+      // Ein Termin faellt erst zwei Stunden nach Beginn heraus, damit er waehrend
+      // des laufenden Gespraechs noch zu sehen ist.
+      .filter(function (t) { return t.zeit && t.zeit + 2 * 60 * 60 * 1000 > jetzt; })
+      .sort(function (a, b) { return a.zeit - b.zeit; })
+      .slice(0, 3);
+
+    if (!kommend.length) return;
+
+    var tage = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
+    var monate = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli',
+                  'August', 'September', 'Oktober', 'November', 'Dezember'];
+    var sicher = function (text) {
+      var d = document.createElement('div');
+      d.textContent = text == null ? '' : String(text);
+      return d.innerHTML;
+    };
+    var initialen = function (name) {
+      return name.replace(/(Prof\.|Dr\.|h\.c\.)/g, '').trim().split(/\s+/)
+                 .filter(Boolean).slice(0, 2).map(function (w) { return w[0]; }).join('');
+    };
+
+    ziel.innerHTML = kommend.map(function (t) {
+      var d = new Date(t.zeit);
+      var wann = tage[d.getDay()] + ', ' + d.getDate() + '. ' + monate[d.getMonth()]
+               + ' · ' + ('0' + d.getHours()).slice(-2) + '.' + ('0' + d.getMinutes()).slice(-2)
+               + ' Uhr · Zoom';
+      var bild = t.bild
+        ? '<img src="' + sicher(t.bild) + '" alt="' + sicher(t.gast) + '" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">'
+        : '<span class="mm">' + sicher(t.kuerzel || initialen(t.gast)) + '</span>';
+      return '<article class="term2">'
+           +   '<div class="term2__img">' + bild + '</div>'
+           +   '<div class="term2__body">'
+           +     '<div class="term2__date">' + sicher(wann) + '</div>'
+           +     '<h3 class="term2__title">' + sicher(t.titel) + '</h3>'
+           +     '<p class="term2__guest">Ralf M. Ruthardt im Gespräch mit ' + sicher(t.gast) + '</p>'
+           +     '<div class="term2__foot">'
+           +       '<span class="term2__price">ab 39 €</span>'
+           +       '<a class="btn btn--sm" href="unterstuetzen.html#live">Ticket sichern</a>'
+           +     '</div>'
+           +   '</div>'
+           + '</article>';
+    }).join('');
+
+    ziel.hidden = false;
+    if (leer) leer.hidden = true;
+  })();
+</script>
+
   <script defer src="js/consent.js"></script>
 </body>
 </html>
