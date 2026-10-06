@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Unterstützen — mitmenschenreden</title>
-  <meta name="description" content="mitmenschenreden bleibt frei lesbar. Unterstütze das Magazin als Leserin oder Leser mit einer Spende, monatlich oder einmalig.">
+  <meta name="description" content="mitmenschenreden bleibt frei lesbar. Seien Sie beim nächsten Gespräch per Zoom live dabei, oder werden Sie Medienpartner und fordern Sie die Mediadaten an.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="mitmenschenreden">
   <meta property="og:locale" content="de_DE">
   <meta property="og:title" content="Unterstützen">
-  <meta property="og:description" content="mitmenschenreden bleibt frei lesbar. Unterstütze das Magazin als Leserin oder Leser mit einer Spende, monatlich oder einmalig.">
+  <meta property="og:description" content="mitmenschenreden bleibt frei lesbar. Seien Sie beim nächsten Gespräch per Zoom live dabei, oder werden Sie Medienpartner und fordern Sie die Mediadaten an.">
   <meta property="og:url" content="https://mitmenschenreden.de/unterstuetzen.html">
   <meta property="og:image" content="https://mitmenschenreden.de/assets/share/default.jpg">
   <meta property="og:image:width" content="1200">
@@ -17,24 +17,64 @@
   <meta property="og:image:alt" content="Unterstützen">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Unterstützen">
-  <meta name="twitter:description" content="mitmenschenreden bleibt frei lesbar. Unterstütze das Magazin als Leserin oder Leser mit einer Spende, monatlich oder einmalig.">
+  <meta name="twitter:description" content="mitmenschenreden bleibt frei lesbar. Seien Sie beim nächsten Gespräch per Zoom live dabei, oder werden Sie Medienpartner und fordern Sie die Mediadaten an.">
   <meta name="twitter:image" content="https://mitmenschenreden.de/assets/share/default.jpg">
   <link rel="stylesheet" href="css/mmr.css">
   <style>
+    /* Wege-Navigation unter dem Hero */
+    .u-jump { display: flex; flex-wrap: wrap; gap: var(--s-s); margin-top: var(--s-m); }
+
+    /* Karten, generisch (Leser-Wege) */
     .u-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--s-l); margin-top: var(--s-l); }
     .u-card { background: var(--bg-alt); border: 1px solid var(--rule); border-radius: 12px; padding: var(--s-l); display: flex; flex-direction: column; }
     .u-card__k { font-size: .72rem; text-transform: uppercase; letter-spacing: .18em; color: var(--muted); font-weight: 600; margin-bottom: .5rem; }
     .u-card h3 { font-family: var(--font-display); font-size: 1.5rem; margin: 0 0 var(--s-s); }
     .u-card p { color: var(--muted); font-size: .98rem; line-height: 1.6; margin-bottom: var(--s-m); }
     .u-card .btn { align-self: flex-start; margin-top: auto; }
-    .u-pate { background: linear-gradient(180deg, #faf6ee, #f5eede); border: 1px solid var(--pate); border-radius: 14px; padding: var(--s-l); margin-top: var(--s-l); }
-    .u-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: var(--s-m); margin: var(--s-l) 0; }
-    .u-area { background: #fff; border: 1px solid var(--pate); border-radius: 10px; padding: var(--s-m); }
-    .u-area__n { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: .25rem; }
-    .u-area__s { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: #8a7b58; font-weight: 600; }
-    .u-note { font-size: .82rem; color: #8a7b58; margin-top: var(--s-s); }
-    .btn--pate { background: var(--pate); color: #1a1a1a; }
-    .btn--pate:hover { filter: brightness(.96); }
+    .u-note { font-size: .82rem; color: var(--muted); margin-top: var(--s-s); }
+
+    /* Ticket-Karten */
+    .t-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: var(--s-l); margin-top: var(--s-l); align-items: stretch; }
+    .t-card { position: relative; background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: var(--s-l); display: flex; flex-direction: column; }
+    .t-card--vip { border-color: var(--gruen-signal); border-width: 2px; background: linear-gradient(180deg, #fcfdf2, #fff); }
+    .t-card__k { font-size: .72rem; text-transform: uppercase; letter-spacing: .18em; font-weight: 600; color: var(--gruen-tief); margin-bottom: .6rem; }
+    .t-card h3 { font-family: var(--font-display); font-size: 1.6rem; margin: 0 0 var(--s-s); line-height: 1.15; }
+    .t-price { display: flex; align-items: baseline; gap: .45rem; margin-bottom: var(--s-m); }
+    .t-price b { font-family: var(--font-display); font-size: 2.6rem; line-height: 1; font-weight: 600; }
+    .t-price span { font-size: .86rem; color: var(--muted); }
+    .t-feat { list-style: none; padding: 0; margin: 0 0 var(--s-m); }
+    .t-feat li { position: relative; padding-left: 1.6rem; margin-bottom: .6rem; font-size: .97rem; line-height: 1.55; color: var(--text); }
+    .t-feat li::before { content: ""; position: absolute; left: 0; top: .45em; width: .7rem; height: .7rem; border-radius: 50%; background: var(--gruen-signal); }
+    .t-feat li.t-feat--plus { font-weight: 600; }
+    .t-card .btn { align-self: stretch; margin-top: auto; text-align: center; }
+    .t-badge { position: absolute; top: -.8rem; right: var(--s-l); background: var(--gruen-signal); color: #1a1a1a; font-size: .7rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; padding: .3rem .7rem; border-radius: 99px; }
+
+    /* Medienpartner-Block */
+    .u-media { background: var(--gruen-schwarz); border-radius: 14px; padding: var(--s-l); margin-top: var(--s-l); color: #f4f3ee; }
+    .u-media .eyebrow { color: var(--gruen-signal); }
+    .u-media h2 { font-family: var(--font-display); font-size: 1.9rem; margin: 0 0 var(--s-s); color: #fff; max-width: 26ch; }
+    .u-media p { color: rgba(255,255,255,.72); max-width: 58ch; line-height: 1.6; }
+    .u-media__grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: var(--s-xl); margin-top: var(--s-m); align-items: start; }
+    .u-media__list { list-style: none; padding: 0; margin: var(--s-m) 0 0; }
+    .u-media__list li { position: relative; padding-left: 1.5rem; margin-bottom: .55rem; font-size: .95rem; color: rgba(255,255,255,.82); }
+    .u-media__list li::before { content: ""; position: absolute; left: 0; top: .5em; width: .55rem; height: .55rem; border-radius: 50%; background: var(--gruen-signal); }
+    .mf { display: grid; gap: var(--s-s); }
+    .mf__label { display: block; font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 600; color: rgba(255,255,255,.66); margin-bottom: .35rem; }
+    .mf__input { width: 100%; box-sizing: border-box; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.22); border-radius: 8px; color: #fff; font-family: var(--font-sans); font-size: 1rem; padding: .8rem .9rem; }
+    .mf__input::placeholder { color: rgba(255,255,255,.4); }
+    .mf__input:focus { outline: none; border-color: var(--gruen-signal); background: rgba(255,255,255,.1); }
+    .mf .btn { justify-self: start; }
+    .mf__note { font-size: .8rem; color: rgba(255,255,255,.55); line-height: 1.5; margin: 0; }
+    .mf__note a { color: var(--gruen-signal); }
+    .mf-hp { position: absolute; left: -5000px; }
+    .mf-success { background: rgba(202,217,9,.12); border: 1px solid var(--gruen-signal); border-radius: 10px; padding: var(--s-m); }
+    .mf-success h3 { font-family: var(--font-display); font-size: 1.3rem; margin: 0 0 .5rem; color: #fff; }
+    .mf-success p { color: rgba(255,255,255,.8); margin: 0; font-size: .95rem; }
+
+    @media (max-width: 860px) {
+      .u-media__grid { grid-template-columns: 1fr; gap: var(--s-l); }
+      .u-media { padding: var(--s-m); }
+    }
   </style>
 </head>
 <body>
@@ -61,34 +101,99 @@
       <span class="hero__tick"></span>
       <div class="eyebrow">Unterstützen</div>
       <h1 class="hero__title" style="max-width:20ch">Frei zu lesen. Möglich gemacht von vielen.</h1>
-      <p class="muted" style="max-width:62ch">mitmenschenreden ist und bleibt frei lesbar. Kein Bezahlschrank, keine Hürde. Getragen wird das von Menschen, die den Perspektivenwechsel wichtig finden. Hier sind die Wege, das Magazin mitzutragen.</p>
+      <p class="muted" style="max-width:62ch">mitmenschenreden ist und bleibt frei lesbar. Kein Bezahlschrank, keine Hürde. Getragen wird das von Menschen, die den Perspektivenwechsel wichtig finden. Es gibt zwei Wege, dabei zu sein.</p>
+      <div class="u-jump">
+        <a class="btn btn--ghost btn--sm" href="#live">Live dabei sein</a>
+        <a class="btn btn--ghost btn--sm" href="#medienpartner">Für Medienpartner</a>
+      </div>
     </div>
   </section>
 
-  <section class="section" style="padding-top:var(--s-l)">
+  <section class="section" id="live" style="padding-top:var(--s-l)">
     <div class="wrap">
-      <h2 style="font-family:var(--font-display);font-size:1.9rem;max-width:24ch">Für Leserinnen und Leser</h2>
-      <p class="muted" style="max-width:56ch">Schon ein kleiner Beitrag hält die Fähre auf Kurs. Zwei Wege, beide ohne Haken.</p>
+      <div class="eyebrow">Live dabei sein</div>
+      <h2 style="font-family:var(--font-display);font-size:1.9rem;max-width:26ch">Beim nächsten Gespräch live dabei</h2>
+      <p class="muted" style="max-width:58ch">Die Gespräche im Magazin sind frei lesbar. Live dabei zu sein ist das Extra: Sie sind per Zoom zugeschaltet, erleben, wie das Gespräch entsteht, und bringen Ihre eigene Frage ein. Von überall, ohne Anreise.</p>
 
-      <div class="u-cards">
-        <div class="u-card">
-          <div class="u-card__k">Regelmäßig</div>
-          <h3>Monatlich unterstützen</h3>
-          <p>Ein fester Betrag im Monat, ab dem, was für dich passt. Jederzeit kündbar, mit einem kleinen Blick hinter die Kulissen.</p>
-          <a class="btn" href="#">Auf Patreon unterstützen</a>
+      <div class="t-cards">
+        <div class="t-card">
+          <div class="t-card__k">Live-Ticket</div>
+          <h3>Basic</h3>
+          <div class="t-price"><b>39</b><span>Euro, einmalig</span></div>
+          <ul class="t-feat">
+            <li>Per Zoom live beim nächsten Interview dabei</li>
+            <li>Fragen im Chat stellen</li>
+            <li>Sie sehen das Gespräch entstehen, unbearbeitet</li>
+          </ul>
+          <!-- CopeCart: href und Beschriftung auf "Ticket kaufen" umstellen, sobald das Produkt steht -->
+          <a class="btn" href="newsletter.html" data-copecart="live-basic">Termin erfahren</a>
         </div>
-        <div class="u-card">
-          <div class="u-card__k">Einmalig</div>
-          <h3>Einmalig danke sagen</h3>
-          <p>Ein einmaliger Betrag, ganz ohne Bindung. Schnell und direkt, in unter einer Minute.</p>
-          <a class="btn" href="#">Mit PayPal spenden</a>
+        <div class="t-card t-card--vip">
+          <span class="t-badge">Kleine Runde</span>
+          <div class="t-card__k">Live-Ticket</div>
+          <h3>VIP</h3>
+          <div class="t-price"><b>99</b><span>Euro, einmalig</span></div>
+          <ul class="t-feat">
+            <li>Alles aus Basic</li>
+            <li class="t-feat--plus">Nach dem Interview in die kleine Runde dazugeschaltet</li>
+            <li>Ihre Fragen direkt an den Gast, im Gespräch statt im Chat</li>
+            <li>Mit Ralf M. Ruthardt und dem Interviewgast in kleiner Runde</li>
+          </ul>
+          <!-- CopeCart: href und Beschriftung auf "VIP-Ticket kaufen" umstellen, sobald das Produkt steht -->
+          <a class="btn" href="newsletter.html" data-copecart="live-vip">Termin erfahren</a>
         </div>
       </div>
-      <p class="u-note">Konzept-Vorschau: die Zahlungswege sind noch Platzhalter.</p>
+      <p class="u-note">Die Gespräche laufen per Zoom, der Verkauf über CopeCart. Sobald der nächste Termin steht, gibt es die Tickets hier. Wer ihn als Erstes erfahren will, trägt sich in den <a href="newsletter.html">Newsletter</a> ein.</p>
     </div>
   </section>
 
-  <!-- Patenschaft- und Advertorial-Bereich für den Moment entfernt (Stand siehe Git) -->
+  <section class="section" id="medienpartner" style="padding-top:var(--s-l)">
+    <div class="wrap">
+      <div class="u-media">
+        <div class="eyebrow">Für Medienpartner</div>
+        <h2>Partner werden, nicht Werbebanner buchen</h2>
+        <p>mitmenschenreden erreicht Menschen, die lange Texte lesen und zu Ende denken. Wer hier sichtbar ist, steht neben Inhalten, die ernst genommen werden. Wie das aussieht, welche Bereiche es gibt und was es kostet, steht in den Mediadaten.</p>
+
+        <div class="u-media__grid">
+          <div>
+            <ul class="u-media__list">
+              <li>Bereichs-Patenschaft: Ihr Logo und ein Nutzen-Satz auf allen Seiten eines Bereichs</li>
+              <li>Advertorial: Ihr eigener, klar gekennzeichneter Beitrag im Blickwinkel</li>
+              <li>Portrait-Interview: ein Gespräch über Ihr Haus, in der Sprache des Magazins</li>
+              <li>Newsletter-Abbinder: Ihre Nennung unter dem Autorenbrief</li>
+            </ul>
+          </div>
+          <div>
+            <form class="mf" id="mf-form">
+              <div>
+                <label class="mf__label" for="mf-name">Name</label>
+                <input class="mf__input" id="mf-name" type="text" name="NAME" required autocomplete="name" placeholder="Vor- und Nachname">
+              </div>
+              <div>
+                <label class="mf__label" for="mf-firma">Firma</label>
+                <input class="mf__input" id="mf-firma" type="text" name="FIRMA" required autocomplete="organization" placeholder="Ihr Unternehmen">
+              </div>
+              <div>
+                <label class="mf__label" for="mf-mail">E-Mail-Adresse</label>
+                <input class="mf__input" id="mf-mail" type="email" name="EMAIL" required autocomplete="email" placeholder="name@firma.de">
+              </div>
+              <div class="mf-hp" aria-hidden="true">
+                <label for="mf-check">Bitte dieses Feld leer lassen</label>
+                <input type="text" id="mf-check" name="email_address_check" value="" tabindex="-1" autocomplete="off">
+              </div>
+              <button class="btn" type="submit">Mediadaten anfordern</button>
+              <p class="mf__note">Wir schicken Ihnen die Mediadaten als PDF und melden uns einmal persönlich. Kein Newsletter, keine Weitergabe. Wie wir mit Ihren Daten umgehen, steht in der <a href="datenschutz.html">Datenschutzerklärung</a>. Lieber direkt schreiben? <a href="mailto:mc@markus-coenen.de?subject=Mediadaten%20mitmenschenreden">mc@markus-coenen.de</a></p>
+            </form>
+
+            <div class="mf-success" id="mf-success" hidden>
+              <h3>Fast geschafft.</h3>
+              <p>Ihr E-Mail-Programm öffnet sich mit einer fertig vorbereiteten Nachricht. Einmal abschicken, dann haben wir Ihre Anfrage und die Mediadaten gehen noch heute raus. Falls sich nichts geöffnet hat, schreiben Sie uns bitte direkt an <a href="mailto:mc@markus-coenen.de?subject=Mediadaten%20mitmenschenreden" style="color:var(--gruen-signal)">mc@markus-coenen.de</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -130,6 +235,28 @@
     <a href="#" class="js-cookie-settings">Cookie-Einstellungen</a>
   </div>
 </footer>
+
+<script>
+  // Mediadaten-Anfrage: Die Felder werden in eine fertige E-Mail gepackt. Kein
+  // Server, keine Datenhaltung bei uns. Sobald ein Brevo-Formular steht, wird
+  // daraus ein normales POST-Formular (Muster: newsletter.html).
+  var mf = document.getElementById('mf-form');
+  mf && mf.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!mf.reportValidity()) return;
+    if (document.getElementById('mf-check').value) return;
+    var wert = function (id) { return document.getElementById(id).value.trim(); };
+    var text = 'Name: ' + wert('mf-name')
+             + '\nFirma: ' + wert('mf-firma')
+             + '\nE-Mail: ' + wert('mf-mail')
+             + '\n\nBitte senden Sie mir die Mediadaten von mitmenschenreden.';
+    window.location.href = 'mailto:mc@markus-coenen.de'
+      + '?subject=' + encodeURIComponent('Mediadaten mitmenschenreden')
+      + '&body=' + encodeURIComponent(text);
+    mf.hidden = true;
+    document.getElementById('mf-success').hidden = false;
+  });
+</script>
 
 <script>
   var t = document.querySelector('.nav-toggle'), n = document.querySelector('.nav');
